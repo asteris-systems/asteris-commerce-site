@@ -1,0 +1,124 @@
+/*
+ * Asteris Commerce — global tokens + reset
+ * Brand: ★ ultraviolet star, black, yellow highlight, violet pop
+ * Aesthetic matches product sites (asterisforwoocommerce.com / asterisforwordpress.com)
+ *
+ * Brand-house: PARENT = violet #AA00FF here. The child products use their
+ * own accents on their own sites (WC = #FF5B3F orange, WP = #3D5AFE indigo).
+ * On asteriscommerce.com they keep their own accents on their product tiles —
+ * but everything ELSE (hero, links, CTAs) uses the parent violet.
+ *
+ * The variable is named --c-orange across the brand-house repos so the same
+ * components copy/paste without churn — only the VALUE differs per site.
+ */
+
+:root {
+  --c-black:   #0a0a0a;
+  --c-yellow:  #fff19a;
+  --c-orange:  #AA00FF;
+  --c-violet:  #AA00FF;
+  --c-bg:      #fafafa;
+  --c-white:   #ffffff;
+  --c-text:    #0a0a0a;
+  --c-muted:   #555555;
+  --c-faint:   #888888;
+  --c-border:  #eeeeee;
+
+  --font: -apple-system, 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+
+  --max-w: 1100px;
+  --gutter: 36px;
+
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 8px;
+
+  --pop-shadow: 4px 4px 0 var(--c-black);
+  --pop-shadow-lg: 8px 8px 0 var(--c-black);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  border: 2px solid var(--c-black);
+  background: var(--c-white);
+  color: var(--c-black);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+  white-space: nowrap;
+}
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--pop-shadow);
+}
+.btn-pop {
+  background: var(--c-orange);
+  color: var(--c-white);
+  border-color: var(--c-orange);
+}
+.btn-large {
+  padding: 16px 28px;
+  font-size: 16px;
+}
+.btn-outline {
+  background: transparent;
+}
+
+.accent { color: var(--c-orange); }
+.highlight {
+  background: var(--c-yellow);
+  padding: 0 4px;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+@media (max-width: 700px) {
+  :root { --gutter: 20px; }
+}

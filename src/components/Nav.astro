@@ -1,0 +1,79 @@
+---
+interface Props {
+  currentPath?: string;
+}
+const { currentPath = '' } = Astro.props;
+
+const navLinks = [
+  { href: '/about', label: 'About' },
+  { href: '/roadmap', label: 'Roadmap' },
+  { href: '/press', label: 'Press' },
+];
+---
+
+<nav class="site-nav">
+  <a href="/" class="logo" aria-label="Asteris Commerce home">
+    <span class="star" aria-hidden="true">★</span> Asteris Commerce
+  </a>
+  <div class="nav-links">
+    {navLinks.map(link => (
+      <a
+        href={link.href}
+        class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+      >
+        {link.label}
+      </a>
+    ))}
+    <a href="https://asterisforwoocommerce.com" class="btn btn-pop" target="_blank" rel="noopener">For WooCommerce →</a>
+  </div>
+</nav>
+
+<style>
+  .site-nav {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 20px var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--c-black);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .logo .star {
+    color: var(--c-orange);
+    font-size: 24px;
+    line-height: 1;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--c-text);
+    transition: color 0.1s ease;
+  }
+  .nav-link:hover, .nav-link.active {
+    color: var(--c-orange);
+  }
+  .nav-links .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  @media (max-width: 700px) {
+    .site-nav { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .nav-links { flex-wrap: wrap; gap: 14px; width: 100%; }
+    .nav-links .btn { margin-left: auto; }
+  }
+</style>

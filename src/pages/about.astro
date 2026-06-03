@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Asteris Commerce — Australian indie WordPress + WooCommerce plugin company"
+  description="Asteris Commerce is My Cosmic Message Pty Ltd, founded by Nick Lord in Sydney. Small team, no VC, two plugins (Asteris for WordPress + Asteris for WooCommerce) shipping under a documented Module Quality Protocol. Honest about what we do and what we don't."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>About Asteris Commerce</h1>
+      <p class="lead">
+        A small team, two plugins, an Australian Pty Ltd. Here's the actual story — who, why, how it's funded, and what it isn't.
+      </p>
+    </div>
+  </section>
+
+  <section class="body">
+    <div class="container narrow">
+
+      <h2>Who</h2>
+      <p>
+        Asteris Commerce is the trading name of <strong>My Cosmic Message Pty Ltd</strong> — an Australian proprietary limited company (ACN 652 358 159, ABN 30 652 358 159), incorporated in New South Wales. <strong>Sole director: Nick Lord.</strong> Based in Sydney, Australia.
+      </p>
+      <p>
+        I built WooCommerce stores for years before becoming a plugin vendor. Asteris exists because I was tired of the stitched stack: 15–20 paid plugins from 12+ vendors, each with its own admin page, update cadence, support inbox, and conflict surface. The plugin I wished existed didn't, so I built it. Then I realised the same logic applied to the non-WC side of WordPress (security, SEO, backups, email) — so that became the second product.
+      </p>
+
+      <h2>Why two plugins, not one</h2>
+      <p>
+        Most WordPress sites don't run WooCommerce. Most WooCommerce stores have plugin needs that go well beyond what a generic WP plugin covers. Bundling everything into one mega-plugin would dilute both products and force non-WC users to install WC code they'll never use.
+      </p>
+      <p>
+        So: <strong>Asteris for WordPress</strong> covers what any WP site needs (Security + Login + 2FA, SEO + AI, Backups + Migration, SMTP + Email Logs, and more — 11 modules at v1.0). <strong>Asteris for WooCommerce</strong> covers what a WC store specifically needs (SEO, AI Suite, PDF Invoices, Variation Swatches, Wishlist, Side Cart, Coupons, and 13 more — 20 modules at v1.0).
+      </p>
+      <p>
+        Some modules genuinely overlap (SEO + AI, Analytics, Links, AI library). Those are built once and vendored into both plugins, so the same code ships in both, neither plugin depends on the other, and customers never have to install both.
+      </p>
+
+      <h2>Funding model</h2>
+      <p>
+        No VC. No angels. No outside capital at all. Asteris Commerce is funded by:
+      </p>
+      <ul>
+        <li><strong>Launch-locked Founder subscriptions</strong> — customers who subscribe during the launch window keep their launch price for as long as their subscription stays continuously active. No 500-cap, no lifetime-deal trap.</li>
+        <li><strong>Standing subscriptions</strong> at regular post-launch pricing for new customers after the launch window closes.</li>
+        <li><strong>Lemon Squeezy as merchant of record</strong> — handles payments, tax, and refunds globally. We don't touch credit card data.</li>
+      </ul>
+      <p>
+        Recurring revenue funds support. There is no growth-hacker incentive, no quarterly pressure, no exit narrative. The business succeeds or fails on whether the plugins are good enough to keep customers subscribed.
+      </p>
+
+      <h2>How we ship</h2>
+      <p>
+        Both plugins ship under a documented <strong>Module Quality Protocol</strong>: every module must close its Tier 1 (must-have) + Tier 2 (best-of-breed) gap analysis against the dominant commercial competitor BEFORE the next module starts. Tier 3 features get deferred to later releases; the Tier 1+2 floor is non-negotiable. The point of this rule is to prevent shipping thin modules that look complete but fail in real use — the failure mode that turns "all-in-one" bundles into cluttered support-heavy junk drawers.
+      </p>
+      <p>
+        Both plugins target PHP 8.1+ minimum, are HPOS-verified, Block Cart / Block Checkout compatible, regression-tested across six themes per release. WordPress Multisite support is planned for v1.1 in both products.
+      </p>
+
+      <h2>What Asteris Commerce isn't</h2>
+      <ul>
+        <li>Not a VC-funded startup</li>
+        <li>Not a marketplace or plugin aggregator — we build all the modules ourselves</li>
+        <li>Not affiliated with Automattic, WordPress Foundation, or any other vendor</li>
+        <li>Not a SaaS — both products are plugins you install on your own site, with your own data, on your own host</li>
+        <li>Not promising features we haven't built — both products' roadmaps are public</li>
+        <li>Not enterprise — we serve solo store owners, freelancers, and small agencies. If you need a dedicated account manager and 24/7 phone support, this isn't the right vendor for you</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:founder@asteriscommerce.com">founder@asteriscommerce.com</a> — goes directly to Nick. For product support, use the support address on the relevant product site.
+      </p>
+      <p>
+        <strong>Legal entity:</strong> My Cosmic Message Pty Ltd, ACN 652 358 159, ABN 30 652 358 159. Registered address: Sydney, NSW, Australia.
+      </p>
+
+      <h2>See also</h2>
+      <ul>
+        <li><a href="https://asterisforwoocommerce.com" target="_blank" rel="noopener">Asteris for WooCommerce</a> — the WC product site</li>
+        <li><a href="https://asterisforwordpress.com" target="_blank" rel="noopener">Asteris for WordPress</a> — the WP product site</li>
+        <li><a href="/roadmap">Cross-product roadmap</a></li>
+        <li><a href="/press">Press + media kit</a></li>
+      </ul>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding: 80px 0 40px;
+  }
+  h1 {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+  .lead {
+    font-size: 20px;
+    color: var(--c-muted);
+    max-width: 720px;
+  }
+  @media (max-width: 700px) { h1 { font-size: 40px; } }
+
+  .body { padding: 40px 0 80px; }
+  .narrow { max-width: 760px; }
+  .body h2 {
+    font-size: 28px;
+    margin: 40px 0 16px;
+    color: var(--c-black);
+  }
+  .body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  .body p strong { color: var(--c-black); }
+  .body ul {
+    margin: 0 0 16px 24px;
+    color: #333;
+  }
+  .body ul li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 6px;
+  }
+  .body a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 3px; }
+  .body a:hover { color: var(--c-black); }
+</style>

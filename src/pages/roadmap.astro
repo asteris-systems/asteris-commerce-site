@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Roadmap — Asteris Commerce cross-product release timeline"
+  description="Cross-product roadmap for Asteris for WooCommerce + Asteris for WordPress. v1.0 ship status, v1.1+ planned modules, research-needed candidates. Honest about what's built vs what's banked."
+>
+  <section class="hero">
+    <div class="container">
+      <h1>Roadmap</h1>
+      <p class="lead">
+        Cross-product release timeline across both Asteris plugins. Honest about what's shipped, what's banked, and what's still under research. Dates are intentionally absent — see the <a href="https://asterisforwoocommerce.com/lifetime/" target="_blank" rel="noopener">no-hard-dates rule</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="body">
+    <div class="container">
+
+      <div class="grid">
+        <!-- Asteris for WooCommerce column -->
+        <div class="prod-col">
+          <div class="prod-eyebrow">★ Asteris for WooCommerce</div>
+          <h2>WC roadmap</h2>
+
+          <h3 class="phase">v1.0 — shipped</h3>
+          <ul class="mod-list">
+            <li><span class="ok">✓</span> 20 modules built and shipped at plugin v1.9.20</li>
+            <li><span class="ok">✓</span> AI Suite · SEO · PDF Invoices · Variation Swatches · Wishlist · Quote / Enquiry · Back in Stock · Side Cart · Sequential Order Numbers · Product Filtering · Min/Max Quantity · Asteris Links · Trust Badges · Free Shipping Bar · Stock Urgency · Delivery Timeline · Feature Labels · Product Badges · Analytics · Asteris Coupons</li>
+            <li><span class="ok">✓</span> 6 of those modules in Asteris Free (WordPress.org)</li>
+            <li><span class="ok">✓</span> HPOS-verified · Block Cart compatible · 6-theme tested</li>
+          </ul>
+
+          <h3 class="phase">v1.1 — first post-launch release</h3>
+          <ul class="mod-list">
+            <li><span class="planned">●</span> <strong>Asteris Cookie Consent</strong> — GDPR / ePrivacy / CCPA / LGPD-compliant banner with real script-blocking. Hero feature of v1.1 release. Replaces CookieYes / Cookiebot / Iubenda ($79–$348/yr SaaS each).</li>
+            <li><span class="planned">●</span> WordPress Multisite support</li>
+            <li><span class="planned">●</span> WP-CLI commands (agency-scale operations)</li>
+            <li><span class="planned">●</span> Customer self-service /account portal (licence management, downloads, invoices)</li>
+            <li><span class="planned">●</span> Module 20 (Coupons) deferred features: AI-generated coupon copy, subscription-aware rules, stacking</li>
+          </ul>
+
+          <h3 class="phase">v1.2 — second release</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> <strong>Asteris Checkout Customizer</strong> — field-level checkout customisation (add/remove/reorder fields, conditional logic, custom thank-you pages). Research-needed.</li>
+          </ul>
+
+          <h3 class="phase">Research-needed (v1.2+)</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> <strong>Asteris Social Proof</strong> — recent-purchase / activity notifications. NotificationX / TrustPulse replacement. Honest-data-only positioning.</li>
+            <li><span class="research">◯</span> <strong>Asteris Payment Icons</strong> — trust-signal payment-method icons at checkout / footer / product page</li>
+          </ul>
+
+          <h3 class="phase">v2+ — under consideration</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> <strong>Asteris Funnel Builder</strong> — full CartFlows / FunnelKit replacement (multi-step funnel pages, one-click upsells, order bumps, A/B testing). EXPLICITLY DEFERRED with documented blocking concerns; revisit when there's evidence of customer demand and team capacity.</li>
+          </ul>
+        </div>
+
+        <!-- Asteris for WordPress column -->
+        <div class="prod-col">
+          <div class="prod-eyebrow">★ Asteris for WordPress</div>
+          <h2>WP roadmap</h2>
+
+          <h3 class="phase">v1.0 — building (sequential ship)</h3>
+          <ul class="mod-list">
+            <li><span class="ok">✓</span> Module Quality Protocol locked: every module closes Tier 1 + Tier 2 gap analysis before the next module starts</li>
+            <li><span class="building">●</span> <strong>Security + Login + 2FA</strong> — flagship wedge module. Built quality-first vs Wordfence Premium.</li>
+            <li><span class="planned">●</span> <strong>SEO + AI</strong> — full SEO toolkit with AI-written meta. Shared with WC product.</li>
+            <li><span class="planned">●</span> <strong>Backups + Migration</strong> — scheduled + offsite + one-click restore.</li>
+            <li><span class="planned">●</span> <strong>SMTP + Email Logs</strong> — major provider integrations + log table + deliverability alerts.</li>
+            <li><span class="planned">●</span> 7 more modules planned for v1.0 — see asterisforwordpress.com for the full list</li>
+          </ul>
+
+          <h3 class="phase">v1.1+ — banked</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> WordPress Multisite support</li>
+            <li><span class="research">◯</span> Performance + Image Optimisation</li>
+            <li><span class="research">◯</span> Activity Log</li>
+            <li><span class="research">◯</span> Code Snippets</li>
+            <li><span class="research">◯</span> Accessibility tooling</li>
+            <li><span class="research">◯</span> Forms</li>
+          </ul>
+
+          <h3 class="phase">v1.5+ — deferred</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> Custom Fields + Post Types (deferred past Feb 2027 ACF / SCF trial period)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span><span class="ok">✓</span> shipped</span>
+        <span><span class="building">●</span> in active build</span>
+        <span><span class="planned">●</span> planned + scoped</span>
+        <span><span class="research">◯</span> research-needed before scoping</span>
+      </div>
+
+      <div class="rules">
+        <h2>Roadmap rules</h2>
+        <ul>
+          <li><strong>No hard dates published.</strong> Stage transitions are velocity-decided. Publishing a date and missing it is worse than not publishing one.</li>
+          <li><strong>Module Quality Protocol is non-negotiable.</strong> Tier 1 + Tier 2 features ship together. No "decoration tier" modules.</li>
+          <li><strong>Shared modules built once.</strong> SEO + AI, Analytics, Links, AI library are vendored into both plugins. Same code, no plugin-to-plugin dependency.</li>
+          <li><strong>Research-needed = not yet scoped.</strong> An item being on the roadmap doesn't mean it will ship. Each research-needed module gets a deep-research workflow + Sovereign sign-off before it enters the build queue.</li>
+          <li><strong>Customer feedback weights priority.</strong> Post-launch, the highest-feedback items move up. The roadmap above is the pre-launch best-guess.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero { padding: 80px 0 40px; }
+  h1 {
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 24px;
+  }
+  .lead {
+    font-size: 20px;
+    color: var(--c-muted);
+    max-width: 720px;
+  }
+  .lead a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 3px; }
+  @media (max-width: 700px) { h1 { font-size: 40px; } }
+
+  .body { padding: 40px 0 80px; }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+  .prod-col {
+    background: var(--c-white);
+    border: 2px solid var(--c-black);
+    border-radius: var(--r-lg);
+    padding: 32px;
+  }
+  .prod-eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+  .prod-col h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  .phase {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--c-muted);
+    margin: 28px 0 12px;
+    font-weight: 700;
+  }
+  .mod-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .mod-list li {
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 8px 0;
+    color: #333;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .mod-list li strong { color: var(--c-black); }
+  .ok { color: var(--c-orange); font-weight: 900; flex-shrink: 0; }
+  .building { color: var(--c-orange); font-weight: 900; flex-shrink: 0; }
+  .planned { color: var(--c-muted); flex-shrink: 0; }
+  .research { color: var(--c-faint); flex-shrink: 0; }
+
+  .legend {
+    margin: 48px 0 32px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--c-muted);
+  }
+  .legend span span {
+    margin-right: 6px;
+  }
+
+  .rules {
+    background: var(--c-black);
+    color: #cccccc;
+    padding: 48px;
+    border-radius: var(--r-lg);
+    margin-top: 32px;
+  }
+  .rules h2 { color: var(--c-white); font-size: 24px; margin-bottom: 16px; }
+  .rules ul { list-style: none; padding: 0; margin: 0; }
+  .rules ul li { padding: 10px 0; font-size: 15px; line-height: 1.6; }
+  .rules ul li strong { color: var(--c-white); }
+</style>

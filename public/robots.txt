@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asteriscommerce.com/sitemap-index.xml
