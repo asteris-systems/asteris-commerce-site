@@ -31,6 +31,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <link rel="canonical" href={canonicalURL} />
   {noindex && <meta name="robots" content="noindex,nofollow" />}
 
+  <!-- time-localise: renders <time datetime="…Z"> in viewer's browser timezone
+       (per feedback_local_time_rule.md). Deferred — runs after DOM ready. -->
+  <script src="/time-localise.js" defer></script>
+
   <title>{title}</title>
 
   <meta property="og:type" content="website" />
