@@ -12,6 +12,14 @@ import Layout from '../layouts/Layout.astro';
       <p class="lead">
         Reviewing one of our plugins for a WordPress publication? Writing about the indie WordPress vendor scene? Looking for the right contact for an interview? Everything you need is below.
       </p>
+
+      <div class="stats">
+        <div class="stat"><div class="stat-num">31</div><div class="stat-label">modules across<br>two products</div></div>
+        <div class="stat"><div class="stat-num">~$2k/yr</div><div class="stat-label">replaced by<br>one subscription</div></div>
+        <div class="stat"><div class="stat-num">2026</div><div class="stat-label">founded<br>in Sydney</div></div>
+        <div class="stat"><div class="stat-num">$0</div><div class="stat-label">VC raised<br>(by design)</div></div>
+        <div class="stat"><div class="stat-num">Weekly</div><div class="stat-label">ship cadence<br>built in public</div></div>
+      </div>
     </div>
   </section>
 
@@ -25,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
 
       <h2>Who to contact</h2>
       <p>
-        <strong>For press inquiries, founder interviews, plugin review copies, partnership / podcast / podcast guesting:</strong>
+        <strong>For press inquiries, founder interviews, plugin review copies, partnerships and podcast guesting:</strong>
       </p>
       <p>
         <a href="mailto:founder@asteriscommerce.com">founder@asteriscommerce.com</a> — goes directly to Nick.
@@ -53,6 +61,24 @@ import Layout from '../layouts/Layout.astro';
         <li>Comparisons positioning Asteris as "anti-WooCommerce.com" or "anti-Automattic" — we ship plugins for the ecosystem, not against it</li>
       </ul>
 
+      <h2>Founder bio</h2>
+      <p>
+        <strong>Nick Lord</strong> is the founder + sole director of Asteris Commerce. Based in Sydney, Australia. Background in running considered-purchase WooCommerce stores — Asteris was built because Nick was tired of the 15-plugin stack he was paying for + maintaining across his own stores. Asteris for WooCommerce v1.0 ships with 20 modules covering the categories Nick was buying separately. Asteris for WordPress v1.0 covers the same problem for non-commerce WordPress sites.
+      </p>
+      <p>
+        Quotable: <em>"I'd rather ship the plugin I wanted as a customer than the plugin a VC pitch deck wanted me to build."</em>
+      </p>
+
+      <h2>Company timeline</h2>
+      <ul class="timeline">
+        <li><strong>2026 (Q1)</strong> — My Cosmic Message Pty Ltd incorporated in NSW, Australia. Trading name: Asteris Commerce.</li>
+        <li><strong>2026 (Q2)</strong> — v1.0 of Asteris for WooCommerce locked at 20 modules. Module Quality Protocol locked as a standing rule (every module ships Tier 1 + Tier 2 gap-analysis-verified vs the dominant commercial competitor before the next module starts).</li>
+        <li><strong>2026 (Q2)</strong> — Asteris for WordPress v1.0 in active build. 11 modules covering security, SEO + AI, backups + migration, SMTP + email logs, performance, image optimisation, accessibility, forms, activity log + site health, code snippets.</li>
+        <li><strong>2026 (Q2)</strong> — Public launch of Asteris for WooCommerce. Founder-locked subscription pricing during the launch window, regular pricing thereafter. Asteris Free (six modules) submitted to the WordPress.org plugin directory.</li>
+        <li><strong>2026 (Q3+)</strong> — Asteris for WordPress v1.0 launch. Modules 21+ on the WC side enter sprint queue per locked Module Quality Protocol research order.</li>
+        <li><strong>Ongoing</strong> — Weekly ship cadence on both products. Public changelog + public roadmap. Founder cohort shapes which modules get prioritised next.</li>
+      </ul>
+
       <h2>Quick facts</h2>
       <ul>
         <li><strong>Founded:</strong> 2026</li>
@@ -65,6 +91,16 @@ import Layout from '../layouts/Layout.astro';
         <li><strong>Merchant of record:</strong> Lemon Squeezy</li>
         <li><strong>Funding:</strong> Bootstrapped via launch-locked Founder subscriptions + standing subscriptions thereafter. No VC, no angels.</li>
       </ul>
+
+      <h2>Press releases</h2>
+      <p>
+        We'll archive every formal press release here once they start landing. For now this section is intentionally empty — Asteris hasn't issued any formal releases yet (launch is the first). If you're after a comment or quote on a specific story before that, email <a href="mailto:founder@asteriscommerce.com">founder@asteriscommerce.com</a> with the angle + deadline.
+      </p>
+
+      <h2>Built-in-public archive</h2>
+      <p>
+        Asteris ships in public — every Friday, what shipped that week is published. Once <a href="https://asterisforwoocommerce.com/blog" target="_blank" rel="noopener">/blog</a> on the WC site goes live (post-launch), it's the canonical archive of weekly drops. Until then, the <a href="https://asterisforwoocommerce.com/changelog" target="_blank" rel="noopener">changelog</a> + <a href="https://asterisforwoocommerce.com/roadmap" target="_blank" rel="noopener">roadmap</a> on the WC site are the public record.
+      </p>
 
       <h2>Logos + brand assets</h2>
       <p>
@@ -121,6 +157,51 @@ import Layout from '../layouts/Layout.astro';
     max-width: 720px;
   }
   @media (max-width: 700px) { h1 { font-size: 40px; } }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+    max-width: 880px;
+  }
+  .stat {
+    background: var(--c-white);
+    border: 2px solid var(--c-black);
+    border-radius: var(--r-md);
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--c-violet, #AA00FF);
+    line-height: 1;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--c-muted);
+    line-height: 1.3;
+  }
+
+  .timeline {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .timeline li {
+    border-left: 3px solid var(--c-violet, #AA00FF);
+    padding: 0 0 6px 18px;
+    margin-bottom: 12px;
+  }
+  .timeline li strong {
+    display: inline-block;
+    color: var(--c-violet, #AA00FF);
+    margin-right: 8px;
+    font-weight: 800;
+  }
 
   .body { padding: 40px 0 80px; }
   .narrow { max-width: 760px; }
