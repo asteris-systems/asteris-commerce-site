@@ -62,16 +62,23 @@ import Layout from '../layouts/Layout.astro';
           <span class="prod-cta">Visit asterisforwordpress.com →</span>
         </a>
 
-        <div class="prod-card prod-card--future" aria-hidden="true">
+        <a href="https://asteriscart.com" class="prod-card prod-card--cart" target="_blank" rel="noopener">
           <div class="prod-meta">
-            <div class="prod-eyebrow"><span class="prod-star">★</span> Next product</div>
-            <span class="prod-status prod-status--planned">Planned</span>
+            <div class="prod-eyebrow"><span class="prod-star">★</span> Asteris Cart</div>
+            <span class="prod-status prod-status--dev">In development · alpha</span>
           </div>
-          <h2 class="prod-h">Room for what we build next.</h2>
+          <h2 class="prod-h">22 modules. One plugin. For WooCommerce checkout.</h2>
           <p class="prod-desc">
-            Asteris Commerce ships plugins one at a time, quality-first. When the next product is ready, it appears here.
+            Side cart, free shipping bar, multi-step checkout, urgency timer, trust badges, GDPR consent, express checkout, quote mode, order bumps — all in one plugin. The honest alternative to CartFlows and FunnelKit. Real expiry, real shipping zones, real stock. Built classic-hooks-first, HPOS-native from day one.
           </p>
-        </div>
+          <ul class="prod-bullets">
+            <li>22 modules at v1.0</li>
+            <li>From $99/yr launch-locked (1 site)</li>
+            <li>HPOS-native · Block Cart compatible</li>
+            <li>Replaces ~$540/yr of CartFlows + FunnelKit + CheckoutWC</li>
+          </ul>
+          <span class="prod-cta">Visit asteriscart.com →</span>
+        </a>
 
         <div class="prod-card prod-card--future" aria-hidden="true">
           <div class="prod-meta">
@@ -179,6 +186,7 @@ import Layout from '../layouts/Layout.astro';
   }
   .prod-card--wc { --tile-accent: #FF5B3F; }
   .prod-card--wp { --tile-accent: #3D5AFE; }
+  .prod-card--cart { --tile-accent: #00C853; }
   .prod-card--future {
     --tile-accent: #AA00FF;
     opacity: 0.55;
