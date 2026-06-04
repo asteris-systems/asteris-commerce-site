@@ -4,13 +4,13 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Roadmap — Asteris Commerce cross-product release timeline"
-  description="Cross-product roadmap for Asteris for WooCommerce + Asteris for WordPress. v1.0 ship status, v1.1+ planned modules, research-needed candidates. Honest about what's built vs what's banked."
+  description="Cross-product roadmap for Asteris for WooCommerce, Asteris for WordPress, and Asteris Cart. v1.0 ship status, v1.1+ planned modules, research-needed candidates. Honest about what's built vs what's banked."
 >
   <section class="hero">
     <div class="container">
       <h1>Roadmap</h1>
       <p class="lead">
-        Cross-product release timeline across both Asteris plugins. Honest about what's shipped, what's banked, and what's still under research. Dates are intentionally absent — see the <a href="https://asterisforwoocommerce.com/lifetime/" target="_blank" rel="noopener">no-hard-dates rule</a>.
+        Cross-product release timeline across all three Asteris plugins. Honest about what's shipped, what's banked, and what's still under research. Dates are intentionally absent — see the <a href="https://asterisforwoocommerce.com/lifetime/" target="_blank" rel="noopener">no-hard-dates rule</a>.
       </p>
     </div>
   </section>
@@ -19,8 +19,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="container">
 
       <div class="grid">
-        <!-- Asteris for WooCommerce column -->
-        <div class="prod-col">
+        <!-- Asteris for WooCommerce row -->
+        <div class="prod-col prod-col--wc">
           <div class="prod-eyebrow">★ Asteris for WooCommerce</div>
           <h2>WC roadmap</h2>
 
@@ -58,8 +58,8 @@ import Layout from '../layouts/Layout.astro';
           </ul>
         </div>
 
-        <!-- Asteris for WordPress column -->
-        <div class="prod-col">
+        <!-- Asteris for WordPress row -->
+        <div class="prod-col prod-col--wp">
           <div class="prod-eyebrow">★ Asteris for WordPress</div>
           <h2>WP roadmap</h2>
 
@@ -86,6 +86,67 @@ import Layout from '../layouts/Layout.astro';
           <h3 class="phase">v1.5+ — deferred</h3>
           <ul class="mod-list">
             <li><span class="research">◯</span> Custom Fields + Post Types (deferred past Feb 2027 ACF / SCF trial period)</li>
+          </ul>
+        </div>
+
+        <!-- Asteris Cart row -->
+        <div class="prod-col prod-col--cart">
+          <div class="prod-eyebrow">★ Asteris Cart</div>
+          <h2>Cart roadmap</h2>
+
+          <h3 class="phase">v1.0 — alpha (pre-launch)</h3>
+          <ul class="mod-list">
+            <li><span class="ok">✓</span> 21 modules built and wired at plugin v1.0.0-alpha.9</li>
+            <li><span class="ok">✓</span> Side Cart · Free Shipping Bar · Cart Page · Floating Button · Add-to-Cart Popup · Mobile Sticky Bar · Empty Cart · Shipping Calculator · Coupon URL · Sticky Checkout Button · Pixel Bridge · Trust Badges · Login · Thank-You Page · Express Checkout · GDPR Consent · Quote Mode · Multi-Step · Urgency Timer · Field Editor · Safe Mode</li>
+            <li><span class="ok">✓</span> HPOS code-verified · Block Cart compatible · Classic-hooks-first</li>
+            <li><span class="building">●</span> End-to-end QA on real store + cross-theme verification (in progress)</li>
+            <li><span class="building">●</span> Public launch: Founder Hundred → open launch — velocity-decided window</li>
+          </ul>
+
+          <h3 class="phase">v1.1 — first post-launch release</h3>
+          <ul class="mod-list">
+            <li><span class="planned">●</span> <strong>Recovery + Bot Filter</strong> — abandoned-cart capture with IP fingerprinting, session validation, rate limiting. The flagship v1.1 wedge — every competitor's recovery metric is bot-poisoned.</li>
+            <li><span class="planned">●</span> <strong>Sequence Runner</strong> — email recovery drips on WP Mail. Resend/Postmark integrations land later.</li>
+            <li><span class="planned">●</span> <strong>Exit-Intent Popup</strong> — last-chance offer before tab close, integrated with Recovery for opt-in capture.</li>
+            <li><span class="planned">●</span> <strong>Customer Portal</strong> — self-service licence management, downloads, invoices (no need to email support).</li>
+            <li><span class="planned">●</span> <strong>Multisite Support</strong> — network-activated mode for agency Multisite installs.</li>
+          </ul>
+
+          <h3 class="phase">v1.2 — upsell flow</h3>
+          <ul class="mod-list">
+            <li><span class="planned">●</span> <strong>Order Bumps</strong> — pre-purchase upsell offers in the checkout summary (code already drafted, ships full in v1.2).</li>
+            <li><span class="planned">●</span> <strong>Post-Purchase Upsells</strong> — one-click acceptance on the thank-you page using the original gateway token.</li>
+            <li><span class="planned">●</span> <strong>Downsells</strong> — alternate offer when an upsell is declined.</li>
+            <li><span class="planned">●</span> <strong>Coupon Bar</strong> — site-wide auto-applying promo bar with eligibility rules.</li>
+          </ul>
+
+          <h3 class="phase">v1.3 — UX polish</h3>
+          <ul class="mod-list">
+            <li><span class="planned">●</span> <strong>Address Autocomplete</strong> — pluggable Google / Mapbox / Loqate / OS Places backends. Merchant brings their own key — no Asteris-proxied billing.</li>
+            <li><span class="planned">●</span> <strong>Express Checkout v2</strong> — gateway-agnostic Payment Request API wrapper, surfaces Stripe + WooPayments + Square + Mollie native PRBs.</li>
+            <li><span class="planned">●</span> <strong>WP-CLI Suite</strong> — agency-scale <code>wp asteris-cart</code> commands for bulk activation, module toggle, status export.</li>
+          </ul>
+
+          <h3 class="phase">v1.4 — analytics + growth (agency-tier)</h3>
+          <ul class="mod-list">
+            <li><span class="planned">●</span> <strong>A/B Testing</strong> — per-module variant testing with statistical significance gates. Surfaces results in admin.</li>
+            <li><span class="planned">●</span> <strong>Analytics Dashboard</strong> — unified revenue view: which modules drove which conversions, attribution surviving custom URLs.</li>
+            <li><span class="planned">●</span> <strong>Cohort Reports</strong> — recovery cohort survival curves, urgency-timer effect on AOV, GDPR opt-in rates by region.</li>
+          </ul>
+
+          <h3 class="phase">v1.5+ — research-needed</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> <strong>AI Recovery Timing</strong> — optimal send-time per cohort. Honest-data-only — no fake ML claims, must beat fixed-window baseline by N% in real tests.</li>
+            <li><span class="research">◯</span> <strong>SMS Recovery</strong> — Twilio / MessageBird send paths. Carrier compliance per market.</li>
+            <li><span class="research">◯</span> <strong>Block Checkout Mode</strong> — full Asteris UX on WC's Block Checkout once WC core ships custom-step support. Currently classic-hooks-only by design.</li>
+            <li><span class="research">◯</span> <strong>Agentic Hooks</strong> — MCP-style endpoints for AI assistants to manage cart/checkout config. Spec-pending.</li>
+          </ul>
+
+          <h3 class="phase">v2+ — under consideration</h3>
+          <ul class="mod-list">
+            <li><span class="research">◯</span> <strong>Funnel Canvas</strong> — visual multi-page funnel builder (the one feature CartFlows beats us on today). EXPLICITLY DEFERRED — only revisit when customer demand is documented and team capacity allows.</li>
+            <li><span class="research">◯</span> <strong>Agency Plus Tier</strong> — $799+ white-label option. Only ships if real demand surfaces (no white-label in v1.0–v1.5).</li>
+            <li><span class="research">◯</span> <strong>Multi-currency Switcher</strong> — if WC core doesn't ship it first. Currently under WC Roadmap consideration.</li>
           </ul>
         </div>
       </div>
@@ -130,21 +191,24 @@ import Layout from '../layouts/Layout.astro';
   .body { padding: 40px 0 80px; }
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
 
   .prod-col {
     background: var(--c-white);
     border: 2px solid var(--c-black);
+    border-top: 6px solid var(--prod-accent, var(--c-orange));
     border-radius: var(--r-lg);
-    padding: 32px;
+    padding: 36px 40px;
   }
+  .prod-col--wc   { --prod-accent: #FF5B3F; }
+  .prod-col--wp   { --prod-accent: #3D5AFE; }
+  .prod-col--cart { --prod-accent: #00C853; }
   .prod-eyebrow {
     font-size: 13px;
     font-weight: 700;
-    color: var(--c-orange);
+    color: var(--prod-accent, var(--c-orange));
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
