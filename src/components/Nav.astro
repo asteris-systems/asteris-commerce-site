@@ -9,71 +9,136 @@ const navLinks = [
   { href: '/roadmap', label: 'Roadmap' },
   { href: '/press', label: 'Press' },
 ];
+
+const products = [
+  { href: 'https://asterisforwoocommerce.com', label: 'For WooCommerce', color: '#FF5B3F' },
+  { href: 'https://asterisforwordpress.com', label: 'For WordPress',   color: '#3D5AFE' },
+  { href: 'https://asteriscart.com',           label: 'For Cart',       color: '#00C853' },
+];
 ---
 
-<nav class="site-nav">
-  <a href="/" class="logo" aria-label="Asteris Commerce home">
-    <span class="star" aria-hidden="true">★</span> Asteris Commerce
-  </a>
-  <div class="nav-links">
-    {navLinks.map(link => (
-      <a
-        href={link.href}
-        class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
-      >
-        {link.label}
-      </a>
-    ))}
-    <a href="https://asterisforwoocommerce.com" class="btn btn-pop" target="_blank" rel="noopener">For WooCommerce →</a>
-  </div>
-</nav>
+<div class="site-nav-wrap">
+  <nav class="site-nav">
+    <a href="/" class="logo" aria-label="Asteris Commerce home">
+      <span class="star" aria-hidden="true">★</span> Asteris Commerce
+    </a>
+    <div class="nav-center">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+    <div class="nav-right">
+      {products.map(p => (
+        <a
+          href={p.href}
+          class="prod-link"
+          style={`--c: ${p.color};`}
+          target="_blank"
+          rel="noopener"
+        >
+          {p.label} →
+        </a>
+      ))}
+    </div>
+  </nav>
+  <div class="site-nav-accent" aria-hidden="true"></div>
+</div>
 
 <style>
+  .site-nav-wrap {
+    /* Wraps nav + brand-accent bar so every page gets the violet header line. */
+    width: 100%;
+    background: var(--c-white);
+  }
+  .site-nav-accent {
+    /* Parent-brand violet accent strip. Sister-pattern of WC orange / WP indigo / Cart green. */
+    height: 6px;
+    background: var(--c-violet, #AA00FF);
+  }
   .site-nav {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 20px var(--gutter);
+    padding: 24px var(--gutter);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 32px;
   }
   .logo {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     letter-spacing: -0.5px;
     color: var(--c-black);
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     white-space: nowrap;
+    text-decoration: none;
   }
   .logo .star {
-    color: var(--c-orange);
-    font-size: 24px;
+    color: var(--c-violet, #AA00FF);
+    font-size: 30px;
     line-height: 1;
   }
-  .nav-links {
+  .nav-center {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
   }
   .nav-link {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--c-text);
     transition: color 0.1s ease;
+    text-decoration: none;
   }
   .nav-link:hover, .nav-link.active {
-    color: var(--c-orange);
+    color: var(--c-violet, #AA00FF);
   }
-  .nav-links .btn {
-    padding: 10px 18px;
-    font-size: 14px;
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  @media (max-width: 700px) {
-    .site-nav { flex-direction: column; align-items: flex-start; gap: 14px; }
-    .nav-links { flex-wrap: wrap; gap: 14px; width: 100%; }
-    .nav-links .btn { margin-left: auto; }
+  .prod-link {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 9px 14px;
+    border: 2px solid var(--c, var(--c-black));
+    border-radius: 8px;
+    color: var(--c-black);
+    background: var(--c-white);
+    text-decoration: none;
+    box-shadow: 3px 3px 0 var(--c, var(--c-black));
+    transition: transform 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .prod-link:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--c, var(--c-black));
+    color: var(--c, var(--c-black));
+  }
+  @media (max-width: 1100px) {
+    .site-nav { gap: 18px; }
+    .nav-center { gap: 22px; }
+    .nav-right { gap: 8px; }
+    .prod-link { font-size: 12px; padding: 8px 11px; box-shadow: 2px 2px 0 var(--c, var(--c-black)); }
+    .prod-link:hover { box-shadow: 4px 4px 0 var(--c, var(--c-black)); }
+  }
+  @media (max-width: 920px) {
+    .site-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px var(--gutter);
+    }
+    .nav-center { flex-wrap: wrap; gap: 14px; }
+    .nav-right { flex-wrap: wrap; gap: 8px; width: 100%; }
   }
 </style>
