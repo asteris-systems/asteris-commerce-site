@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="body">
-    <div class="container narrow">
+    <div class="container">
 
       <h2>Who we are (one-liner)</h2>
       <p class="quote">
@@ -219,17 +219,16 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .body { padding: 40px 0 80px; }
-  .narrow { max-width: 760px; }
   .body h2 {
-    font-size: 28px;
+    font-size: 32px;
     margin: 40px 0 16px;
     color: var(--c-black);
   }
   .body p {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 22px;
+    line-height: 1.55;
     color: #333;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
   .body p strong { color: var(--c-black); }
   .body p.quote {
@@ -246,9 +245,9 @@ import Layout from '../layouts/Layout.astro';
     color: #333;
   }
   .body ul li {
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 6px;
+    font-size: 22px;
+    line-height: 1.55;
+    margin-bottom: 8px;
   }
   .body a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 3px; }
   .body a:hover { color: var(--c-black); }
