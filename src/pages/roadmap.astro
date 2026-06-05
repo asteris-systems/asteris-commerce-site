@@ -1,271 +1,431 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Roadmap redesigned 6 Jun 2026: dropped the 3-column layout in favour of
+// stacked product sections with brand-coloured top borders. Phase headings
+// are anchor points down the scroll; modules use bold-name + em-dash pattern
+// per Nick's preferred bullet style.
 ---
 
 <Layout
-  title="Roadmap: Asteris Commerce cross-product release timeline"
+  title="Roadmap. Asteris Commerce cross-product release timeline"
   description="Cross-product roadmap for Asteris for WooCommerce, Asteris for WordPress, and Asteris Cart. v1.0 ship status, v1.1+ planned modules, research-needed candidates. Honest about what's built vs what's banked."
 >
   <section class="hero">
     <div class="container">
-      <h1>Roadmap</h1>
+      <h1>Roadmap.</h1>
       <p class="lead">
-        Cross-product release timeline across all three Asteris plugins. Honest about what's shipped, what's banked, and what's still under research. Dates are intentionally absent: see the <a href="https://asterisforwoocommerce.com/lifetime/" target="_blank" rel="noopener">no-hard-dates rule</a>.
+        Cross-product release timeline across all three Asteris plugins. Honest about what's shipped, what's banked, and what's still under research. Dates are intentionally absent. See the <a href="https://asterisforwoocommerce.com/lifetime/" target="_blank" rel="noopener">no-hard-dates rule</a>.
       </p>
     </div>
   </section>
 
+  <div class="legend-strip">
+    <div class="container">
+      <div class="legend-inner">
+        <span class="legend-key"><span class="badge badge-shipped">SHIPPED</span></span>
+        <span class="legend-key"><span class="badge badge-building">IN BUILD</span></span>
+        <span class="legend-key"><span class="badge badge-planned">PLANNED</span></span>
+        <span class="legend-key"><span class="badge badge-research">RESEARCH</span></span>
+      </div>
+    </div>
+  </div>
+
   <section class="body">
     <div class="container">
 
-      <div class="grid">
-        <!-- Asteris for WooCommerce row -->
-        <div class="prod-col prod-col--wc">
-          <div class="prod-eyebrow">★ Asteris for WooCommerce</div>
-          <h2>WC roadmap</h2>
+      <!-- WC -->
+      <section class="product product--wc">
+        <div class="product-eyebrow">★ Asteris for WooCommerce</div>
+        <h2 class="product-title">WC roadmap</h2>
+        <p class="product-sub">20 modules shipped. Cookie Consent flagship in v1.1. Funnel Builder explicitly deferred.</p>
 
-          <h3 class="phase">v1.0: shipped</h3>
-          <ul class="mod-list">
-            <li><span class="ok">✓</span> 20 modules built and shipped at plugin v1.9.20</li>
-            <li><span class="ok">✓</span> AI Suite · SEO · PDF Invoices · Variation Swatches · Wishlist · Quote / Enquiry · Back in Stock · Side Cart · Sequential Order Numbers · Product Filtering · Min/Max Quantity · Asteris Links · Trust Badges · Free Shipping Bar · Stock Urgency · Delivery Timeline · Feature Labels · Product Badges · Analytics · Asteris Coupons</li>
-            <li><span class="ok">✓</span> 6 of those modules in Asteris Free (WordPress.org)</li>
-            <li><span class="ok">✓</span> HPOS-verified · Block Cart compatible · 6-theme tested</li>
-          </ul>
-
-          <h3 class="phase">v1.1: first post-launch release</h3>
-          <ul class="mod-list">
-            <li><span class="planned">●</span> <strong>Asteris Cookie Consent</strong> — GDPR / ePrivacy / CCPA / LGPD-compliant banner with real script-blocking. Hero feature of v1.1 release. Replaces CookieYes / Cookiebot / Iubenda ($79–$348/yr SaaS each).</li>
-            <li><span class="planned">●</span> WordPress Multisite support</li>
-            <li><span class="planned">●</span> WP-CLI commands (agency-scale operations)</li>
-            <li><span class="planned">●</span> Customer self-service /account portal (licence management, downloads, invoices)</li>
-            <li><span class="planned">●</span> Module 20 (Coupons) deferred features: AI-generated coupon copy, subscription-aware rules, stacking</li>
-          </ul>
-
-          <h3 class="phase">v1.2: second release</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> <strong>Asteris Checkout Customizer</strong> — field-level checkout customisation (add/remove/reorder fields, conditional logic, custom thank-you pages). Research-needed.</li>
-          </ul>
-
-          <h3 class="phase">Research-needed (v1.2+)</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> <strong>Asteris Social Proof</strong> — recent-purchase / activity notifications. NotificationX / TrustPulse replacement. Honest-data-only positioning.</li>
-            <li><span class="research">◯</span> <strong>Asteris Payment Icons</strong> — trust-signal payment-method icons at checkout / footer / product page</li>
-          </ul>
-
-          <h3 class="phase">v2+: under consideration</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> <strong>Asteris Funnel Builder</strong> — full CartFlows / FunnelKit replacement (multi-step funnel pages, one-click upsells, order bumps, A/B testing). EXPLICITLY DEFERRED with documented blocking concerns; revisit when there's evidence of customer demand and team capacity.</li>
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.0</h3>
+            <span class="phase-label">shipped</span>
+            <span class="badge badge-shipped">SHIPPED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">20 modules built and shipped at plugin v1.9.20</span></li>
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">AI Suite · SEO · PDF Invoices · Variation Swatches · Wishlist · Quote / Enquiry · Back in Stock · Side Cart · Sequential Order Numbers · Product Filtering · Min/Max Quantity · Asteris Links · Trust Badges · Free Shipping Bar · Stock Urgency · Delivery Timeline · Feature Labels · Product Badges · Analytics · Asteris Coupons</span></li>
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">6 of those modules in Asteris Free (WordPress.org)</span></li>
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">HPOS-verified · Block Cart compatible · 6-theme tested</span></li>
           </ul>
         </div>
 
-        <!-- Asteris for WordPress row -->
-        <div class="prod-col prod-col--wp">
-          <div class="prod-eyebrow">★ Asteris for WordPress</div>
-          <h2>WP roadmap</h2>
-
-          <h3 class="phase">v1.0: building (sequential ship)</h3>
-          <ul class="mod-list">
-            <li><span class="ok">✓</span> Module Quality Protocol locked: every module closes Tier 1 + Tier 2 gap analysis before the next module starts</li>
-            <li><span class="building">●</span> <strong>Security + Login + 2FA</strong> — flagship wedge module. Built quality-first vs Wordfence Premium.</li>
-            <li><span class="planned">●</span> <strong>SEO + AI</strong> — full SEO toolkit with AI-written meta. Shared with WC product.</li>
-            <li><span class="planned">●</span> <strong>Backups + Migration</strong> — scheduled + offsite + one-click restore.</li>
-            <li><span class="planned">●</span> <strong>SMTP + Email Logs</strong> — major provider integrations + log table + deliverability alerts.</li>
-            <li><span class="planned">●</span> 7 more modules planned for v1.0: see asterisforwordpress.com for the full list</li>
-          </ul>
-
-          <h3 class="phase">v1.1+: banked</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> WordPress Multisite support</li>
-            <li><span class="research">◯</span> Performance + Image Optimisation</li>
-            <li><span class="research">◯</span> Activity Log</li>
-            <li><span class="research">◯</span> Code Snippets</li>
-            <li><span class="research">◯</span> Accessibility tooling</li>
-            <li><span class="research">◯</span> Forms</li>
-          </ul>
-
-          <h3 class="phase">v1.5+: deferred</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> Custom Fields + Post Types (deferred past Feb 2027 ACF / SCF trial period)</li>
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.1</h3>
+            <span class="phase-label">first post-launch release</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Asteris Cookie Consent</strong> — GDPR, ePrivacy, CCPA, LGPD-compliant banner with real script-blocking. Hero feature of v1.1 release. Replaces CookieYes, Cookiebot, Iubenda ($79 to $348/yr SaaS each).</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">WordPress Multisite support</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">WP-CLI commands (agency-scale operations)</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">Customer self-service /account portal (licence management, downloads, invoices)</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">Module 20 (Coupons) deferred features: AI-generated coupon copy, subscription-aware rules, stacking</span></li>
           </ul>
         </div>
 
-        <!-- Asteris Cart row -->
-        <div class="prod-col prod-col--cart">
-          <div class="prod-eyebrow">★ Asteris Cart</div>
-          <h2>Cart roadmap</h2>
-
-          <h3 class="phase">v1.0: alpha (pre-launch)</h3>
-          <ul class="mod-list">
-            <li><span class="ok">✓</span> 21 modules built and wired at plugin v1.0.0-alpha.9</li>
-            <li><span class="ok">✓</span> Side Cart · Free Shipping Bar · Cart Page · Floating Button · Add-to-Cart Popup · Mobile Sticky Bar · Empty Cart · Shipping Calculator · Coupon URL · Sticky Checkout Button · Pixel Bridge · Trust Badges · Login · Thank-You Page · Express Checkout · GDPR Consent · Quote Mode · Multi-Step · Urgency Timer · Field Editor · Safe Mode</li>
-            <li><span class="ok">✓</span> HPOS code-verified · Block Cart compatible · Classic-hooks-first</li>
-            <li><span class="building">●</span> End-to-end QA on real store + cross-theme verification (in progress)</li>
-            <li><span class="building">●</span> Public launch: Founder Hundred → open launch: velocity-decided window</li>
-          </ul>
-
-          <h3 class="phase">v1.1: first post-launch release</h3>
-          <ul class="mod-list">
-            <li><span class="planned">●</span> <strong>Recovery + Bot Filter</strong> — abandoned-cart capture with IP fingerprinting, session validation, rate limiting. The flagship v1.1 wedge: every competitor's recovery metric is bot-poisoned.</li>
-            <li><span class="planned">●</span> <strong>Sequence Runner</strong> — email recovery drips on WP Mail. Resend/Postmark integrations land later.</li>
-            <li><span class="planned">●</span> <strong>Exit-Intent Popup</strong> — last-chance offer before tab close, integrated with Recovery for opt-in capture.</li>
-            <li><span class="planned">●</span> <strong>Customer Portal</strong> — self-service licence management, downloads, invoices (no need to email support).</li>
-            <li><span class="planned">●</span> <strong>Multisite Support</strong> — network-activated mode for agency Multisite installs.</li>
-          </ul>
-
-          <h3 class="phase">v1.2: upsell flow</h3>
-          <ul class="mod-list">
-            <li><span class="planned">●</span> <strong>Order Bumps</strong> — pre-purchase upsell offers in the checkout summary (code already drafted, ships full in v1.2).</li>
-            <li><span class="planned">●</span> <strong>Post-Purchase Upsells</strong> — one-click acceptance on the thank-you page using the original gateway token.</li>
-            <li><span class="planned">●</span> <strong>Downsells</strong> — alternate offer when an upsell is declined.</li>
-            <li><span class="planned">●</span> <strong>Coupon Bar</strong> — site-wide auto-applying promo bar with eligibility rules.</li>
-          </ul>
-
-          <h3 class="phase">v1.3: UX polish</h3>
-          <ul class="mod-list">
-            <li><span class="planned">●</span> <strong>Address Autocomplete</strong> — pluggable Google / Mapbox / Loqate / OS Places backends. Merchant brings their own key: no Asteris-proxied billing.</li>
-            <li><span class="planned">●</span> <strong>Express Checkout v2</strong> — gateway-agnostic Payment Request API wrapper, surfaces Stripe + WooPayments + Square + Mollie native PRBs.</li>
-            <li><span class="planned">●</span> <strong>WP-CLI Suite</strong> — agency-scale <code>wp asteris-cart</code> commands for bulk activation, module toggle, status export.</li>
-          </ul>
-
-          <h3 class="phase">v1.4: analytics + growth (agency-tier)</h3>
-          <ul class="mod-list">
-            <li><span class="planned">●</span> <strong>A/B Testing</strong> — per-module variant testing with statistical significance gates. Surfaces results in admin.</li>
-            <li><span class="planned">●</span> <strong>Analytics Dashboard</strong> — unified revenue view: which modules drove which conversions, attribution surviving custom URLs.</li>
-            <li><span class="planned">●</span> <strong>Cohort Reports</strong> — recovery cohort survival curves, urgency-timer effect on AOV, GDPR opt-in rates by region.</li>
-          </ul>
-
-          <h3 class="phase">v1.5+: research-needed</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> <strong>AI Recovery Timing</strong> — optimal send-time per cohort. Honest-data-only: no fake ML claims, must beat fixed-window baseline by N% in real tests.</li>
-            <li><span class="research">◯</span> <strong>SMS Recovery</strong> — Twilio / MessageBird send paths. Carrier compliance per market.</li>
-            <li><span class="research">◯</span> <strong>Block Checkout Mode</strong> — full Asteris UX on WC's Block Checkout once WC core ships custom-step support. Currently classic-hooks-only by design.</li>
-            <li><span class="research">◯</span> <strong>Agentic Hooks</strong> — MCP-style endpoints for AI assistants to manage cart/checkout config. Spec-pending.</li>
-          </ul>
-
-          <h3 class="phase">v2+: under consideration</h3>
-          <ul class="mod-list">
-            <li><span class="research">◯</span> <strong>Funnel Canvas</strong> — visual multi-page funnel builder (the one feature CartFlows beats us on today). EXPLICITLY DEFERRED: only revisit when customer demand is documented and team capacity allows.</li>
-            <li><span class="research">◯</span> <strong>Agency Plus Tier</strong>:$799+ white-label option. Only ships if real demand surfaces (no white-label in v1.0–v1.5).</li>
-            <li><span class="research">◯</span> <strong>Multi-currency Switcher</strong> — if WC core doesn't ship it first. Currently under WC Roadmap consideration.</li>
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.2</h3>
+            <span class="phase-label">second release</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Asteris Checkout Customizer</strong> — field-level checkout customisation (add/remove/reorder fields, conditional logic, custom thank-you pages). <em>Research-needed.</em></span></li>
           </ul>
         </div>
-      </div>
 
-      <div class="legend">
-        <span><span class="ok">✓</span> shipped</span>
-        <span><span class="building">●</span> in active build</span>
-        <span><span class="planned">●</span> planned + scoped</span>
-        <span><span class="research">◯</span> research-needed before scoping</span>
-      </div>
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">Research</h3>
+            <span class="phase-label">v1.2+ candidates</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Asteris Social Proof</strong> — recent-purchase and activity notifications. NotificationX, TrustPulse replacement. Honest-data-only positioning.</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Asteris Payment Icons</strong> — trust-signal payment-method icons at checkout, footer, or product page</span></li>
+          </ul>
+        </div>
 
-      <div class="rules">
-        <h2>Roadmap rules</h2>
-        <ul>
-          <li><strong>No hard dates published.</strong> Stage transitions are velocity-decided. Publishing a date and missing it is worse than not publishing one.</li>
-          <li><strong>Module Quality Protocol is non-negotiable.</strong> Tier 1 + Tier 2 features ship together. No "decoration tier" modules.</li>
-          <li><strong>Shared modules built once.</strong> SEO + AI, Analytics, Links, AI library are vendored into both plugins. Same code, no plugin-to-plugin dependency.</li>
-          <li><strong>Research-needed = not yet scoped.</strong> An item being on the roadmap doesn't mean it will ship. Each research-needed module gets a deep-research workflow + Sovereign sign-off before it enters the build queue.</li>
-          <li><strong>Customer feedback weights priority.</strong> Post-launch, the highest-feedback items move up. The roadmap above is the pre-launch best-guess.</li>
-        </ul>
-      </div>
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v2+</h3>
+            <span class="phase-label">under consideration</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Asteris Funnel Builder</strong> — full CartFlows and FunnelKit replacement (multi-step funnel pages, one-click upsells, order bumps, A/B testing). <em>EXPLICITLY DEFERRED with documented blocking concerns. Revisit when there's evidence of customer demand and team capacity.</em></span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- WP -->
+      <section class="product product--wp">
+        <div class="product-eyebrow">★ Asteris for WordPress</div>
+        <h2 class="product-title">WP roadmap</h2>
+        <p class="product-sub">11 modules in sequential build under the Module Quality Protocol. Security + Login + 2FA is the flagship wedge.</p>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.0</h3>
+            <span class="phase-label">building (sequential ship)</span>
+            <span class="badge badge-building">IN BUILD</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">Module Quality Protocol locked. Every module closes Tier 1 + Tier 2 gap analysis before the next module starts</span></li>
+            <li class="module"><span class="module-icon icon-building">●</span><span class="module-body"><strong>Security + Login + 2FA</strong> — flagship wedge module. Built quality-first vs Wordfence Premium.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>SEO + AI</strong> — full SEO toolkit with AI-written meta. Shared with WC product.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Backups + Migration</strong> — scheduled, offsite, one-click restore.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>SMTP + Email Logs</strong> — major provider integrations, log table, deliverability alerts.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">7 more modules planned for v1.0. See <a href="https://asterisforwordpress.com" target="_blank" rel="noopener">asterisforwordpress.com</a> for the full list</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.1+</h3>
+            <span class="phase-label">banked</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">WordPress Multisite support</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Performance + Image Optimisation</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Activity Log</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Code Snippets</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Accessibility tooling</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Forms</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.5+</h3>
+            <span class="phase-label">deferred</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body">Custom Fields + Post Types (deferred past Feb 2027 ACF / SCF trial period)</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Cart -->
+      <section class="product product--cart">
+        <div class="product-eyebrow">★ Asteris Cart</div>
+        <h2 class="product-title">Cart roadmap</h2>
+        <p class="product-sub">21 modules wired at alpha. v1.1 ships Recovery + Bot Filter as the flagship wedge.</p>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.0</h3>
+            <span class="phase-label">alpha · pre-launch</span>
+            <span class="badge badge-building">IN BUILD</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">21 modules built and wired at plugin v1.0.0-alpha.9</span></li>
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">Side Cart · Free Shipping Bar · Cart Page · Floating Button · Add-to-Cart Popup · Mobile Sticky Bar · Empty Cart · Shipping Calculator · Coupon URL · Sticky Checkout Button · Pixel Bridge · Trust Badges · Login · Thank-You Page · Express Checkout · GDPR Consent · Quote Mode · Multi-Step · Urgency Timer · Field Editor · Safe Mode</span></li>
+            <li class="module"><span class="module-icon icon-shipped">✓</span><span class="module-body">HPOS code-verified · Block Cart compatible · Classic-hooks-first</span></li>
+            <li class="module"><span class="module-icon icon-building">●</span><span class="module-body">End-to-end QA on real store + cross-theme verification (in progress)</span></li>
+            <li class="module"><span class="module-icon icon-building">●</span><span class="module-body">Public launch: Founder Hundred to open launch. Velocity-decided window.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.1</h3>
+            <span class="phase-label">first post-launch release</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Recovery + Bot Filter</strong> — abandoned-cart capture with IP fingerprinting, session validation, rate limiting. The flagship v1.1 wedge. Every competitor's recovery metric is bot-poisoned.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Sequence Runner</strong> — email recovery drips on WP Mail. Resend, Postmark integrations land later.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Exit-Intent Popup</strong> — last-chance offer before tab close, integrated with Recovery for opt-in capture.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Customer Portal</strong> — self-service licence management, downloads, invoices.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Multisite Support</strong> — network-activated mode for agency Multisite installs.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.2</h3>
+            <span class="phase-label">upsell flow</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Order Bumps</strong> — pre-purchase upsell offers in the checkout summary.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Post-Purchase Upsells</strong> — one-click acceptance on the thank-you page using the original gateway token.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Downsells</strong> — alternate offer when an upsell is declined.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Coupon Bar</strong> — site-wide auto-applying promo bar with eligibility rules.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.3</h3>
+            <span class="phase-label">UX polish</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Address Autocomplete</strong> — pluggable Google, Mapbox, Loqate, or OS Places backends. Merchant brings their own key. No Asteris-proxied billing.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Express Checkout v2</strong> — gateway-agnostic Payment Request API wrapper. Surfaces Stripe, WooPayments, Square, and Mollie native PRBs.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>WP-CLI Suite</strong> — agency-scale <code>wp asteris-cart</code> commands for bulk activation, module toggle, status export.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.4</h3>
+            <span class="phase-label">analytics + growth (agency-tier)</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>A/B Testing</strong> — per-module variant testing with statistical significance gates. Surfaces results in admin.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Analytics Dashboard</strong> — unified revenue view. Which modules drove which conversions, attribution surviving custom URLs.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Cohort Reports</strong> — recovery cohort survival curves, urgency-timer effect on AOV, GDPR opt-in rates by region.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.5+</h3>
+            <span class="phase-label">research-needed</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>AI Recovery Timing</strong> — optimal send-time per cohort. Honest-data-only. No fake ML claims. Must beat fixed-window baseline by N% in real tests.</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>SMS Recovery</strong> — Twilio, MessageBird send paths. Carrier compliance per market.</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Block Checkout Mode</strong> — full Asteris UX on WC's Block Checkout once WC core ships custom-step support. Currently classic-hooks-only by design.</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Agentic Hooks</strong> — MCP-style endpoints for AI assistants to manage cart/checkout config. Spec-pending.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v2+</h3>
+            <span class="phase-label">under consideration</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Funnel Canvas</strong> — visual multi-page funnel builder. <em>EXPLICITLY DEFERRED. Only revisit when customer demand is documented and team capacity allows.</em></span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Agency Plus Tier</strong> — $799+ white-label option. Only ships if real demand surfaces (no white-label v1.0 through v1.5).</span></li>
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Multi-currency Switcher</strong> — if WC core doesn't ship it first. Currently under WC Roadmap consideration.</span></li>
+          </ul>
+        </div>
+      </section>
+
     </div>
   </section>
 </Layout>
 
 <style>
-  .hero { padding: 80px 0 40px; }
+  .hero { padding: 80px 0 32px; }
   h1 {
     font-size: 64px;
     line-height: 1;
     letter-spacing: -2px;
-    margin-bottom: 24px;
+    margin: 0 0 24px;
   }
   .lead {
     font-size: 22px;
     color: var(--c-muted);
-    max-width: 720px;
+    margin: 0;
   }
-  .lead a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 3px; }
-  @media (max-width: 700px) { h1 { font-size: 40px; } }
+  @media (max-width: 700px) { h1 { font-size: 44px; } .lead { font-size: 18px; } }
 
-  .body { padding: 40px 0 80px; }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .prod-col {
+  /* Legend strip */
+  .legend-strip {
     background: var(--c-white);
-    border: 2px solid var(--c-black);
-    border-top: 6px solid var(--prod-accent, var(--c-orange));
-    border-radius: var(--r-lg);
-    padding: 36px 40px;
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
+    padding: 18px 0;
+    margin: 24px 0 56px;
   }
-  .prod-col--wc   { --prod-accent: #FF5B3F; }
-  .prod-col--wp   { --prod-accent: #3D5AFE; }
-  .prod-col--cart { --prod-accent: #00C853; }
-  .prod-eyebrow {
+  .legend-inner {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+    color: var(--c-muted);
+  }
+  .legend-key {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+  }
+  .badge {
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  .badge-shipped  { background: rgba(0,200,83,0.12);  color: #0c8540; }
+  .badge-building { background: rgba(255,91,63,0.12); color: #c8431d; }
+  .badge-planned  { background: rgba(170,0,255,0.10); color: #7400b3; }
+  .badge-research { background: rgba(0,0,0,0.06);     color: var(--c-muted); }
+
+  /* Body */
+  .body { padding: 0 0 80px; }
+
+  /* Product sections */
+  .product {
+    background: var(--c-white);
+    border-radius: 16px;
+    border: 1px solid var(--c-border);
+    padding: 48px 56px;
+    margin-bottom: 48px;
+    border-top: 6px solid var(--c-orange);
+    position: relative;
+    overflow: hidden;
+  }
+  .product--wc   { border-top-color: #FF5B3F; }
+  .product--wp   { border-top-color: #3D5AFE; }
+  .product--cart { border-top-color: #00C853; }
+
+  .product-eyebrow {
     font-size: 14px;
     font-weight: 700;
-    color: var(--prod-accent, var(--c-orange));
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
   }
-  .prod-col h2 {
-    font-size: 30px;
-    margin-bottom: 24px;
+  .product--wc   .product-eyebrow { color: #FF5B3F; }
+  .product--wp   .product-eyebrow { color: #3D5AFE; }
+  .product--cart .product-eyebrow { color: #00C853; }
+
+  .product-title {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0 0 8px;
+    line-height: 1.1;
   }
-  .phase {
-    font-size: 17px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+  .product-sub {
+    font-size: 18px;
     color: var(--c-muted);
-    margin: 28px 0 12px;
-    font-weight: 700;
+    margin: 0 0 36px;
   }
-  .mod-list {
+
+  /* Phase = one version block within a product */
+  .phase {
+    padding: 28px 0;
+    border-top: 1px solid var(--c-border);
+  }
+  .phase:first-of-type { border-top: none; padding-top: 0; }
+  .phase-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .phase-version {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--c-black);
+    margin: 0;
+  }
+  .phase-label {
+    font-size: 16px;
+    color: var(--c-muted);
+    font-weight: 500;
+  }
+
+  /* Module items */
+  .modules {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  .mod-list li {
-    font-size: 22px;
+  .module {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px dashed #f0f0f0;
+    align-items: start;
+  }
+  .module:first-child { border-top: none; }
+  .module-icon {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1.4;
+    text-align: center;
+  }
+  .icon-shipped  { color: #00C853; }
+  .icon-building { color: #FF5B3F; }
+  .icon-planned  { color: var(--c-violet, #AA00FF); }
+  .icon-research { color: #999999; }
+
+  .module-body {
+    font-size: 17px;
     line-height: 1.55;
-    padding: 10px 0;
-    color: #333;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
+    color: var(--c-text);
   }
-  .mod-list li strong { color: var(--c-black); }
-  .ok { color: var(--c-orange); font-weight: 900; flex-shrink: 0; }
-  .building { color: var(--c-orange); font-weight: 900; flex-shrink: 0; }
-  .planned { color: var(--c-muted); flex-shrink: 0; }
-  .research { color: var(--c-faint); flex-shrink: 0; }
-
-  .legend {
-    margin: 48px 0 32px;
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+  .module-body strong { color: var(--c-black); font-weight: 800; }
+  .module-body em { font-style: normal; color: var(--c-muted); }
+  .module-body a { color: var(--c-violet, #AA00FF); text-decoration: underline; text-underline-offset: 2px; }
+  .module-body code {
+    background: #f5f5f5;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: var(--font-mono);
     font-size: 14px;
-    color: var(--c-muted);
-  }
-  .legend span span {
-    margin-right: 6px;
   }
 
-  .rules {
-    background: var(--c-black);
-    color: #cccccc;
-    padding: 48px;
-    border-radius: var(--r-lg);
-    margin-top: 32px;
+  /* Responsive */
+  @media (max-width: 760px) {
+    .product { padding: 36px 28px; }
+    .product-title { font-size: 32px; }
   }
-  .rules h2 { color: var(--c-white); font-size: 26px; margin-bottom: 16px; }
-  .rules ul { list-style: none; padding: 0; margin: 0; }
-  .rules ul li { padding: 12px 0; font-size: 22px; line-height: 1.55; }
-  .rules ul li strong { color: var(--c-white); }
 </style>
