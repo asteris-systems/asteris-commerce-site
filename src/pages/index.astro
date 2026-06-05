@@ -123,6 +123,20 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- Orion cross-sell — sister business -->
+  <section class="orion-section">
+    <div class="container">
+      <div class="orion-inner">
+        <div class="orion-eyebrow">★ Sister business · Orion Web Service</div>
+        <h3 class="orion-headline">Need faster hosting — or the team behind Asteris to build your site?</h3>
+        <p class="orion-body">
+          <strong>Orion Web Service</strong> runs your WordPress + WooCommerce site on <strong>Google Cloud + AWS</strong> with <strong>Cloudflare CDN</strong> globally. Same Sydney team as Asteris. Building + hosting real client stores since 2021.
+        </p>
+        <a href="https://orionwebservice.com/?utm_source=asteriscommerce&utm_medium=home-section&utm_campaign=cross-sell" class="orion-cta" target="_blank" rel="noopener">Visit Orion Web Service →</a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -313,4 +327,59 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 24px;
   }
   .about-inner p strong { color: var(--c-black); }
+
+  /* Orion sister-business cross-sell — sits right after the About strip */
+  .orion-section {
+    background: var(--c-black);
+    color: var(--c-white);
+    padding: 72px 0;
+    border-top: 4px solid var(--c-violet, #AA00FF);
+  }
+  .orion-inner {
+    max-width: 880px;
+  }
+  .orion-eyebrow {
+    color: var(--c-violet, #AA00FF);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .orion-headline {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--c-white);
+    margin: 0 0 18px;
+  }
+  .orion-body {
+    font-size: 20px;
+    line-height: 1.55;
+    color: #cccccc;
+    margin: 0 0 28px;
+  }
+  .orion-body strong { color: var(--c-white); }
+  .orion-cta {
+    display: inline-block;
+    background: var(--c-white);
+    color: var(--c-black);
+    border: 2px solid var(--c-white);
+    padding: 16px 26px;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--c-violet, #AA00FF);
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .orion-cta:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--c-violet, #AA00FF);
+  }
+  @media (max-width: 700px) {
+    .orion-headline { font-size: 26px; }
+    .orion-body { font-size: 18px; }
+  }
 </style>
