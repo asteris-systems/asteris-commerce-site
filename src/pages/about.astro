@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="About Asteris Commerce — Australian indie WordPress + WooCommerce plugin company"
-  description="Asteris Commerce is My Cosmic Message Pty Ltd, founded by Nick Lord in Sydney. Small team, no VC, two plugins (Asteris for WordPress + Asteris for WooCommerce) shipping under a documented Module Quality Protocol. Honest about what we do and what we don't."
+  title="About Asteris Commerce — Australian WordPress + WooCommerce + Cart plugin division"
+  description="Asteris Commerce is the plugin-products division of My Cosmic Message Pty Ltd (incorporated 2021), the Sydney-based company that's also been running Orion Web Service (full-stack WP + WC development + hosting) since 2021. Three plugins: Asteris for WooCommerce, Asteris for WordPress, Asteris Cart. Built from five years of operator pain across real client stores."
 >
   <section class="hero">
     <div class="container">
       <h1>About Asteris Commerce</h1>
       <p class="lead">
-        A small team, two plugins, an Australian Pty Ltd. Here's the actual story — who, why, how it's funded, and what it isn't.
+        A small team, three plugins, an Australian Pty Ltd that's been running WP + WC dev work since 2021. Here's the actual story — who, why, how it's funded, and what it isn't.
       </p>
     </div>
   </section>
@@ -20,21 +20,21 @@ import Layout from '../layouts/Layout.astro';
 
       <h2>Who</h2>
       <p>
-        Asteris Commerce is the trading name of <strong>My Cosmic Message Pty Ltd</strong> — an Australian proprietary limited company (ACN 652 358 159, ABN 30 652 358 159), incorporated in New South Wales. <strong>Sole director: Nick Lord.</strong> Based in Sydney, Australia.
+        Asteris Commerce is the plugin-products division of <strong>My Cosmic Message Pty Ltd</strong> — an Australian proprietary limited company (ACN 652 358 159, ABN 30 652 358 159), incorporated in New South Wales in <strong>2021</strong>. <strong>Sole director: Nick Lord.</strong> Based in Sydney, Australia. The same Pty Ltd also operates <strong>Orion Web Service</strong> — a full-stack WordPress + WooCommerce development and hosting business that's been serving Australian + international clients since 2021.
       </p>
       <p>
-        I built WooCommerce stores for years before becoming a plugin vendor. Asteris exists because I was tired of the stitched stack: 15–20 paid plugins from 12+ vendors, each with its own admin page, update cadence, support inbox, and conflict surface. The plugin I wished existed didn't, so I built it. Then I realised the same logic applied to the non-WC side of WordPress (security, SEO, backups, email) — so that became the second product.
+        I've spent five years building + maintaining + hosting WooCommerce stores for clients via Orion Web Service. Asteris exists because every single client stack had the same shape: 15–20 paid plugins from 12+ vendors, each with its own admin page, update cadence, support inbox, and conflict surface. The plugin I wished existed didn't, so I built it. Then I realised the same logic applied to the non-WC side of WordPress (security, SEO, backups, email), and again to the checkout/funnel layer (CartFlows, FunnelKit, the upsell stack) — so those became the second and third products. <strong>Asteris isn't a fresh startup; it's a 5-year-old WP services company productising the patterns we've been seeing every day on real client work.</strong>
       </p>
 
-      <h2>Why two plugins, not one</h2>
+      <h2>Why three plugins, not one</h2>
       <p>
-        Most WordPress sites don't run WooCommerce. Most WooCommerce stores have plugin needs that go well beyond what a generic WP plugin covers. Bundling everything into one mega-plugin would dilute both products and force non-WC users to install WC code they'll never use.
+        Most WordPress sites don't run WooCommerce. Most WooCommerce stores have plugin needs that go well beyond what a generic WP plugin covers. And the checkout + funnel + upsell layer in WC is its own distinct problem domain (CartFlows / FunnelKit territory) that benefits from being a focused product rather than buried inside a mega-plugin. Bundling everything into one would dilute all three and force customers to install code they'll never use.
       </p>
       <p>
-        So: <strong>Asteris for WordPress</strong> covers what any WP site needs (Security + Login + 2FA, SEO + AI, Backups + Migration, SMTP + Email Logs, and more — 11 modules at v1.0). <strong>Asteris for WooCommerce</strong> covers what a WC store specifically needs (SEO, AI Suite, PDF Invoices, Variation Swatches, Wishlist, Side Cart, Coupons, and 13 more — 20 modules at v1.0).
+        So: <strong>Asteris for WordPress</strong> covers what any WP site needs (Security + Login + 2FA, SEO + AI, Backups + Migration, SMTP + Email Logs, and more — 11 modules at v1.0). <strong>Asteris for WooCommerce</strong> covers what a WC store specifically needs (SEO, AI Suite, PDF Invoices, Variation Swatches, Wishlist, Side Cart, Coupons, and 13 more — 20 modules at v1.0). <strong>Asteris Cart</strong> covers the checkout + funnel + upsell + cart-recovery layer (22 modules at v1.0) — replacing CartFlows + FunnelKit + the related funnel stack at a fraction of the combined cost.
       </p>
       <p>
-        Some modules genuinely overlap (SEO + AI, Analytics, Links, AI library). Those are built once and vendored into both plugins, so the same code ships in both, neither plugin depends on the other, and customers never have to install both.
+        Some modules genuinely overlap (SEO + AI, Analytics, Links, AI library, Activity Log + Site Health). Those are built once and vendored into all three plugins, so the same code ships everywhere, no plugin depends on another, and customers never have to install more than the one they actually need.
       </p>
 
       <h2>Funding model</h2>
@@ -42,6 +42,7 @@ import Layout from '../layouts/Layout.astro';
         No VC. No angels. No outside capital at all. Asteris Commerce is funded by:
       </p>
       <ul>
+        <li><strong>Orion Web Service revenue</strong> — the sister business has been running profitable WP + WC development + hosting work since 2021. That cash flow funds Asteris's R&D + ops, so we don't need to sprint for premature revenue or compromise the Module Quality Protocol to ship faster.</li>
         <li><strong>Launch-locked Founder subscriptions</strong> — customers who subscribe during the launch window keep their launch price for as long as their subscription stays continuously active. Hard cap of 100 paid Founders + 20 competition winners per product. No lifetime-deal trap.</li>
         <li><strong>Standing subscriptions</strong> at regular post-launch pricing for new customers after the Founder 100 closes per product.</li>
         <li><strong>Stripe direct via our own licence server</strong> — payments processed by Stripe; licences issued + managed by our own infrastructure at pay.asteriscommerce.com. We don't touch credit card data.</li>
@@ -80,6 +81,7 @@ import Layout from '../layouts/Layout.astro';
       <ul>
         <li><a href="https://asterisforwoocommerce.com" target="_blank" rel="noopener">Asteris for WooCommerce</a> — the WC product site</li>
         <li><a href="https://asterisforwordpress.com" target="_blank" rel="noopener">Asteris for WordPress</a> — the WP product site</li>
+        <li><a href="https://asteriscart.com" target="_blank" rel="noopener">Asteris Cart</a> — the focused checkout + funnel product site</li>
         <li><a href="/roadmap">Cross-product roadmap</a></li>
         <li><a href="/press">Press + media kit</a></li>
       </ul>
