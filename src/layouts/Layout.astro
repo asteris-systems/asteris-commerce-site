@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import OrionStrip from '../components/OrionStrip.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import '../styles/global.css';
 
@@ -55,6 +56,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <main>
     <slot />
   </main>
+  <OrionStrip />
   <Footer />
   <CookieBanner />
 </body>
