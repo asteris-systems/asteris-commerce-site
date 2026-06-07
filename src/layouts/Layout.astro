@@ -36,6 +36,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
        (per feedback_local_time_rule.md). Deferred — runs after DOM ready. -->
   <script src="/time-localise.js" defer></script>
 
+  <!-- Asteris Partners — click tracker. Captures ?ref=<partner_public_id>,
+       stores in localStorage, POSTs to pay.asteriscommerce.com/wp-json/asteris/v1/partners/track,
+       and rewrites Stripe Checkout links to carry the partner ref through. -->
+  <script src="/partners-tracker.js" defer></script>
+
   <title>{title}</title>
 
   <meta property="og:type" content="website" />

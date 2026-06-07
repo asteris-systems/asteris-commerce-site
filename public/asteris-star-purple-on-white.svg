@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Asteris brand mark — purple star on white background.
+       Brand: parent violet #AA00FF (per memory/project_brand_palette.md).
+       Suitable for Stripe Connect platform branding (Express Dashboard +
+       onboarding flow). Stripe wants ≥128px square; 512 gives clean downscale. -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+  <!-- 6-point star (matches the ★ glyph Asteris uses sitewide) -->
+  <g transform="translate(256 256)">
+    <path fill="#AA00FF" d="
+      M 0 -160
+      L 38 -50
+      L 152 -50
+      L 60 18
+      L 96 128
+      L 0 60
+      L -96 128
+      L -60 18
+      L -152 -50
+      L -38 -50
+      Z"/>
+  </g>
+</svg>

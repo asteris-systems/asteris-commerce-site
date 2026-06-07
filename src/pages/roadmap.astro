@@ -62,6 +62,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <ul class="modules">
             <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Asteris Cookie Consent</strong> — GDPR, ePrivacy, CCPA, LGPD-compliant banner with real script-blocking. Hero feature of v1.1 release. Replaces CookieYes, Cookiebot, Iubenda ($79 to $348/yr SaaS each).</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Asteris Live Monitor</strong> — Real-time visitor dashboard built for stores. See who's on the site, what page they're on, what's in their cart, and which carts are about to abandon. Cart-aware from the ground up.</span></li>
             <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">WordPress Multisite support</span></li>
             <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">WP-CLI commands (agency-scale operations)</span></li>
             <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body">Customer self-service /account portal (licence management, downloads, invoices)</span></li>
@@ -258,6 +259,53 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </section>
 
+      <!-- Asteris Platform — Partners Program -->
+      <section class="product product--platform">
+        <div class="product-eyebrow">★ Asteris Platform</div>
+        <h2 class="product-title">Asteris Partners</h2>
+        <p class="product-sub">Self-hosted partner program for the 3 Asteris plugins. Built on the existing licence server (pay.asteriscommerce.com). 25% Year 1 / 15% Year 2+ recurring commission, 60-day attribution cookie, cross-product attribution across all three plugins. <em>Not a customer-facing module — this is Asteris's own program. The separate Asteris Affiliate WC module (for customers to run their own affiliate programs) is listed under Research below.</em></p>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.0</h3>
+            <span class="phase-label">ships with launch</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Asteris Partners</strong> — public application page, partner dashboard, click + conversion tracking, refund-aware payouts via Stripe Connect, cross-product attribution across all 3 Asteris plugins within a 60-day window.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Founding Partners</strong> — 25 launch slots (matches Year 1 commission %). Top 10 invited from organic advocates pre-launch; other 15 open via public application at launch month. Locked 30% lifetime commission + early access + private Slack + co-marketing.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Tax compliance built in</strong> — W-9 / W-8BEN / ABN collection at signup. Auto-1099-NEC reporting at the $600 US threshold. Built so agencies don't have to handle it themselves.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Anti-fraud baseline</strong> — self-referral blocking, velocity caps, refund-rate flagging. Optional AI fraud detection via the Asteris AI Suite hook in v1.2.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">v1.1</h3>
+            <span class="phase-label">Asteris stack integrations</span>
+            <span class="badge badge-planned">PLANNED</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Asteris Cart funnel integration</strong> — partners can build custom-branded checkout funnels via Asteris Cart. Unique URL per partner, custom messaging, custom thank-you page.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Live Monitor signals for partners</strong> — partners see THEIR referred visitors live. "Your visitor just added $200, idle 5min" — partners can intervene to close the sale.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>AI Suite marketing copy</strong> — one-click "generate email / tweet / blog angle" for the product they're promoting. BYO API key.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Embed-anywhere widgets</strong> — JS snippet that renders live product cards with the partner's link baked in. Built for content partners running review blogs.</span></li>
+            <li class="module"><span class="module-icon icon-planned">●</span><span class="module-body"><strong>Reverse-partner at thank-you</strong> — paying customers invited to join Partners in one click. Conversion lift on dormant referral capacity.</span></li>
+          </ul>
+        </div>
+
+        <div class="phase">
+          <div class="phase-head">
+            <h3 class="phase-version">Research</h3>
+            <span class="phase-label">downstream</span>
+            <span class="badge badge-research">RESEARCH</span>
+          </div>
+          <ul class="modules">
+            <li class="module"><span class="module-icon icon-research">◯</span><span class="module-body"><strong>Asteris Affiliate WC module</strong> — a separate customer-facing WC plugin that replaces AffiliateWP / SliceWP / Solid Affiliate for WC store owners running their own affiliate program. Target v1.2+ on the WC roadmap. Gap analysis underway.</span></li>
+          </ul>
+        </div>
+      </section>
+
     </div>
   </section>
 </Layout>
@@ -326,9 +374,10 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
     overflow: hidden;
   }
-  .product--wc   { border-top-color: #FF5B3F; }
-  .product--wp   { border-top-color: #3D5AFE; }
-  .product--cart { border-top-color: #00C853; }
+  .product--wc       { border-top-color: #FF5B3F; }
+  .product--wp       { border-top-color: #3D5AFE; }
+  .product--cart     { border-top-color: #00C853; }
+  .product--platform { border-top-color: #AA00FF; }
 
   .product-eyebrow {
     font-size: 14px;
@@ -338,9 +387,10 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 12px;
     display: inline-block;
   }
-  .product--wc   .product-eyebrow { color: #FF5B3F; }
-  .product--wp   .product-eyebrow { color: #3D5AFE; }
-  .product--cart .product-eyebrow { color: #00C853; }
+  .product--wc       .product-eyebrow { color: #FF5B3F; }
+  .product--wp       .product-eyebrow { color: #3D5AFE; }
+  .product--cart     .product-eyebrow { color: #00C853; }
+  .product--platform .product-eyebrow { color: #AA00FF; }
 
   .product-title {
     font-size: 40px;
