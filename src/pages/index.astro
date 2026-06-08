@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Asteris Commerce — Australian indie WordPress + WooCommerce plugin company"
-  description="Asteris Commerce builds four plugins: Asteris for WooCommerce (20 modules), Asteris for WordPress (11 modules), Asteris Cart (21-module checkout suite for WC), and Asteris Affiliates (full affiliate program for WP + WC, in build). Sydney-built. Small team. No VC, no growth team. One vendor, four plugins, honest about what we do and what we don't."
+  description="Asteris Commerce builds five plugins: Asteris for WooCommerce (20 modules), Asteris for WordPress (11 modules), Asteris Cart (21-module checkout suite for WC), Asteris Affiliates (full affiliate program for WP + WC, in build), and Asteris Blocks (50 free Gutenberg blocks). Sydney-built. Small team. No VC, no growth team. One vendor, five plugins, honest about what we do and what we don't."
 >
   <section class="hero">
     <div class="container">
@@ -100,6 +100,25 @@ import Layout from '../layouts/Layout.astro';
           </ul>
           <span class="prod-cta">Visit asterisaffiliates.com →</span>
         </div>
+
+        <div class="prod-card prod-card--blocks">
+          <div class="prod-meta">
+            <div class="prod-eyebrow"><span class="prod-star" style="color:#FFC107;">★</span> Asteris Blocks</div>
+            <span class="prod-status prod-status--free">Free · WordPress.org</span>
+          </div>
+          <h2 class="prod-h">50 free Gutenberg blocks. No upsells.</h2>
+          <p class="prod-desc">
+            The only fully-free Gutenberg block plugin from a real company. Hero, Pricing Table, FAQ with schema, Recipe Card with Recipe schema, Countdown, Cookie Notice, Code Block with syntax highlighting, Image Hotspots, Map, QR Code, Before/After Slider, Table of Contents — 50 blocks total, alphabetised, free forever. Replaces ~$400/yr of niche block plugins.
+          </p>
+          <ul class="prod-bullets">
+            <li>50 blocks at v0.1 — no Pro tier, no nag, no lock</li>
+            <li>Replaces MC4WP, FooGallery, HurryTimer, WP Recipe Maker, Cookie Notice, Author Box, Syntax Highlighter, Table of Contents, Social Share…</li>
+            <li>Native typography + colour controls + HTML anchor IDs on every block</li>
+            <li>Built-in cross-promo sidebar — funnels to the 4 paid Asteris plugins</li>
+            <li>Free forever — locked decision, no future paywall</li>
+          </ul>
+          <span class="prod-cta">Visit asterisblocks.com →</span>
+        </div>
       </div>
     </div>
   </section>
@@ -123,7 +142,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="mission-row"><span><strong>Asteris for WP</strong></span><span>~$1,100/yr</span><span>$149–$549/yr</span></div>
           <div class="mission-row"><span><strong>Asteris Cart</strong></span><span>~$540/yr</span><span>$99–$399/yr</span></div>
           <div class="mission-row"><span><strong>Asteris Affiliates</strong></span><span>$300–$2,400/yr</span><span>$149–$549/yr</span></div>
-          <div class="mission-row mission-row--total"><span><strong>Full stack</strong></span><span><strong>~$5,500/yr</strong></span><span><strong>~$600–$2,000/yr</strong></span></div>
+          <div class="mission-row"><span><strong>Asteris Blocks</strong></span><span>~$400/yr</span><span><strong>Free forever</strong></span></div>
+          <div class="mission-row mission-row--total"><span><strong>Full stack</strong></span><span><strong>~$5,900/yr</strong></span><span><strong>~$600–$2,000/yr</strong></span></div>
         </div>
       </div>
     </div>
@@ -235,6 +255,17 @@ import Layout from '../layouts/Layout.astro';
   .prod-card--aff {
     --tile-accent: #06D6A0;
     border-color: #06D6A0;
+  }
+  /* Asteris Blocks — amber accent, FREE (not greyed) */
+  .prod-card--blocks {
+    --tile-accent: #FFC107;
+    border-color: #FFC107;
+  }
+  .prod-status--free {
+    background: #FFC107;
+    color: #0a0a0a;
+    font-weight: 700;
+    border-color: #FFC107;
   }
 
   /* ── Mission strip ─────────────────────────────────────────────────── */
