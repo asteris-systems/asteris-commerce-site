@@ -5,43 +5,78 @@ interface Props {
 const { currentPath = '' } = Astro.props;
 
 const navLinks = [
-  { href: '/about', label: 'About' },
-  { href: '/roadmap', label: 'Roadmap' },
-  { href: '/press', label: 'Press' },
+  { href: '/asteris-theme/',         label: 'Asteris Theme', match: '/asteris-theme' },
 ];
 
-const products = [
-  { href: 'https://asterisforwoocommerce.com', label: 'For WooCommerce', color: '#FF5B3F' },
-  { href: 'https://asterisforwordpress.com', label: 'For WordPress',   color: '#3D5AFE' },
-  { href: 'https://asteriscart.com',           label: 'For Cart',       color: '#00C853' },
+const pluginItems = [
+  { href: 'https://asterisforwordpress.com',   label: 'For WordPress',   color: '#3D5AFE', desc: '11 modules · security · SEO · performance · forms · backups' },
+  { href: 'https://asterisforwoocommerce.com', label: 'For WooCommerce', color: '#FF5B3F', desc: '20 modules · SEO · swatches · PDF invoices · wishlist · filters' },
+  { href: 'https://asteriscart.com',           label: 'Asteris Cart',    color: '#00C853', desc: '21 modules · side cart · checkout funnel · urgency · upsells' },
+  { href: 'https://asterisaffiliates.com',     label: 'Asteris Affiliates', color: '#06D6A0', desc: 'Full affiliate program · 3 payout methods · self-hosted' },
+];
+
+const tailLinks = [
+  { href: '/asteris-pro-patterns/', label: 'Patterns', match: '/asteris-pro-patterns' },
+  { href: 'https://asterisblocks.com', label: 'Blocks', external: true },
+  { href: '/about',                  label: 'About',    match: '/about' },
+  { href: '/roadmap',                label: 'Roadmap',  match: '/roadmap' },
+  { href: '/press',                  label: 'Press',    match: '/press' },
 ];
 ---
 
 <div class="site-nav-wrap">
-  <nav class="site-nav">
+  <nav class="site-nav" aria-label="Main">
     <a href="/" class="logo" aria-label="Asteris Commerce home">
       <span class="star" aria-hidden="true">★</span> Asteris Commerce
     </a>
+
     <div class="nav-center">
       {navLinks.map(link => (
         <a
           href={link.href}
-          class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+          class:list={['nav-link', { active: currentPath.startsWith(link.match) }]}
         >
           {link.label}
         </a>
       ))}
-    </div>
-    <div class="nav-right">
-      {products.map(p => (
-        <a
-          href={p.href}
-          class="prod-link"
-          style={`--c: ${p.color};`}
-          target="_blank"
-          rel="noopener"
+
+      <div class="nav-dropdown">
+        <button
+          type="button"
+          class="nav-link dropdown-trigger"
+          aria-haspopup="true"
+          aria-expanded="false"
         >
-          {p.label} →
+          Plugins <span class="caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          {pluginItems.map(p => (
+            <a
+              href={p.href}
+              class="dropdown-item"
+              style={`--c: ${p.color};`}
+              target="_blank"
+              rel="noopener"
+              role="menuitem"
+            >
+              <span class="dd-dot" aria-hidden="true"></span>
+              <span class="dd-text">
+                <strong>{p.label}</strong>
+                <span class="dd-desc">{p.desc}</span>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {tailLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={['nav-link', { active: link.match && currentPath.startsWith(link.match) }]}
+          target={link.external ? '_blank' : undefined}
+          rel={link.external ? 'noopener' : undefined}
+        >
+          {link.label}
         </a>
       ))}
     </div>
@@ -51,26 +86,26 @@ const products = [
 
 <style>
   .site-nav-wrap {
-    /* Wraps nav + brand-accent bar so every page gets the violet header line. */
     width: 100%;
     background: var(--c-white);
+    position: relative;
+    z-index: 100;
   }
   .site-nav-accent {
-    /* Parent-brand violet accent strip. Sister-pattern of WC orange / WP indigo / Cart green. */
     height: 6px;
     background: var(--c-violet, #AA00FF);
   }
   .site-nav {
     max-width: var(--max-w);
     margin: 0 auto;
-    padding: 24px var(--gutter);
+    padding: 22px var(--gutter);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 32px;
   }
   .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     letter-spacing: -0.5px;
     color: var(--c-black);
@@ -79,66 +114,153 @@ const products = [
     gap: 10px;
     white-space: nowrap;
     text-decoration: none;
+    flex: 0 0 auto;
   }
   .logo .star {
     color: var(--c-violet, #AA00FF);
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1;
   }
   .nav-center {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 26px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex: 1 1 auto;
   }
   .nav-link {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--c-text);
     transition: color 0.1s ease;
     text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    white-space: nowrap;
   }
-  .nav-link:hover, .nav-link.active {
+  .nav-link:hover, .nav-link.active, .dropdown-trigger:focus {
+    color: var(--c-violet, #AA00FF);
+    outline: none;
+  }
+
+  /* Dropdown */
+  .nav-dropdown {
+    position: relative;
+  }
+  .dropdown-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .caret {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 340px;
+    background: #fff;
+    border: 1px solid #e0e3eb;
+    border-radius: 14px;
+    box-shadow: 0 16px 48px -16px rgba(10, 10, 10, 0.18), 0 4px 12px -4px rgba(10, 10, 10, 0.06);
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 200;
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+  .nav-dropdown:hover .dropdown-trigger,
+  .nav-dropdown:focus-within .dropdown-trigger {
     color: var(--c-violet, #AA00FF);
   }
-  .nav-right {
+  .nav-dropdown:hover .dropdown-trigger[aria-expanded],
+  .nav-dropdown:focus-within .dropdown-trigger[aria-expanded] {
+    /* JS-free — aria-expanded stays "false" but visual state is via :hover/:focus-within */
+  }
+  /* invisible bridge so the menu doesn't close when traversing the gap */
+  .nav-dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 16px;
+  }
+
+  .dropdown-item {
     display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .prod-link {
-    font-size: 13px;
-    font-weight: 700;
-    padding: 9px 14px;
-    border: 2px solid var(--c, var(--c-black));
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
     border-radius: 8px;
-    color: var(--c-black);
-    background: var(--c-white);
     text-decoration: none;
-    box-shadow: 3px 3px 0 var(--c, var(--c-black));
-    transition: transform 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
-    white-space: nowrap;
-    display: inline-block;
+    color: var(--c-text);
+    transition: background 0.12s ease;
+    border-left: 3px solid transparent;
   }
-  .prod-link:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0 var(--c, var(--c-black));
-    color: var(--c, var(--c-black));
+  .dropdown-item:hover {
+    background: #f6f7fa;
+    border-left-color: var(--c, var(--c-violet, #AA00FF));
   }
+  .dd-dot {
+    flex: 0 0 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--c, var(--c-violet, #AA00FF));
+    margin-top: 5px;
+  }
+  .dd-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1.35;
+  }
+  .dd-text strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--c-black);
+  }
+  .dd-desc {
+    font-size: 12px;
+    color: #6b7280;
+    font-weight: 400;
+  }
+
   @media (max-width: 1100px) {
-    .site-nav { gap: 18px; }
-    .nav-center { gap: 22px; }
-    .nav-right { gap: 8px; }
-    .prod-link { font-size: 12px; padding: 8px 11px; box-shadow: 2px 2px 0 var(--c, var(--c-black)); }
-    .prod-link:hover { box-shadow: 4px 4px 0 var(--c, var(--c-black)); }
+    .site-nav { gap: 16px; }
+    .nav-center { gap: 18px; }
+    .nav-link { font-size: 14px; }
+    .logo { font-size: 20px; }
+    .logo .star { font-size: 24px; }
   }
-  @media (max-width: 920px) {
+  @media (max-width: 880px) {
     .site-nav {
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
-      padding: 18px var(--gutter);
+      gap: 12px;
+      padding: 16px var(--gutter);
     }
-    .nav-center { flex-wrap: wrap; gap: 14px; }
-    .nav-right { flex-wrap: wrap; gap: 8px; width: 100%; }
+    .nav-center {
+      width: 100%;
+      justify-content: flex-start;
+      gap: 14px;
+    }
+    .dropdown-menu {
+      left: 0;
+      transform: none;
+      min-width: 280px;
+    }
   }
 </style>

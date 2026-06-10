@@ -1,0 +1,580 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "6.6166 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06100808-1266-0139-0000-d5f5415bc09c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "6.4792 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "organic",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "free woocommerce theme 2026",
+        "location_code": 2840,
+        "language_code": "en",
+        "depth": 10,
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "free woocommerce theme 2026",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=free%20woocommerce%20theme%202026&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-06-10 05:08:25 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview",
+            "organic",
+            "video",
+            "people_also_ask",
+            "related_searches"
+          ],
+          "se_results_count": 107,
+          "pages_count": 1,
+          "items_count": 12,
+          "items": [
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "asynchronous_ai_overview": true,
+              "markdown": null,
+              "items": null,
+              "references": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]",
+              "domain": "wp-rocket.me",
+              "title": "The 10 Fastest WoooCommerce Themes (2026)",
+              "url": "https://wp-rocket.me/blog/fastest-woocommerce-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wp-rocket.me › Blog › Themes & Plugins",
+              "website_name": "WP Rocket",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Dec 16, 2025 — Botiga is a freemium, lightweight WooCommerce theme from aThemes. All of the demo content is built with the native WordPress block editor, which ... Read more",
+              "pre_snippet": "12/16/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Botiga is a freemium, lightweight WooCommerce theme"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-12-16 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/div[1]",
+              "domain": "teamupdraft.com",
+              "title": "Best free WordPress themes for 2026",
+              "url": "https://teamupdraft.com/blog/best-free-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://teamupdraft.com › blog › best-free-wordpress-th...",
+              "website_name": "TeamUpdraft",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Oct 29, 2025 — Discover the best free WordPress themes for 2026. Compare speed, SEO, and flexibility to find the perfect theme for your site.",
+              "pre_snippet": "10/29/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "best free WordPress themes for 2026"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-10-29 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+              "domain": "wpforms.com",
+              "title": "26 Best Free WordPress Themes in 2026 (That I Really Love)",
+              "url": "https://wpforms.com/best-free-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wpforms.com › best-free-wordpress-themes",
+              "website_name": "WPForms",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Apr 21, 2026 — Which free WordPress themes work best with WooCommerce? Storefront is the obvious winner since it's built by the WooCommerce team ... Read more",
+              "pre_snippet": "04/21/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Storefront"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-04-21 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+              "domain": "woocommerce.com",
+              "title": "WooCommerce Themes",
+              "url": "https://woocommerce.com/product-category/themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://woocommerce.com › product-category › themes",
+              "website_name": "WooCommerce",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Find the perfect design for your store in the WooCommerce themes marketplace.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "WooCommerce themes marketplace"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[10]/div[1]/div[1]",
+              "domain": "cartflows.com",
+              "title": "32 Best Free WooCommerce Themes for 2026 (Hand- ...",
+              "url": "https://cartflows.com/blog/free-woocommerce-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://cartflows.com › Plugins and Tools",
+              "website_name": "CartFlows",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "30+ Best Free WooCommerce Themes · 1. Astra · 2. Botiga · 3. Neve Shop · 4. Rife Free · 5. Woostify · 6. Deep · 7. TH Shop Mania · 8. Sbmart. Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "1. Astra"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Free WooCommerce Themes...",
+                  "description": null,
+                  "url": "https://cartflows.com/blog/free-woocommerce-themes/#free-woocommerce-themes-vs-premium-themes",
+                  "domain": "cartflows.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "30+ Best Free WooCommerce...",
+                  "description": null,
+                  "url": "https://cartflows.com/blog/free-woocommerce-themes/#30-best-free-woocommerce-themes",
+                  "domain": "cartflows.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+              "domain": "wpastra.com",
+              "title": "21 Best WooCommerce Themes for 2026",
+              "url": "https://wpastra.com/themes/woocommerce-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wpastra.com › Themes",
+              "website_name": "wpastra.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Tested and compared: 21 of the best WooCommerce themes for 2026. Covers free and premium options, speed scores, pricing, and a clear top pick.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "21 of the best WooCommerce themes for 2026"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[14]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Nayyar Shaikh - Hindi",
+                  "title": "Top 5 BEST & FREE WooCommerce Themes For WordPress ...",
+                  "timestamp": "2026-05-20 05:08:25 +00:00",
+                  "url": "https://www.youtube.com/watch?v=QnA15IFFuVs"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Quick Wordpress Websites",
+                  "title": "20 Best Free WooCommerce Themes for 2026 (Hand-Picked ...",
+                  "timestamp": "2026-03-07 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=Xr8tRCRxz_A"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Themeisle: WordPress Tutorials & Reviews",
+                  "title": "The Best Free WooCommerce Themes That Look Better Than ...",
+                  "timestamp": "2026-01-16 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=BJ-xjwN6a8k"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Victor Chinedu",
+                  "title": "The Top 5 Best FREE WooCommerce Themes | UPDATED ...",
+                  "timestamp": "2024-06-07 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=9p9IBjMoiLY&vl=en"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[16]/div[1]/div[1]",
+              "domain": "slayva.com",
+              "title": "Best WooCommerce Themes: Fast, Free, And Beautiful In 2026",
+              "url": "https://slayva.com/best-woocommerce-themes-2026/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://slayva.com › best-woocommerce-themes-2026",
+              "website_name": "slayva.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "May 10, 2026 — Find the best WooCommerce themes for 2026. Free, fast, and mobile ready designs for beginners and small stores. Professional themes tested ...",
+              "pre_snippet": "05/10/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Free, fast, and mobile ready designs"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-05-10 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+              "domain": "envothemes.com",
+              "title": "Free WooCommerce & Multipurpose WordPress Themes",
+              "url": "https://envothemes.com/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://envothemes.com",
+              "website_name": "EnvoThemes",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "We create free WooCommerce & Multipurpose WordPress Themes. Easy to use, lightning fast, customizable and free to download. Read more",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "free WooCommerce & Multipurpose WordPress Themes"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Themes & Plugins",
+                  "description": null,
+                  "url": "https://envothemes.com/product/envo-royal-pro/",
+                  "domain": "envothemes.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Demos",
+                  "description": null,
+                  "url": "https://envothemes.com/product/envo-royal-pro/#!demos",
+                  "domain": "envothemes.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Documentation",
+                  "description": null,
+                  "url": "https://envothemes.com/docs/docs/envo-royal/",
+                  "domain": "envothemes.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Download",
+                  "description": null,
+                  "url": "https://envothemes.com/wp-content/uploads/free/envo-marketplace.zip",
+                  "domain": "envothemes.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the best free theme for WooCommerce?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_expanded_element",
+                      "featured_title": "The Best Free WooCommerce Themes",
+                      "url": "https://www.cloudways.com/blog/best-free-woocommerce-themes/",
+                      "domain": "www.cloudways.com",
+                      "title": "Best Free WooCommerce Themes for 2026 (Reviewed & Ranked)",
+                      "description": "Astra — Best Overall Free WooCommerce Theme. Source: WordPress.org. ...\nOceanWP — Most Feature-Rich Free WooCommerce Theme. ...\nKadence — Best for Block Editor and FSE Stores. ...\nGeneratePress — Fastest Loading Free WooCommerce Theme. ...\nNeve — Best for Core Web Vitals and Mobile-First Stores.",
+                      "images": null,
+                      "timestamp": null,
+                      "table": null
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Where can I get free WordPress themes?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the free ecommerce theme for WordPress?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Which theme is best for WordPress WooCommerce?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[1]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_expanded_element",
+                      "featured_title": "Comparison of Top WooCommerce Themes",
+                      "url": "https://purethemes.net/best-woocommerce-wordpress-themes/",
+                      "domain": "purethemes.net",
+                      "title": "6 Best WooCommerce WordPress Themes for 2026 - Purethemes",
+                      "description": null,
+                      "images": null,
+                      "timestamp": null,
+                      "table": {
+                        "table_header": [
+                          "Theme",
+                          "Rating",
+                          "Best For"
+                        ],
+                        "table_content": [
+                          [
+                            "Fynode",
+                            "5.0",
+                            "Feature-rich stores, multi-vendor"
+                          ],
+                          [
+                            "Shop Mania",
+                            "5.0",
+                            "Multi-Purpose"
+                          ],
+                          [
+                            "XStore",
+                            "4.85/5",
+                            "Variety-seekers, large catalogs"
+                          ],
+                          [
+                            "Savoy",
+                            "4.83/5",
+                            "Minimalist brands, boutiques"
+                          ]
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[2]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Free woocommerce theme 2026 free download",
+                "Free woocommerce theme 2026 reddit",
+                "Best free woocommerce theme 2026",
+                "Free woocommerce theme 2026 download",
+                "Free woocommerce theme 2026 github",
+                "Free WooCommerce themes",
+                "Free wordpress themes 2026",
+                "Best free WordPress themes 2026"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

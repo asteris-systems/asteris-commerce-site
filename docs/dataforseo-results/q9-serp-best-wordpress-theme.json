@@ -1,0 +1,873 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.9255 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06100819-1266-0139-0000-9316305b5fd3",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.7641 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "organic",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "best wordpress theme",
+        "location_code": 2840,
+        "language_code": "en",
+        "depth": 10,
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "best wordpress theme",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=best%20wordpress%20theme&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-06-10 05:19:25 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "ai_overview",
+            "organic",
+            "discussions_and_forums",
+            "video",
+            "related_searches"
+          ],
+          "se_results_count": 127,
+          "pages_count": 1,
+          "items_count": 12,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "What is your favourite theme that you use to make ...",
+              "url": "https://www.reddit.com/r/Wordpress/comments/1c9dtrl/what_is_your_favourite_theme_that_you_use_to_make/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "100+ comments  ·  2 years ago",
+              "website_name": "Reddit · r/Wordpress",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "A question for WordPress developers - what theme you prefer to use when making clients' websites?\n\nLet's start with me, I prefer using bare bones themes ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Which Wordpress theme do you use and why? - Reddit",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/Wordpress/comments/1myoh28/which_wordpress_theme_do_you_use_and_why/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Where should I look for good Wordpress Themes ...",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/Wordpress/comments/1n30lvo/where_should_i_look_for_good_wordpress_themes/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "More results from www.reddit.com",
+                  "description": null,
+                  "url": "https://www.google.com/search?q=best+wordpress+theme+site:www.reddit.com&sca_esv=d059007c5155ebc1&hl=en&gl=US&sa=X&ved=2ahUKEwjI77SY9vuUAxVIOPsDHeEJHM4QrQIoAnoECBsQAw",
+                  "domain": "www.google.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]",
+              "domain": "teamupdraft.com",
+              "title": "Best free WordPress themes for 2026",
+              "url": "https://teamupdraft.com/blog/best-free-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://teamupdraft.com › blog › best-free-wordpress-th...",
+              "website_name": "TeamUpdraft",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Oct 29, 2025 — What is the best free WordPress theme in 2026? Astra and Kadence are excellent all-rounders for most sites, while Blocksy and GeneratePress ... Read more",
+              "pre_snippet": "10/29/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Astra and Kadence are excellent all-rounders for most sites"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-10-29 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[5]/div[1]/div[1]",
+              "domain": "themeforest.net",
+              "title": "2026's Best Selling WordPress Themes",
+              "url": "https://themeforest.net/popular_item/by_category?category=wordpress&srsltid=AfmBOopP5WKQtAtB94NGv61sEQptSW_hnIzMwoZCZKVmNcdiNjpPgzhh",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://themeforest.net › popular_item › by_category",
+              "website_name": "ThemeForest",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Browse 2026's best selling WordPress themes and start building your website.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": {
+                "current": 19,
+                "regular": null,
+                "max_value": 79,
+                "currency": "USD",
+                "is_price_range": true,
+                "displayed_price": "$19 to $79"
+              },
+              "highlighted": [
+                "Browse 2026's best selling WordPress themes"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "ai_overview",
+              "rank_group": 1,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[6]/div[1]/div[1]",
+              "asynchronous_ai_overview": false,
+              "markdown": "The \"best\" WordPress theme `depends on your specific needs, experience level, and preferred page builder` . Here are the top-rated themes for 2026, categorized by their strengths:\n\n1. Best for Performance & Page Builders\n\nThese themes are lightweight, SEO-friendly, and integrate perfectly with visual builders like Elementor or Beaver Builder.[](https://wpforms.com/best-free-wordpress-themes/) [[1]](https://wpforms.com/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n\n- **Astra:** The most popular theme on the market. It is incredibly fast, offers hundreds of pre-built templates, and works flawlessly with the native Gutenberg editor and major page builders. View options on Astra.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)[[2]](https://www.siteground.com/academy/best-wordpress-themes/)\n- **GeneratePress:** Known as the ultimate minimalist theme. It adds less than 10kb to your page size, making it the top choice for developers and users who prioritize lightning-fast load times.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n- **Hello Elementor:** A bare-bones, ultra-lightweight theme built specifically to be the perfect blank canvas for Elementor users.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n\n2. Best All-in-One Visual Builders These themes come bundled with their own powerful drag-and-drop builders, giving you complete creative control without needing to install separate plugins.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)[[2]](https://www.isitwp.com/top-wordpress-themes/)\n\n- **Divi:** Famous for the intuitive no-code Divi Builder. It features over 2,000 layout packs and a powerful visual editor that lets you see changes in real-time. Explore features on Elegant Themes.[](https://www.experte.com/wordpress/wordpress-page-builder) [[1]](https://www.experte.com/wordpress/wordpress-page-builder)[[2]](https://www.elegantthemes.com/blog/wordpress/is-wordpress-good)[[3]](https://www.isitwp.com/best-wordpress-review-themes/)[[4]](https://www.elegantthemes.com/blog/wordpress/7-coolest-wordpress-themes-compared)[[5]](https://www.icecubedigital.com/blog/10-best-wordpress-themes-in-2026/)\n- **Avada:** The best-selling multipurpose theme on Envato/ThemeForest. It ships with the Fusion Builder and is packed with endless customization features for any type of site.[](https://themeforest.net/popular_item/by_category?category=wordpress) [[1]](https://themeforest.net/popular_item/by_category?category=wordpress)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n\n3. Best for Gutenberg & Full Site Editing If you want to build your site using native WordPress blocks, these modern themes are top-tier.[[1]](https://elementor.com/blog/how-to-build-a-website-with-wordpress/)\n\n- **Kadence:** Balances powerful design tools with extreme speed. It offers advanced header builders, rich color controls, and integrates smoothly with Gutenberg.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n- **Blocksy:** A highly visual, Gutenberg-first theme that includes dynamic layouts, dark mode options, and advanced customization controls.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)\n- **Twenty Twenty-Five / Twenty Twenty-Four:** The official default WordPress block themes. They are beautifully coded and fully support Full Site Editing (FSE), allowing you to customize every page element directly from your dashboard.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://www.youtube.com/shorts/PkXcHww6LNY)\n\n4. Best for eCommerce\n\n- **Botiga:** Created by aThemes, this minimalist, WooCommerce-optimized theme gives you premium-level store features, advanced product card layouts, and badge customizations out of the box.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wpforms.com/best-free-wordpress-themes/)\n- **OceanWP:** Highly extendable and heavily used for WooCommerce. It offers robust eCommerce features, though some advanced tools require the pro version.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)\n\nFor an in-depth comparison and speed test breakdown of the top-performing themes:![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQnO6s3XEgRunM_EcYbya0ishgdnAe0EN7K2zQCgefA9AoPGmVbyvfc1cwWfyEQzabVLYHu-u_03ybADq1VF0Y1HciKbg)\n![Related video thumbnail](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRJmzzfXSxwUEYjEaZDVNXrem7e7xE0cF09zMLgaOJj8FArXHwZk9WhWVXvoS3Hl1rTqwgTnuTkYeWXjhq9CF9JbUYWOo8)\n2:16[These are the Fastest WordPress Themes Compared (Performance ...![](https://api.dataforseo.com/cdn/i/06100819-1266-0139-0000-9316305b5fd3:4)\n![](https://api.dataforseo.com/cdn/i/06100819-1266-0139-0000-9316305b5fd3:5)\nThemeisle: WordPress Tutorials & Reviews YouTube · Jun 12, 2025](https://www.youtube.com/shorts/o-VQPxwRARc)",
+              "items": [
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "The \"best\" WordPress theme depends on your specific needs, experience level, and preferred page builder. Here are the top-rated themes for 2026, categorized by their strengths:",
+                  "markdown": "The \"best\" WordPress theme `depends on your specific needs, experience level, and preferred page builder` . Here are the top-rated themes for 2026, categorized by their strengths:",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": "1. Best for Performance & Page Builders",
+                  "text": "These themes are lightweight, SEO-friendly, and integrate perfectly with visual builders like Elementor or Beaver Builder. WPForms +1",
+                  "markdown": "These themes are lightweight, SEO-friendly, and integrate perfectly with visual builders like Elementor or Beaver Builder.[](https://wpforms.com/best-free-wordpress-themes/) [[1]](https://wpforms.com/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WPForms",
+                      "domain": "wpforms.com",
+                      "url": "https://wpforms.com/best-free-wordpress-themes/",
+                      "title": "26 Best Free WordPress Themes in 2026 (That I Really Love) - WPForms",
+                      "text": "* 1. Sydney (The Business Professional) Best For: Service businesses needing instant credibility. My Real-World Test Results: Load..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WP Rocket",
+                      "domain": "wp-rocket.me",
+                      "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+                      "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid) - WP Rocket",
+                      "text": "TL;DR: The 10 Fastest Themes for WordPress. We tested around 30 popular WordPress themes and selected the 10 fastest based on full..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Astra: The most popular theme on the market. It is incredibly fast, offers hundreds of pre-built templates, and works flawlessly with the native Gutenberg editor and major page builders. View options on Astra. Astra GeneratePress: Known as the ultimate minimalist theme. It adds less than 10kb to your page size, making it the top choice for developers and users who prioritize lightning-fast load times. Hello Elementor: A bare-bones, ultra-lightweight theme built specifically to be the perfect blank canvas for Elementor users.",
+                  "markdown": "- **Astra:** The most popular theme on the market. It is incredibly fast, offers hundreds of pre-built templates, and works flawlessly with the native Gutenberg editor and major page builders. View options on Astra.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)[[2]](https://www.siteground.com/academy/best-wordpress-themes/)\n- **GeneratePress:** Known as the ultimate minimalist theme. It adds less than 10kb to your page size, making it the top choice for developers and users who prioritize lightning-fast load times.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n- **Hello Elementor:** A bare-bones, ultra-lightweight theme built specifically to be the perfect blank canvas for Elementor users.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WP Rocket",
+                      "domain": "wp-rocket.me",
+                      "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+                      "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid) - WP Rocket",
+                      "text": "TL;DR: The 10 Fastest Themes for WordPress. We tested around 30 popular WordPress themes and selected the 10 fastest based on full..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "SiteGround",
+                      "domain": "www.siteground.com",
+                      "url": "https://www.siteground.com/academy/best-wordpress-themes/",
+                      "title": "The Best WordPress Themes [Default, Free and Paid] - SiteGround",
+                      "text": "Table_title: Best WordPress Themes (Quick View) Table_content: | Theme | Type | Standout Features | | --- | --- | --- | | Astra | ..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "These themes come bundled with their own powerful drag-and-drop builders, giving you complete creative control without needing to install separate plugins. WP Rocket +1",
+                  "markdown": "These themes come bundled with their own powerful drag-and-drop builders, giving you complete creative control without needing to install separate plugins.[](https://wp-rocket.me/blog/fastest-wordpress-themes/) [[1]](https://wp-rocket.me/blog/fastest-wordpress-themes/)[[2]](https://www.isitwp.com/top-wordpress-themes/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WP Rocket",
+                      "domain": "wp-rocket.me",
+                      "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+                      "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid) - WP Rocket",
+                      "text": "TL;DR: The 10 Fastest Themes for WordPress. We tested around 30 popular WordPress themes and selected the 10 fastest based on full..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "IsItWP",
+                      "domain": "www.isitwp.com",
+                      "url": "https://www.isitwp.com/top-wordpress-themes/",
+                      "title": "I Rank The Best and Most Popular WordPress Themes of 2026 ( ...",
+                      "text": "2. Divi. Divi is one of the most popular WordPress themes on the market, with about 1.2 million installs. It is created by Elegant..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Divi: Famous for the intuitive no-code Divi Builder. It features over 2,000 layout packs and a powerful visual editor that lets you see changes in real-time. Explore features on Elegant Themes. Elegant Themes Avada: The best-selling multipurpose theme on Envato/ThemeForest. It ships with the Fusion Builder and is packed with endless customization features for any type of site.",
+                  "markdown": "- **Divi:** Famous for the intuitive no-code Divi Builder. It features over 2,000 layout packs and a powerful visual editor that lets you see changes in real-time. Explore features on Elegant Themes.[](https://www.experte.com/wordpress/wordpress-page-builder) [[1]](https://www.experte.com/wordpress/wordpress-page-builder)[[2]](https://www.elegantthemes.com/blog/wordpress/is-wordpress-good)[[3]](https://www.isitwp.com/best-wordpress-review-themes/)[[4]](https://www.elegantthemes.com/blog/wordpress/7-coolest-wordpress-themes-compared)[[5]](https://www.icecubedigital.com/blog/10-best-wordpress-themes-in-2026/)\n- **Avada:** The best-selling multipurpose theme on Envato/ThemeForest. It ships with the Fusion Builder and is packed with endless customization features for any type of site.[](https://themeforest.net/popular_item/by_category?category=wordpress) [[1]](https://themeforest.net/popular_item/by_category?category=wordpress)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "EXPERTE.com",
+                      "domain": "www.experte.com",
+                      "url": "https://www.experte.com/wordpress/wordpress-page-builder",
+                      "title": "Best WordPress Page Builder: Our TOP 5 in 2026 - EXPERTE.com",
+                      "text": "Table_title: Quick Comparison: Which Page Builder Is Right for You? Table_content: | Page Builder | Beginner-friendliness | Highli..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Elegant Themes",
+                      "domain": "www.elegantthemes.com",
+                      "url": "https://www.elegantthemes.com/blog/wordpress/is-wordpress-good",
+                      "title": "Is WordPress Good? A Comprehensive Review for 2025",
+                      "text": "No-Code Visual Builder: Divi's no-code visual builder is designed for ease of use. It allows users to drag and drop elements to de..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "IsItWP",
+                      "domain": "www.isitwp.com",
+                      "url": "https://www.isitwp.com/best-wordpress-review-themes/",
+                      "title": "10+ Best WordPress Review Themes I've Tested: Paid & Free",
+                      "text": "Why Is Divi One of the Best WordPress Review Themes? The builder includes 2,000+ pre-built layouts, a drag-and-drop interface, and..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Elegant Themes",
+                      "domain": "www.elegantthemes.com",
+                      "url": "https://www.elegantthemes.com/blog/wordpress/7-coolest-wordpress-themes-compared",
+                      "title": "7 Coolest WordPress Themes (Compared)",
+                      "text": "Divi is our top choice, combining powerful visual editing with practical features that work in the real world. Beyond its eye-catc..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Icecube Digital",
+                      "domain": "www.icecubedigital.com",
+                      "url": "https://www.icecubedigital.com/blog/10-best-wordpress-themes-in-2026/",
+                      "title": "10 Best WordPress Themes in 2026 for Every Website",
+                      "text": "6. Divi (Premium) One that stands out is Divi by Elegant Themes, which offers a true-time visual editor and continues to be one of..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "If you want to build your site using native WordPress blocks, these modern themes are top-tier.",
+                  "markdown": "If you want to build your site using native WordPress blocks, these modern themes are top-tier.[[1]](https://elementor.com/blog/how-to-build-a-website-with-wordpress/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "Elementor",
+                      "domain": "elementor.com",
+                      "url": "https://elementor.com/blog/how-to-build-a-website-with-wordpress/",
+                      "title": "How to Build a Website With WordPress: The Complete Expert Guide",
+                      "text": "Themes vs. Builders: The WordPress landscape has two main paths for design: modern Block Themes that use the native Full Site Edit..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Kadence: Balances powerful design tools with extreme speed. It offers advanced header builders, rich color controls, and integrates smoothly with Gutenberg. Blocksy: A highly visual, Gutenberg-first theme that includes dynamic layouts, dark mode options, and advanced customization controls. Twenty Twenty-Five / Twenty Twenty-Four: The official default WordPress block themes. They are beautifully coded and fully support Full Site Editing (FSE), allowing you to customize every page element directly from your dashboard.",
+                  "markdown": "- **Kadence:** Balances powerful design tools with extreme speed. It offers advanced header builders, rich color controls, and integrates smoothly with Gutenberg.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wp-rocket.me/blog/fastest-wordpress-themes/)\n- **Blocksy:** A highly visual, Gutenberg-first theme that includes dynamic layouts, dark mode options, and advanced customization controls.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)\n- **Twenty Twenty-Five / Twenty Twenty-Four:** The official default WordPress block themes. They are beautifully coded and fully support Full Site Editing (FSE), allowing you to customize every page element directly from your dashboard.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://www.youtube.com/shorts/PkXcHww6LNY)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "TeamUpdraft",
+                      "domain": "teamupdraft.com",
+                      "url": "https://teamupdraft.com/blog/best-free-wordpress-themes/",
+                      "title": "Best free WordPress themes for 2026 - TeamUpdraft",
+                      "text": "Best free WordPress themes for 2026 * Key Takeaways. * Why free themes are better than ever in 2026. * How I ranked the WordPress ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WP Rocket",
+                      "domain": "wp-rocket.me",
+                      "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+                      "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid) - WP Rocket",
+                      "text": "TL;DR: The 10 Fastest Themes for WordPress. We tested around 30 popular WordPress themes and selected the 10 fastest based on full..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "Botiga: Created by aThemes, this minimalist, WooCommerce-optimized theme gives you premium-level store features, advanced product card layouts, and badge customizations out of the box. OceanWP: Highly extendable and heavily used for WooCommerce. It offers robust eCommerce features, though some advanced tools require the pro version.",
+                  "markdown": "- **Botiga:** Created by aThemes, this minimalist, WooCommerce-optimized theme gives you premium-level store features, advanced product card layouts, and badge customizations out of the box.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)[[2]](https://wpforms.com/best-free-wordpress-themes/)\n- **OceanWP:** Highly extendable and heavily used for WooCommerce. It offers robust eCommerce features, though some advanced tools require the pro version.[](https://teamupdraft.com/blog/best-free-wordpress-themes/) [[1]](https://teamupdraft.com/blog/best-free-wordpress-themes/)",
+                  "links": null,
+                  "images": null,
+                  "references": [
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "TeamUpdraft",
+                      "domain": "teamupdraft.com",
+                      "url": "https://teamupdraft.com/blog/best-free-wordpress-themes/",
+                      "title": "Best free WordPress themes for 2026 - TeamUpdraft",
+                      "text": "Best free WordPress themes for 2026 * Key Takeaways. * Why free themes are better than ever in 2026. * How I ranked the WordPress ..."
+                    },
+                    {
+                      "type": "ai_overview_reference",
+                      "position": "left",
+                      "source": "WPForms",
+                      "domain": "wpforms.com",
+                      "url": "https://wpforms.com/best-free-wordpress-themes/",
+                      "title": "26 Best Free WordPress Themes in 2026 (That I Really Love) - WPForms",
+                      "text": "* 1. Sydney (The Business Professional) Best For: Service businesses needing instant credibility. My Real-World Test Results: Load..."
+                    }
+                  ]
+                },
+                {
+                  "type": "ai_overview_element",
+                  "position": "left",
+                  "title": null,
+                  "text": "For an in-depth comparison and speed test breakdown of the top-performing themes: 2:16 These are the Fastest WordPress Themes Compared (Performance ... Themeisle: WordPress Tutorials & Reviews YouTube · Jun 12, 2025",
+                  "markdown": "For an in-depth comparison and speed test breakdown of the top-performing themes:![](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQnO6s3XEgRunM_EcYbya0ishgdnAe0EN7K2zQCgefA9AoPGmVbyvfc1cwWfyEQzabVLYHu-u_03ybADq1VF0Y1HciKbg)\n![Related video thumbnail](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRJmzzfXSxwUEYjEaZDVNXrem7e7xE0cF09zMLgaOJj8FArXHwZk9WhWVXvoS3Hl1rTqwgTnuTkYeWXjhq9CF9JbUYWOo8)\n2:16[These are the Fastest WordPress Themes Compared (Performance ...![](https://api.dataforseo.com/cdn/i/06100819-1266-0139-0000-9316305b5fd3:2)\n![](https://api.dataforseo.com/cdn/i/06100819-1266-0139-0000-9316305b5fd3:3)\nThemeisle: WordPress Tutorials & Reviews YouTube · Jun 12, 2025](https://www.youtube.com/shorts/o-VQPxwRARc)",
+                  "links": null,
+                  "images": null,
+                  "references": null
+                }
+              ],
+              "references": [
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "ThemeForest",
+                  "domain": "themeforest.net",
+                  "url": "https://themeforest.net/popular_item/by_category?category=wordpress",
+                  "title": "2026's Best Selling WordPress Themes - ThemeForest",
+                  "text": "Popular Items Admin Templates Corporate Creative Entertainment Mobile Nonprofit Personal Retail Specialty Pages Technology Wedding..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "TeamUpdraft",
+                  "domain": "teamupdraft.com",
+                  "url": "https://teamupdraft.com/blog/best-free-wordpress-themes/",
+                  "title": "Best free WordPress themes for 2026 - TeamUpdraft",
+                  "text": "Best free WordPress themes for 2026 * Key Takeaways. * Why free themes are better than ever in 2026. * How I ranked the WordPress ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "YouTube",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/shorts/PkXcHww6LNY",
+                  "title": "Best Free WordPress Themes Series (Ep. 10)",
+                  "text": "Twenty Twenty-Four is considered one of the best default themes ever in WordPress. It is a block theme, allowing easy customizatio..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "WPForms",
+                  "domain": "wpforms.com",
+                  "url": "https://wpforms.com/best-free-wordpress-themes/",
+                  "title": "26 Best Free WordPress Themes in 2026 (That I Really Love) - WPForms",
+                  "text": "* 1. Sydney (The Business Professional) Best For: Service businesses needing instant credibility. My Real-World Test Results: Load..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "WP Rocket",
+                  "domain": "wp-rocket.me",
+                  "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+                  "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid) - WP Rocket",
+                  "text": "TL;DR: The 10 Fastest Themes for WordPress. We tested around 30 popular WordPress themes and selected the 10 fastest based on full..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "EXPERTE.com",
+                  "domain": "www.experte.com",
+                  "url": "https://www.experte.com/wordpress/wordpress-page-builder",
+                  "title": "Best WordPress Page Builder: Our TOP 5 in 2026 - EXPERTE.com",
+                  "text": "Table_title: Quick Comparison: Which Page Builder Is Right for You? Table_content: | Page Builder | Beginner-friendliness | Highli..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "IsItWP",
+                  "domain": "www.isitwp.com",
+                  "url": "https://www.isitwp.com/top-wordpress-themes/",
+                  "title": "I Rank The Best and Most Popular WordPress Themes of 2026 ( ...",
+                  "text": "2. Divi. Divi is one of the most popular WordPress themes on the market, with about 1.2 million installs. It is created by Elegant..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.youtube.com",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=MNPKrTu6_dQ",
+                  "title": "Top 10 Best Free Wordpress Themes For 2025 (Seriously)",
+                  "text": "product page and a very diverse portfolio page and there are a few other notable options that might be worth upgrading. the pro ve..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.youtube.com",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=x7yfsI3VM6o",
+                  "title": "10 Best WordPress Themes in 2024 (Compared & Ranked)",
+                  "text": "support which allows you to work with Gutenberg or Elementor. and finally just customization as a whole using the WordPress live c..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.youtube.com",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=dBlirgznUWo",
+                  "title": "5 Best Premium WordPress Themes in 2025 (Expert Picks)",
+                  "text": "so if you want to check out more about these premium WordPress themes then make sure you check out out the blog post link that we ..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.youtube.com",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=BLVa3zpqR_0",
+                  "title": "10+ Best Free WordPress Themes of 2025 - Tested & Ranked",
+                  "text": "focus on speed plus there are also loads of starter designs to choose from and even custom blocks to you know customize your websi..."
+                },
+                {
+                  "type": "ai_overview_reference",
+                  "position": "right",
+                  "source": "www.youtube.com",
+                  "domain": "www.youtube.com",
+                  "url": "https://www.youtube.com/watch?v=_adT_TaNAmk",
+                  "title": "10 Best Free WordPress Themes in 2024 (Compared)",
+                  "text": "and first off it's its versatile. use oceanwp excels in a variety of website. types including blogs portfolios. and e-commerce sit..."
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]",
+              "domain": "wp-rocket.me",
+              "title": "The 10 Fastest WordPress Themes in 2026 (Free and Paid)",
+              "url": "https://wp-rocket.me/blog/fastest-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wp-rocket.me › Blog › Themes & Plugins",
+              "website_name": "WP Rocket",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "May 26, 2026 — Astra is one of the most popular free WordPress themes, known for its lightweight code, user-friendly features, and thousands of ready-to-use ... Read more",
+              "pre_snippet": "05/26/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Astra"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-05-26 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "discussions_and_forums",
+              "rank_group": 1,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[10]/div[1]",
+              "title": "Discussions and forums",
+              "items": [
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "Which Wordpress theme do you use and why?",
+                  "url": "https://www.reddit.com/r/Wordpress/comments/1myoh28/which_wordpress_theme_do_you_use_and_why/",
+                  "domain": "www.reddit.com",
+                  "source": "Reddit",
+                  "description": null,
+                  "timestamp": "2025-09-10 05:19:25 +00:00",
+                  "posts_count": 70
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "What are the most eye catching WordPress themes?",
+                  "url": "https://www.quora.com/What-are-the-most-eye-catching-WordPress-themes",
+                  "domain": "www.quora.com",
+                  "source": "Quora",
+                  "description": null,
+                  "timestamp": "2020-06-10 05:19:25 +00:00",
+                  "posts_count": 2
+                },
+                {
+                  "type": "discussions_and_forums_element",
+                  "title": "What are the best WordPress themes?",
+                  "url": "https://www.quora.com/What-are-the-best-WordPress-themes",
+                  "domain": "www.quora.com",
+                  "source": "Quora",
+                  "description": null,
+                  "timestamp": "2012-06-10 05:19:25 +00:00",
+                  "posts_count": 200
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[12]/div[1]/div[1]",
+              "domain": "elements.envato.com",
+              "title": "Responsive WordPress Themes",
+              "url": "https://elements.envato.com/wordpress/themes?srsltid=AfmBOoryBybSl4VB-R-3W8U3D8NLzqw-o_RLHP44bg8o0B3KDooKnWmr",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://elements.envato.com › All Items › WordPress",
+              "website_name": "Envato",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Download Unlimited, responsive WordPress themes with a single subscription. Top rated, hand-picked WordPress themes for all industries from Envato.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Download Unlimited, responsive WordPress themes"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[14]/div[1]/div[1]",
+              "domain": "wpforms.com",
+              "title": "26 Best Free WordPress Themes in 2026 (That I Really Love)",
+              "url": "https://wpforms.com/best-free-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wpforms.com › best-free-wordpress-themes",
+              "website_name": "WPForms",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Apr 21, 2026 — 26 Best Free WordPress Themes (My Personal Favorites for 2026) · 1. Sydney (The Business Professional) · 2. Botiga (The Modern Shop) · 3. Astra ... Read more",
+              "pre_snippet": "04/21/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "1. Sydney (The Business Professional"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-04-21 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[16]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Darrel Wilson",
+                  "title": "My Top 5 Best WordPress Themes (Don't Miss #1)",
+                  "timestamp": "2026-01-26 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=ESputNhH4ZI"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · WPTuts",
+                  "title": "Top 5 FREE WordPress Themes 2025",
+                  "timestamp": "2024-09-18 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=kNFOt0yfl4I"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Themeisle: WordPress Tutorials & Reviews",
+                  "title": "10+ Best Free WordPress Themes of 2025 - Tested & Ranked",
+                  "timestamp": "2025-11-05 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=BLVa3zpqR_0"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[18]/div[1]/div[1]",
+              "domain": "wordpress.org",
+              "title": "WordPress Theme Directory",
+              "url": "https://wordpress.org/themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wordpress.org › themes",
+              "website_name": "WordPress.org",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Find the perfect theme for your WordPress website. Choose from thousands of stunning designs with a wide variety of features and customization options.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Choose from thousands of stunning designs"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[20]/div[1]/div[1]",
+              "domain": "www.wpbeginner.com",
+              "title": "2026's Most Popular and Best WordPress Themes (Expert ...",
+              "url": "https://www.wpbeginner.com/showcase/best-wordpress-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.wpbeginner.com › Showcase",
+              "website_name": "WPBeginner",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Want the very best WordPress themes for your website or blog, packed with features? Read our expert pick of the best and most popular WordPress themes.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "best WordPress themes"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Sydney",
+                  "description": null,
+                  "url": "https://www.wpbeginner.com/showcase/best-wordpress-themes/#sydney",
+                  "domain": "www.wpbeginner.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "SeedProd",
+                  "description": null,
+                  "url": "https://www.wpbeginner.com/showcase/best-wordpress-themes/#seedprod",
+                  "domain": "www.wpbeginner.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Divi",
+                  "description": null,
+                  "url": "https://www.wpbeginner.com/showcase/best-wordpress-themes/#divi",
+                  "domain": "www.wpbeginner.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Botiga",
+                  "description": null,
+                  "url": "https://www.wpbeginner.com/showcase/best-wordpress-themes/#aioseo-6-botiga",
+                  "domain": "www.wpbeginner.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Best wordpress theme free",
+                "Best wordpress theme free download",
+                "Best wordpress theme reddit",
+                "Top 10 wordpress themes free",
+                "Best wordpress themes for business",
+                "Best wordpress themes 2026",
+                "Best wordpress themes premium",
+                "Best wordpress themes for ecommerce"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

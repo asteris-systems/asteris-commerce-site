@@ -1,0 +1,608 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.9963 sec.",
+  "cost": 0.002,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06100808-1266-0139-0000-35e82d7246c7",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.8843 sec.",
+      "cost": 0.002,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "serp",
+        "google",
+        "organic",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "api": "serp",
+        "function": "live",
+        "se": "google",
+        "se_type": "organic",
+        "keyword": "woocommerce block theme",
+        "location_code": 2840,
+        "language_code": "en",
+        "depth": 10,
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "woocommerce block theme",
+          "type": "organic",
+          "se_domain": "google.com",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://www.google.com/search?q=woocommerce%20block%20theme&hl=en&gl=US&ie=UTF-8&uule=w+CAIQIFISCQs2MuSEtepUEUK33kOSuTsc",
+          "datetime": "2026-06-10 05:08:18 +00:00",
+          "spell": null,
+          "refinement_chips": null,
+          "item_types": [
+            "organic",
+            "video",
+            "people_also_ask",
+            "related_searches"
+          ],
+          "se_results_count": 104,
+          "pages_count": 1,
+          "items_count": 12,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]",
+              "domain": "www.reddit.com",
+              "title": "What are some good block based themes? : r/woocommerce",
+              "url": "https://www.reddit.com/r/woocommerce/comments/1h8u34g/what_are_some_good_block_based_themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "10+ comments  ·  1 year ago",
+              "website_name": "Reddit · r/woocommerce",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "I have 2 stores that run on flatsome which is ok, but despite criticism of block themes, now that is been around things are starting to get better. However ...",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": null,
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "Best block theme for Woocommerce : r/Wordpress ...",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/Wordpress/comments/13ggc72/best_block_theme_for_woocommerce/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "WooCommerce Block Theme with all features - Reddit",
+                  "description": null,
+                  "url": "https://www.reddit.com/r/woocommerce/comments/1h2fip6/woocommerce_block_theme_with_all_features/",
+                  "domain": "www.reddit.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "More results from www.reddit.com",
+                  "description": null,
+                  "url": "https://www.google.com/search?q=woocommerce+block+theme+site:www.reddit.com&sca_esv=d059007c5155ebc1&hl=en&gl=US&sa=X&ved=2ahUKEwjso9Da8_uUAxWEhP0HHd3wGQEQrQIoAnoECA8QAw",
+                  "domain": "www.google.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]",
+              "domain": "developer.woocommerce.com",
+              "title": "Theming for Woo blocks | WooCommerce developer docs",
+              "url": "https://developer.woocommerce.com/docs/theming/block-theme-development/theming-woo-blocks/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://developer.woocommerce.com › docs › theming",
+              "website_name": "WooCommerce",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "5 days ago — WooCommerce blocks rely on global styles for their styling. Global styles can be defined by themes via theme.json or by users via Appearance > Editor > Styles. Read more",
+              "pre_snippet": "5 days ago",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "WooCommerce blocks rely on global styles for"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-06-05 05:08:18 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[3]/div[1]/div[1]",
+              "domain": "yithemes.com",
+              "title": "Wonder: Best WordPress Block Theme for WooCommerce",
+              "url": "https://yithemes.com/blog/best-practices/best-wordpress-block-theme-for-woocommerce/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://yithemes.com › blog › best-practices › best-word...",
+              "website_name": "yithemes.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Aug 2, 2024 — It's a streamlined, lightweight, and easily customizable theme with six different built-in styles, five headers, and plenty of templates for your homepage and ... Read more",
+              "pre_snippet": "08/02/2024 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "easily customizable theme"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "What makes a WordPress...",
+                  "description": null,
+                  "url": "https://yithemes.com/blog/best-practices/best-wordpress-block-theme-for-woocommerce/#what-makes-a-wordpress-theme-the-best",
+                  "domain": "yithemes.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Why a block theme is the only...",
+                  "description": null,
+                  "url": "https://yithemes.com/blog/best-practices/best-wordpress-block-theme-for-woocommerce/#why-a-block-theme-is-the-only-solution-to-consider-for-your-ecommerce",
+                  "domain": "yithemes.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2024-08-02 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[5]/div[1]/div[1]",
+              "domain": "woocommerce.com",
+              "title": "WooCommerce Themes",
+              "url": "https://woocommerce.com/product-category/themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://woocommerce.com › product-category › themes",
+              "website_name": "WooCommerce",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Find the perfect design for your store in the <b>WooCommerce themes</b> ・ hundreds of free and paid extensions ・ professionally designed themes",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "WooCommerce"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "video",
+              "rank_group": 1,
+              "rank_absolute": 5,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[7]/div[1]",
+              "items": [
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Riad Mahmud",
+                  "title": "Overview of the WooCommerce block editor and 2025 FSE ...",
+                  "timestamp": "2025-07-06 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=RsfJXzhGszg"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · WordPress",
+                  "title": "Why Block Themes Make WooCommerce Stores Better",
+                  "timestamp": "2025-09-12 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=HxzWkGCVG7E"
+                },
+                {
+                  "type": "video_element",
+                  "source": "YouTube · Jamie WP",
+                  "title": "Why WooCommerce Blocks are amazing",
+                  "timestamp": "2023-11-24 00:00:00 +00:00",
+                  "url": "https://www.youtube.com/watch?v=NW_CEHO7zoE"
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 6,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[9]/div[1]/div[1]",
+              "domain": "wooninjas.com",
+              "title": "What the Shift to WooCommerce Blocks Means for Your ...",
+              "url": "https://wooninjas.com/woocommerce-blocks/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://wooninjas.com › Blog › WooCommerce",
+              "website_name": "WooNinjas",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Aug 26, 2025 — With WooCommerce Blocks, store owners can easily build, customize, and manage their online shops using a simple drag-and-drop style editor. This ... Read more",
+              "pre_snippet": "08/26/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "easily build, customize, and manage their online shops"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-08-26 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 7,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[11]/div[1]/div[1]",
+              "domain": "www.businessbloomer.com",
+              "title": "WooCommerce Block Theme: Aiming to Replace Storefront?",
+              "url": "https://www.businessbloomer.com/woocommerce-block-theme-aiming-to-replace-storefront/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://www.businessbloomer.com › woocommerce-blo...",
+              "website_name": "Business Bloomer",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Jul 15, 2025 — The theme, available now on GitHub, is designed to take full advantage of WordPress's FSE system. It promises more flexibility, better ... Read more",
+              "pre_snippet": "07/15/2025 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "available now on GitHub"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2025-07-15 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 1,
+              "rank_absolute": 8,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[13]/div[1]/div[1]/div[1]",
+              "items": [
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is a block theme on WordPress?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[13]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_ai_overview_expanded_element",
+                      "items": null,
+                      "references": null,
+                      "asynchronous_ai_overview": true
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "Is WooCommerce Storefront a block theme?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[13]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_expanded_element",
+                      "featured_title": null,
+                      "url": "https://olliewp.com/best-woocommerce-block-themes/",
+                      "domain": "olliewp.com",
+                      "title": "The Best WooCommerce Block Themes for 2026",
+                      "description": "Everything you see on your site, from the header to the footer, is made of blocks and editable in one place. WooCommerce is the plugin that turns your WordPress site into an online store. A WooCommerce block theme extends the same visual editing experience to your store pages, too.",
+                      "images": null,
+                      "timestamp": null,
+                      "table": null
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "How to create a block theme?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[13]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_expanded_element",
+                      "featured_title": "Workflow for creating block themes",
+                      "url": "https://fullsiteediting.com/lessons/creating-block-based-themes/",
+                      "domain": "fullsiteediting.com",
+                      "title": "Creating WordPress block themes - Full Site Editing",
+                      "description": "Install the Create Block Theme plugin.\nCreate a blank theme from the plugin options.\nAdd a color palette and fonts in the Site Editor Styles panel.\nCreate block templates based on the desired design.\nExport the changes to a theme . ...\nTweak the theme files in your code editor.",
+                      "images": null,
+                      "timestamp": null,
+                      "table": null
+                    }
+                  ]
+                },
+                {
+                  "type": "people_also_ask_element",
+                  "title": "What is the difference between classic and block in WooCommerce?",
+                  "seed_question": null,
+                  "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[13]/div[1]/div[1]/div[1]/div[1]/div[2]/div[4]",
+                  "expanded_element": [
+                    {
+                      "type": "people_also_ask_expanded_element",
+                      "featured_title": null,
+                      "url": "https://agilestorelocator.com/blog/woocommerce-checkout-blocks-vs-classic/",
+                      "domain": "agilestorelocator.com",
+                      "title": "WooCommerce Checkout Blocks vs Classic Checkout: A 2025 Guide",
+                      "description": "Design Flexibility and Customization\n Classic Checkout is built on shortcodes and PHP templates. Customizing it requires coding skills or third-party plugins. In contrast, checkout blocks let you use the WordPress block editor to arrange, style, and preview components visually.",
+                      "images": null,
+                      "timestamp": null,
+                      "table": null
+                    }
+                  ]
+                }
+              ],
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 9,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[15]/div[1]/div[1]",
+              "domain": "woocommerce.com",
+              "title": "No-code online store customization",
+              "url": "https://woocommerce.com/customize/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://woocommerce.com › customize",
+              "website_name": "WooCommerce",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "WooCommerce Block Themes let you completely customize every part of your online store without touching a line of code.",
+              "pre_snippet": null,
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "WooCommerce Block Themes"
+              ],
+              "links": null,
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": null,
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 10,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[17]/div[1]/div[1]",
+              "domain": "olliewp.com",
+              "title": "The Best WooCommerce Block Themes for 2026",
+              "url": "https://olliewp.com/best-woocommerce-block-themes/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://olliewp.com › Blog › Block Editor",
+              "website_name": "olliewp.com",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Apr 27, 2026 — Twenty Twenty Five is the default true WordPress block theme. It is flexible enough to allow you to build a WooCommerce store, but not entirely ... Read more",
+              "pre_snippet": "04/27/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Twenty Twenty Five is the default true WordPress block theme"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "What Is A Woocommerce Block...",
+                  "description": null,
+                  "url": "https://olliewp.com/best-woocommerce-block-themes/",
+                  "domain": "olliewp.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Template Control",
+                  "description": null,
+                  "url": "https://olliewp.com/best-woocommerce-block-themes/",
+                  "domain": "olliewp.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Partial Woocommerce Block...",
+                  "description": null,
+                  "url": "https://olliewp.com/best-woocommerce-block-themes/",
+                  "domain": "olliewp.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-04-27 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 9,
+              "rank_absolute": 11,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[19]/div[1]/div[1]",
+              "domain": "fullsiteediting.com",
+              "title": "WooCommerce and full site editing themes",
+              "url": "https://fullsiteediting.com/lessons/woocommerce-and-full-site-editing/",
+              "cache_url": null,
+              "related_search_url": null,
+              "breadcrumb": "https://fullsiteediting.com › Lessons",
+              "website_name": "Full Site Editing",
+              "is_image": false,
+              "is_video": false,
+              "is_featured_snippet": false,
+              "is_malicious": false,
+              "is_web_story": false,
+              "description": "Feb 3, 2026 — Learn how to add block templates for WooCommerce shop pages, cart and checkout in a full site editing theme.",
+              "pre_snippet": "02/03/2026 00:00:00",
+              "extended_snippet": null,
+              "images": null,
+              "amp_version": false,
+              "rating": null,
+              "price": null,
+              "highlighted": [
+                "Learn how to add block templates for WooCommerce"
+              ],
+              "links": [
+                {
+                  "type": "link_element",
+                  "title": "How To Add Customized...",
+                  "description": null,
+                  "url": "https://fullsiteediting.com/lessons/woocommerce-and-full-site-editing/",
+                  "domain": "fullsiteediting.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "A Closer Look At The Shop...",
+                  "description": null,
+                  "url": "https://fullsiteediting.com/lessons/woocommerce-and-full-site-editing/",
+                  "domain": "fullsiteediting.com"
+                },
+                {
+                  "type": "link_element",
+                  "title": "Styling Woocommerce Product...",
+                  "description": null,
+                  "url": "https://fullsiteediting.com/lessons/woocommerce-and-full-site-editing/",
+                  "domain": "fullsiteediting.com"
+                }
+              ],
+              "faq": null,
+              "extended_people_also_search": null,
+              "about_this_result": null,
+              "related_result": null,
+              "timestamp": "2026-02-03 00:00:00 +00:00",
+              "rectangle": null
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 1,
+              "rank_absolute": 12,
+              "page": 1,
+              "position": "left",
+              "xpath": "/html[1]/body[1]/div[3]/div[1]/div[12]/div[1]/div[3]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]",
+              "items": [
+                "Woocommerce block theme github",
+                "Woocommerce block theme free download",
+                "Woocommerce block theme free",
+                "Woocommerce block theme example",
+                "Woocommerce block theme download",
+                "WooCommerce themes",
+                "WooCommerce themes free",
+                "WooCommerce theme detector"
+              ],
+              "rectangle": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
