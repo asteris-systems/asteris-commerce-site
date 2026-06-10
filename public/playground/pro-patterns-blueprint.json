@@ -1,0 +1,65 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Asteris Pro Patterns — live demo",
+    "description": "WordPress + Asteris Theme + Pro Patterns (73 patterns active in the inserter). In your browser, no install, no purchase.",
+    "author": "Asteris Commerce"
+  },
+  "landingPage": "/wp-admin/post-new.php?post_type=page",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": ["kitchen-sink"],
+  "features": {
+    "networking": true
+  },
+  "login": {
+    "username": "admin",
+    "password": "password"
+  },
+  "steps": [
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "WP_DEBUG": false,
+        "ASTERIS_PRO_PATTERNS_DEV": true
+      }
+    },
+    {
+      "step": "runWpInstallationWizard",
+      "options": {
+        "adminUsername": "admin",
+        "adminPassword": "password"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; update_option('blogname', 'Pro Patterns Demo'); update_option('blogdescription', '73 premium block patterns — try them all');"
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://asteriscommerce.com/playground/asteris-theme.zip"
+      },
+      "extractToPath": "/wordpress/wp-content/themes"
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "asteris"
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://asteriscommerce.com/playground/asteris-pro-patterns.zip"
+      },
+      "extractToPath": "/wordpress/wp-content/plugins"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "asteris-pro-patterns/asteris-pro-patterns.php"
+    }
+  ]
+}

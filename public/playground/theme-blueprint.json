@@ -1,0 +1,67 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Asteris Theme — live demo",
+    "description": "WordPress + WooCommerce + Asteris Theme (14 product page templates active). In your browser, no install.",
+    "author": "Asteris Commerce"
+  },
+  "landingPage": "/?p=2",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": ["kitchen-sink"],
+  "features": {
+    "networking": true
+  },
+  "login": {
+    "username": "admin",
+    "password": "password"
+  },
+  "steps": [
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "WP_DEBUG": false
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "options": { "activate": true }
+    },
+    {
+      "step": "runWpInstallationWizard",
+      "options": {
+        "adminUsername": "admin",
+        "adminPassword": "password"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; update_option('blogname', 'Asteris Theme Demo'); update_option('blogdescription', 'A free WordPress + WooCommerce block theme — 14 product page templates'); update_option('woocommerce_store_address', 'Sample St'); update_option('woocommerce_store_city', 'Sydney'); update_option('woocommerce_default_country', 'AU:NSW'); update_option('woocommerce_currency', 'USD'); update_option('woocommerce_onboarding_profile', ['completed' => true, 'skipped' => true]); update_option('woocommerce_show_marketplace_suggestions', 'no');"
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://asteriscommerce.com/playground/asteris-theme.zip"
+      },
+      "extractToPath": "/wordpress/wp-content/themes"
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "asteris"
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
+      }
+    }
+  ]
+}
