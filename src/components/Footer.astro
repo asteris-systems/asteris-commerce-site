@@ -31,7 +31,7 @@ const year = 2026;
     </div>
   </div>
   <div class="legal-strip">
-    <p>© {year} My Cosmic Message Pty Ltd t/a Asteris Commerce. All rights reserved.</p>
+    <p>© {year} My Cosmic Message Pty Ltd t/a Asteris Commerce. All rights reserved. <span class="usd">All prices are in USD.</span></p>
     <p class="meta">WordPress is a registered trademark of the WordPress Foundation. WooCommerce is a trademark of Automattic Inc. Asteris Commerce is not affiliated with either.</p>
   </div>
 </footer>
@@ -110,6 +110,7 @@ const year = 2026;
     color: #555555;
     max-width: 580px;
   }
+  .legal-strip .usd { color: #999999; font-weight: 600; }
   @media (max-width: 900px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
   }
