@@ -55,6 +55,15 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
   <link rel="sitemap" href="/sitemap-index.xml" />
 
   <slot name="head" />
+
+  <!-- Google Analytics 4 (G-TXZL5GDQRT) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TXZL5GDQRT"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TXZL5GDQRT');
+  </script>
 </head>
 <body>
   <Nav currentPath={currentPath} />
