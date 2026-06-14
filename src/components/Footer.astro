@@ -6,17 +6,25 @@ const year = 2026;
   <div class="footer-grid">
     <div class="col col-brand">
       <a href="/" class="brand" aria-label="Asteris Commerce home"><span class="star">★</span> Asteris Commerce</a>
-      <p class="tagline">Faster sites. Lower memory. Smaller install. Five plugins for WordPress and WooCommerce from one Sydney team.</p>
+      <p class="tagline">Faster sites. Lower memory. Smaller install. A lean suite of plugins, a theme and patterns for WordPress and WooCommerce from one Sydney team.</p>
       <p class="aus">Made in Australia · ABN 30 652 358 159</p>
     </div>
-    <div class="col">
+    <div class="col col-products">
       <h4>Products</h4>
-      <a href="https://asterisforwoocommerce.com" target="_blank" rel="noopener"><span class="dot" style="color:#FF5B3F">●</span> Asteris for WooCommerce</a>
-      <a href="https://asterisforwordpress.com" target="_blank" rel="noopener"><span class="dot" style="color:#3D5AFE">●</span> Asteris for WordPress</a>
-      <a href="https://asteriscart.com" target="_blank" rel="noopener"><span class="dot" style="color:#00C853">●</span> Asteris Cart</a>
-      <a href="https://asterisaffiliates.com" target="_blank" rel="noopener"><span class="dot" style="color:#06D6A0">●</span> Asteris Affiliates</a>
-      <a href="https://asterisblocks.com" target="_blank" rel="noopener"><span class="dot" style="color:#FFC107">●</span> Asteris Blocks (free)</a>
-      <a href="/" class="parent-link"><span class="dot" style="color:#AA00FF">●</span> Asteris Commerce</a>
+      <div class="product-cols">
+        <div>
+          <a href="https://asterisforwoocommerce.com" target="_blank" rel="noopener"><span class="dot" style="color:#FF5B3F">●</span> Asteris for WooCommerce</a>
+          <a href="https://asterisforwordpress.com" target="_blank" rel="noopener"><span class="dot" style="color:#3D5AFE">●</span> Asteris for WordPress</a>
+          <a href="https://asteriscart.com" target="_blank" rel="noopener"><span class="dot" style="color:#00C853">●</span> Asteris Cart</a>
+          <a href="https://asterisaffiliates.com" target="_blank" rel="noopener"><span class="dot" style="color:#06D6A0">●</span> Asteris Affiliates</a>
+        </div>
+        <div>
+          <a href="/asteris-theme"><span class="dot" style="color:#00B8D4">●</span> Asteris Theme</a>
+          <a href="/asteris-pro-patterns"><span class="dot" style="color:#F50057">●</span> Asteris Pro Patterns</a>
+          <a href="https://asterisblocks.com" target="_blank" rel="noopener"><span class="dot" style="color:#FFC107">●</span> Asteris Blocks (free)</a>
+          <a href="/" class="parent-link"><span class="dot" style="color:#AA00FF">●</span> Asteris Commerce</a>
+        </div>
+      </div>
     </div>
     <div class="col">
       <h4>Company</h4>
@@ -46,9 +54,15 @@ const year = 2026;
     max-width: var(--max-w);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     gap: 36px;
     padding-bottom: 48px;
+  }
+  .col-products { grid-column: span 2; }
+  .product-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
   }
   .col h4 {
     color: var(--c-white);
@@ -113,8 +127,11 @@ const year = 2026;
   .legal-strip .usd { color: #999999; font-weight: 600; }
   @media (max-width: 900px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
+    .col-products { grid-column: span 2; }
   }
   @media (max-width: 500px) {
     .footer-grid { grid-template-columns: 1fr; }
+    .col-products { grid-column: span 1; }
+    .product-cols { grid-template-columns: 1fr; }
   }
 </style>
