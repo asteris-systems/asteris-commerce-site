@@ -1,5 +1,5 @@
 ---
-title: Asteris Pro Patterns
+title: Asteris Blocks Pro
 slug: asteris-pro-patterns
 description: 73 premium block patterns for the Asteris theme — niche page templates, video and audio sections, premium e-commerce, advanced content patterns. Simple annual pricing.
 ---
@@ -54,7 +54,7 @@ No lifetime tier — an annual subscription keeps the patterns maintained and th
 ## Frequently asked questions
 
 **Why a separate plugin instead of bundling everything in the free theme?**
-The free Asteris theme on wp.org has ~88 patterns already — more than most premium themes. We chose to keep the free theme generous and put net-new specialty work in this paid product. Nothing was moved from free to paid. Pro Patterns is pure addition.
+The free Asteris theme on wp.org has ~88 patterns already — more than most premium themes. We chose to keep the free theme generous and put net-new specialty work in this paid product. Nothing was moved from free to paid. Blocks Pro is pure addition.
 
 **Can I use these patterns commercially?**
 Yes. Use them on client sites within your licence's site limit (1, 3, or 5 depending on your tier).
