@@ -99,17 +99,6 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="founding">
-    <div class="container">
-      <div class="founding-card">
-        <span class="founding-eyebrow">â˜… Founding Partners</span>
-        <h2>25 launch slots. 30% lifetime commission.</h2>
-        <p>The first 25 approved partners get the Founding Partner tier — locked 30% commission for life, early access to new modules, a private Slack channel with Nick, and co-marketing once your first referrals ship. Cap matches the Year 1 commission rate. Cute? Sure. Worth it? Massively.</p>
-        <p class="founding-note">Founding Partner invitations go to organic advocates first (top 10), then open via the regular application for the remaining 15 slots at launch.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="rules">
     <div class="container">
       <h2 class="section-title">The honest fine print</h2>
@@ -124,7 +113,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="rule">
           <h3>Self-referrals are blocked.</h3>
-          <p>If you buy Asteris through your own link to grab 25% off, the system catches it and rejects the commission. Don't bother trying — buy at the Founder price like everyone else.</p>
+          <p>If you buy Asteris through your own link to grab 25% off, the system catches it and rejects the commission. Don't bother trying — buy at the standard price like everyone else.</p>
         </div>
         <div class="rule">
           <h3>No audience minimum.</h3>
@@ -219,23 +208,6 @@ import Layout from '../layouts/Layout.astro';
     color: #4a5568; font-family: ui-monospace, monospace;
   }
 
-  /* Founding */
-  .founding { padding: 64px 0; background: #0b0c10; }
-  .founding-card {
-    background: linear-gradient(135deg, rgba(170,0,255,0.10), rgba(255,91,63,0.10));
-    border: 1px solid var(--violet-border);
-    border-radius: 16px;
-    padding: 48px 52px;
-    color: #e8eaed;
-  }
-  .founding-eyebrow {
-    display: inline-block; color: var(--violet); font-size: 14px; font-weight: 700;
-    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;
-  }
-  .founding-card h2 { font-size: 36px; color: #fff; margin: 0 0 18px; line-height: 1.15; }
-  .founding-card p { font-size: 17px; line-height: 1.65; color: #c8cbd0; margin: 0 0 14px; }
-  .founding-note { font-size: 16px !important; color: #9aa0a6 !important; }
-
   /* Rules */
   .rules { padding: 80px 0; background: #fafbfd; border-top: 1px solid #e0e3eb; }
   .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
@@ -256,8 +228,6 @@ import Layout from '../layouts/Layout.astro';
     .lead { font-size: 18px; }
     .section-title { font-size: 26px; }
     .rules-grid { grid-template-columns: 1fr; }
-    .founding-card { padding: 32px 28px; }
-    .founding-card h2 { font-size: 28px; }
     .step { grid-template-columns: 48px 1fr; gap: 16px; }
     .step-num { width: 40px; height: 40px; font-size: 17px; }
     .final-cta h2 { font-size: 30px; }

@@ -1,7 +1,7 @@
 ---
 title: Asteris Pro Patterns
 slug: asteris-pro-patterns
-description: 73 premium block patterns for the Asteris theme — niche page templates, video and audio sections, premium e-commerce, advanced content patterns. Locks the founder price for life.
+description: 73 premium block patterns for the Asteris theme — niche page templates, video and audio sections, premium e-commerce, advanced content patterns. Simple annual pricing.
 ---
 
 # Premium patterns for the Asteris theme.
@@ -22,17 +22,17 @@ description: 73 premium block patterns for the Asteris theme — niche page temp
 
 **7 composite sections** — Above-the-fold (Hero + Logos + Stats in one insert). Social proof (Reviews + Press strip). Pricing block (3-tier + FAQ + CTA). Mid-page conversion. Pre-footer. About section. FAQ + final CTA. One-click insert; multiple sections drop in pre-arranged.
 
-## Pricing — locked for life on the founder tier
+## Pricing
 
-Three tiers. Annual subscription. The first 100 customers lock the founder price for the life of their active subscription. After 100, regular pricing kicks in.
+Three tiers. One standard price for everyone. Annual subscription, by site count.
 
-| Tier | Sites | Founder (first 100) | Regular |
-|---|---|---|---|
-| **Starter** | 1 site | **$49/yr** | $79/yr |
-| **Pro** | 3 sites | **$99/yr** | $149/yr |
-| **Agency** | 5 sites | **$149/yr** | $229/yr |
+| Tier | Sites | Price |
+|---|---|---|
+| **Starter** | 1 site | **$49/yr** |
+| **Pro** | 3 sites | **$99/yr** |
+| **Agency** | 5 sites | **$149/yr** |
 
-No lifetime tier. The founder lock IS your lifetime price — as long as you keep your subscription active, the founder price never goes up. Cancel and rejoin later, regular pricing applies.
+No lifetime tier — an annual subscription keeps the patterns maintained and the library growing.
 
 [Get Starter — $49/yr]  [Get Pro — $99/yr]  [Get Agency — $149/yr]
 
@@ -66,7 +66,7 @@ Patterns stay registered while you're licensed. After cancellation, the patterns
 Yes. Regular drops — composite landing-page combos, dark-mode companions, more niche industries. All free while you're subscribed.
 
 **Why is there no lifetime tier?**
-Because we want to keep shipping updates, and lifetime kills the recurring revenue that funds that work. The founder lock gives you the price certainty you'd get from lifetime, without crippling our ability to keep building.
+Because we want to keep shipping updates, and lifetime kills the recurring revenue that funds that work. An annual subscription keeps the patterns maintained and the library growing.
 
 ---
 
