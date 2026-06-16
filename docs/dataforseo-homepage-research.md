@@ -84,7 +84,7 @@ Each query targets a distinct positioning question for the homepage. All run aga
 - `referral plugin wordpress`
 
 ### Q5 — Patterns / Blocks
-**Goal:** Pro Patterns + Blocks add-on positioning
+**Goal:** Blocks Pro + Blocks add-on positioning
 
 **Endpoint:** same
 **Keywords:**

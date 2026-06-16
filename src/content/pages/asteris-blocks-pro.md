@@ -1,6 +1,6 @@
 ---
 title: Asteris Blocks Pro
-slug: asteris-pro-patterns
+slug: asteris-blocks-pro
 description: 73 premium block patterns for the Asteris theme — niche page templates, video and audio sections, premium e-commerce, advanced content patterns. Simple annual pricing.
 ---
 

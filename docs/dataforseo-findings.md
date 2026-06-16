@@ -127,7 +127,7 @@ This puts the **free Theme as the obvious on-ramp** (matches search demand + com
 |---|---|---|
 | Theme spotlight | (none) | **Start free — Asteris Theme** · *"The free WooCommerce block theme with 14 product page templates"* |
 | Plugin grid | "Products" / "Four plugins…" | **The four plugin suites** · *"Specific functions — SEO, security, swatches, checkout, affiliates — under one vendor"* |
-| Add-ons | "Asteris Blocks" card alone | **Round it out** · 2 cards: Asteris Blocks (free) + Pro Patterns (paid) |
+| Add-ons | "Asteris Blocks" card alone | **Round it out** · 2 cards: Asteris Blocks (free) + Blocks Pro (paid) |
 | Mission | "More inclusions. Less cost." | (keep — table is good as-is, add Theme row) |
 | Why split | "Why four plugins, one company" | **"Why six products, one vendor"** |
 | About | (keep) | (keep) |
