@@ -123,8 +123,11 @@ const year = 2026;
   }
   .legal-strip .meta {
     color: #555555;
-    max-width: 580px;
+    max-width: none;
+    flex: 0 0 100%;
+    font-size: 13px;
   }
+  @media (max-width: 820px) { .legal-strip .meta { font-size: 14px; } }
   .legal-strip .usd { color: #999999; font-weight: 600; }
   @media (max-width: 900px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
