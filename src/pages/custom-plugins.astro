@@ -104,17 +104,53 @@ const faqs = [
   { q: 'I only need a tweak to an existing plugin — can you help?', a: 'Yes. Small fixes, extensions and "make this plugin do X" changes are very welcome, usually as a one-time job or under a Care plan.' },
   { q: 'Do you do rush jobs?', a: 'Yes, with a rush fee and a confirmed slot. Tell us the deadline on the scoping call.' },
 ];
+
+// JSON-LD schema for rich results.
+const ORIGIN = 'https://asteriscommerce.com';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Service',
+      'name': 'Custom WordPress & WooCommerce plugin development',
+      'serviceType': 'WordPress and WooCommerce plugin development',
+      'description': 'Bespoke WordPress and WooCommerce plugin development for any industry and any feature — modals, shipping, multimedia, integrations, automation and more. Fixed-scope builds you own outright, with optional monthly support.',
+      'provider': { '@type': 'Organization', 'name': 'Asteris Commerce', 'url': ORIGIN },
+      'areaServed': 'Worldwide',
+      'url': ORIGIN + '/custom-plugins/',
+      'offers': { '@type': 'Offer', 'priceCurrency': 'USD', 'price': '1200', 'url': ORIGIN + '/custom-plugins/' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': ORIGIN + '/' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Custom Plugins', 'item': ORIGIN + '/custom-plugins/' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': faqs.map((f) => ({
+        '@type': 'Question',
+        'name': f.q,
+        'acceptedAnswer': { '@type': 'Answer', 'text': f.a },
+      })),
+    },
+  ],
+};
 ---
 
 <Layout
-  title="Custom WordPress & WooCommerce Plugins — Asteris Commerce"
-  description="Bespoke WordPress and WooCommerce plugins built for your exact use case — any industry, any plugin type (modals, shipping, multimedia, integrations and more). Fixed-scope builds you own outright, plus optional monthly support and maintenance. Built by the Sydney team behind seven shipping Asteris plugins and five years of Orion Web Service client work."
+  title="Custom WordPress & WooCommerce Plugin Development | Asteris Commerce"
+  description="Custom WordPress & WooCommerce plugin development for any industry — modals, shipping, integrations and more. Fixed-scope builds you own, plus optional support."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </Fragment>
   <!-- HERO -->
   <section class="cp-hero">
     <div class="container">
       <p class="cp-eyebrow">★ Asteris Commerce · Bespoke builds</p>
-      <h1>Custom plugins, built for exactly<br class="cp-br" /> how <em>your</em> business works.</h1>
+      <h1>Custom WordPress &amp; WooCommerce plugins,<br class="cp-br" /> built for exactly how <em>your</em> business works.</h1>
       <p class="lead">Off-the-shelf almost fits? We build the WordPress &amp; WooCommerce plugin that fits exactly — for any industry, any feature: modals, shipping, multimedia, integrations, automation and everything in between. Fixed scope, fixed price, and you own the code.</p>
       <div class="cp-hero-cta">
         <a href={CONTACT} class="btn btn-large btn-pop">Book a free scoping call →</a>
@@ -126,6 +162,16 @@ const faqs = [
         <li><strong>You</strong> own the code</li>
         <li><strong>Sydney</strong>-built</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- INTRO / keyword anchor -->
+  <section class="cp-section cp-alt">
+    <div class="container cp-intro">
+      <h2>WordPress &amp; WooCommerce development, delivered as a plugin you own</h2>
+      <p class="cp-sub">
+        We&rsquo;re a Sydney-based <strong>WordPress &amp; WooCommerce development</strong> team offering <strong>custom plugin development services</strong> — from a single modal to a full WooCommerce shipping or checkout system. Hire us as your <strong>WordPress plugin developer</strong> for a fixed-scope build, and walk away owning the code: no per-site licence, no lock-in.
+      </p>
     </div>
   </section>
 
@@ -350,6 +396,9 @@ const faqs = [
   .cp-section h2 { font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); letter-spacing: -.02em; margin: 0 0 .6rem; }
   .cp-sub { color: var(--c-muted); font-size: 1.1rem; max-width: 62ch; margin: 0 0 2.4rem; line-height: 1.55; }
   .cp-sub-light { color: #bdbdbd; }
+  .cp-intro { max-width: 840px; margin: 0 auto; text-align: center; }
+  .cp-intro h2 { margin-bottom: 1rem; }
+  .cp-intro .cp-sub { margin: 0 auto; }
 
   /* WHAT WE BUILD GRID */
   .cp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
