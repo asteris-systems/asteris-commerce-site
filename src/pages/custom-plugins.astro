@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const CONTACT = 'mailto:hello@asteriscommerce.com?subject=Custom%20plugin%20enquiry';
+const CONTACT = '#enquire';
 
 // What we build — plugin types (the user asked for "all plugin types").
 const pluginTypes = [
@@ -242,6 +242,83 @@ const faqs = [
       <p class="cp-note cp-note-center">Final price is set after the free scoping call &mdash; no obligation. Care plans can be added to any build.</p>
     </div>
   </section>
+
+  <!-- ENQUIRY FORM -->
+  <section id="enquire" class="cp-section cp-enquire">
+    <div class="container cp-enquire-wrap">
+      <h2>Tell us what you need</h2>
+      <p class="cp-sub">Sketch the idea in a few lines. We&rsquo;ll reply within one business day with next steps and book a free scoping call &mdash; no obligation.</p>
+      <p id="cp-thanks" class="cp-thanks" hidden>✓ Thanks — your enquiry is on its way. We&rsquo;ll reply within one business day.</p>
+      <script is:inline>
+        if (location.search.indexOf('sent=1') !== -1) {
+          var t = document.getElementById('cp-thanks');
+          if (t) { t.hidden = false; t.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+        }
+      </script>
+      <form class="cp-form" action="https://formsubmit.co/support@asteriscommerce.com" method="POST">
+        <!-- FormSubmit config -->
+        <input type="hidden" name="_subject" value="Custom plugin enquiry — asteriscommerce.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://asteriscommerce.com/custom-plugins/?sent=1" />
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="cp-honey" aria-hidden="true" />
+
+        <div class="cp-field-row">
+          <label class="cp-field">
+            <span>Your name *</span>
+            <input type="text" name="Name" required autocomplete="name" />
+          </label>
+          <label class="cp-field">
+            <span>Email *</span>
+            <input type="email" name="Email" required autocomplete="email" />
+          </label>
+        </div>
+        <div class="cp-field-row">
+          <label class="cp-field">
+            <span>Website (optional)</span>
+            <input type="url" name="Website" placeholder="https://" />
+          </label>
+          <label class="cp-field">
+            <span>Plugin type</span>
+            <select name="Plugin type">
+              <option>Not sure yet</option>
+              {pluginTypes.map((p) => <option>{p.title}</option>)}
+              <option>Tweak to an existing plugin</option>
+              <option>Something else</option>
+            </select>
+          </label>
+        </div>
+        <div class="cp-field-row">
+          <label class="cp-field">
+            <span>Industry</span>
+            <select name="Industry">
+              <option>Not listed / other</option>
+              {industries.map((i) => <option>{i}</option>)}
+            </select>
+          </label>
+          <label class="cp-field">
+            <span>Budget range</span>
+            <select name="Budget">
+              <option>Not sure yet</option>
+              <option>Under $1,500</option>
+              <option>$1,500 – $5,000</option>
+              <option>$5,000 – $15,000</option>
+              <option>$15,000+</option>
+              <option>Ongoing / Care plan</option>
+            </select>
+          </label>
+        </div>
+        <label class="cp-field">
+          <span>What do you need the plugin to do? *</span>
+          <textarea name="Details" rows="5" required placeholder="The problem, the must-have features, anything it has to integrate with, and any deadline."></textarea>
+        </label>
+        <div class="cp-form-foot">
+          <button type="submit" class="btn btn-large btn-pop">Send enquiry →</button>
+          <p>Goes straight to <strong>support@asteriscommerce.com</strong>. We never share your details.</p>
+        </div>
+      </form>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -333,6 +410,28 @@ const faqs = [
   .cp-pcard .btn { margin-top: auto; text-align: center; }
   .cp-pcard-foot { text-align: center; color: var(--c-faint); font-size: .85rem; margin: .9rem 0 0; }
 
+  /* ENQUIRY FORM */
+  .cp-enquire { background: var(--c-black); color: #fff; }
+  .cp-enquire h2 { color: #fff; text-align: center; }
+  .cp-enquire .cp-sub { color: #bdbdbd; text-align: center; margin-left: auto; margin-right: auto; }
+  .cp-enquire-wrap { max-width: 760px; }
+  .cp-thanks { background: #0f3d23; color: #4ade80; border: 1px solid #2e6b46; border-radius: var(--r-md); padding: 14px 18px; text-align: center; font-weight: 700; margin: 0 auto 1rem; max-width: 760px; }
+  .cp-form { background: #fff; border-radius: var(--r-lg); padding: 32px; margin-top: 1rem; }
+  .cp-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .cp-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .cp-field { display: block; margin-bottom: 18px; }
+  .cp-field > span { display: block; font-weight: 700; font-size: .9rem; margin-bottom: 6px; color: var(--c-text); }
+  .cp-field input, .cp-field select, .cp-field textarea {
+    width: 100%; box-sizing: border-box; border: 2px solid var(--c-black); border-radius: var(--r-md);
+    padding: 11px 13px; font: inherit; font-size: 1rem; background: #fff; color: var(--c-text);
+  }
+  .cp-field input:focus, .cp-field select:focus, .cp-field textarea:focus {
+    outline: none; border-color: var(--c-violet); box-shadow: 0 0 0 3px rgba(170,0,255,.15);
+  }
+  .cp-field textarea { resize: vertical; }
+  .cp-form-foot { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+  .cp-form-foot p { margin: 0; color: var(--c-faint); font-size: .85rem; }
+
   @media (max-width: 900px) {
     .cp-grid { grid-template-columns: repeat(2, 1fr); }
     .cp-why { grid-template-columns: 1fr; }
@@ -341,6 +440,7 @@ const faqs = [
     .cp-grid { grid-template-columns: 1fr; }
     .cp-checks { grid-template-columns: 1fr; }
     .cp-cards { grid-template-columns: 1fr; }
+    .cp-field-row { grid-template-columns: 1fr; }
     .cp-br { display: none; }
   }
 </style>
