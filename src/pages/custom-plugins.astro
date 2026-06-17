@@ -1,0 +1,346 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const CONTACT = 'mailto:hello@asteriscommerce.com?subject=Custom%20plugin%20enquiry';
+
+// What we build — plugin types (the user asked for "all plugin types").
+const pluginTypes = [
+  { icon: '🪟', title: 'Modals & popups', ex: 'Exit-intent, age-gates, announcements, upsell windows, cookie-consent, lightboxes.' },
+  { icon: '🚚', title: 'Shipping & fulfilment', ex: 'Live carrier rates, table/zone rules, label printing, local pickup, dispatch routing.' },
+  { icon: '🛒', title: 'Checkout & cart', ex: 'Custom fields, conditional fees, one-page checkout, order bumps, save-for-later.' },
+  { icon: '💳', title: 'Payments & subscriptions', ex: 'Gateways, deposits & part-pay, recurring billing, split payments, wallets.' },
+  { icon: '🎬', title: 'Multimedia', ex: 'Galleries, audio/video players, 3D & AR product viewers, playlists, streaming.' },
+  { icon: '📅', title: 'Booking & scheduling', ex: 'Appointments, rentals, events, room/resource calendars, availability rules.' },
+  { icon: '📝', title: 'Forms & data capture', ex: 'Multi-step, conditional logic, file uploads, e-sign, CRM sync, calculators.' },
+  { icon: '🔌', title: 'Integrations & APIs', ex: 'ERP, CRM, accounting (Xero/QuickBooks), couriers, marketplaces, webhooks.' },
+  { icon: '🔐', title: 'Memberships & access', ex: 'Paywalls, content drip, role gating, course access, partner portals.' },
+  { icon: '🏷️', title: 'Pricing & quoting', ex: 'B2B/wholesale tiers, RFQ, product configurators, dynamic & bulk pricing.' },
+  { icon: '📊', title: 'Reporting & dashboards', ex: 'Custom analytics, scheduled exports, KPI widgets, admin overview screens.' },
+  { icon: '⚙️', title: 'Automation & workflows', ex: 'Triggers, cron jobs, status automations, notifications, queue processing.' },
+  { icon: '🔁', title: 'Import / export / sync', ex: 'Migrations, two-way sync, scheduled feeds, bulk product/customer tooling.' },
+  { icon: '🤖', title: 'AI features', ex: 'Content generation, recommendations, search, support agents, BYO-key models.' },
+  { icon: '🚀', title: 'Performance & infra', ex: 'Object caching, background jobs, custom search/index, query optimisation.' },
+  { icon: '🧰', title: 'Admin & ops tools', ex: 'Custom post types, bulk operations, internal tools, ACF-style field engines.' },
+];
+
+// Any industry.
+const industries = [
+  'Retail & eCommerce', 'Hospitality & food', 'Real estate', 'Health & medical',
+  'Education & e-learning', 'Professional services', 'Manufacturing & B2B', 'Events & ticketing',
+  'Fitness & wellness', 'Finance & insurance', 'Nonprofit & charity', 'Travel & tourism',
+  'Automotive', 'Beauty & salons', 'SaaS & technology', 'Trades & local services',
+];
+
+// The process — audited end-to-end.
+const steps = [
+  { n: '01', t: 'Discovery & scoping call', d: 'A free call to map the use case, constraints, integrations and success criteria. NDA on request before anything is shared.' },
+  { n: '02', t: 'Fixed proposal & quote', d: 'A written spec — features, data model, milestones, timeline and a fixed price. No hourly black holes, no surprise invoices.' },
+  { n: '03', t: 'Architecture & design', d: 'Data model, admin UX, security model and a compatibility plan (HPOS, Block Checkout, Multisite, your theme + plugin stack).' },
+  { n: '04', t: 'Build on staging', d: 'We build on a staging copy with milestone demos, so you see and steer it as it comes together — never blind until the end.' },
+  { n: '05', t: 'QA, security & compat', d: 'Code review, Plugin Check, accessibility (WCAG 2.1 AA), a performance budget, and testing across themes + PHP 8.1–8.3.' },
+  { n: '06', t: 'Deploy & handover', d: 'Installed on your site, with full documentation and the complete source. You own the code outright — no lock-in.' },
+  { n: '07', t: 'Support & care (optional)', d: 'Ongoing WP/WC compatibility updates, fixes, small monthly changes, monitoring and priority support under an SLA.' },
+];
+
+// Everything included — the quality floor.
+const included = [
+  'You own the code outright — no per-site licence, no lock-in',
+  'Full source + written documentation delivered',
+  'Security-first: nonces, sanitisation, capability & permission checks',
+  'WordPress Coding Standards + Plugin Check clean',
+  'HPOS, Block Cart/Checkout & Multisite compatibility as needed',
+  'Accessibility (WCAG 2.1 AA) built in, not bolted on',
+  'Performance budget — assets load only where the feature runs',
+  'Optional self-hosted auto-update channel for your team',
+  'Clean uninstall — no orphaned tables or options',
+  'Translation-ready (i18n) out of the box',
+  'Tested across 6 themes + PHP 8.1, 8.2, 8.3',
+  '30-day warranty on every build',
+  'NDA & confidentiality as standard',
+  'Staging-first — we never cowboy on production',
+  'GDPR / privacy handled by design',
+  'Works with your existing stack — no rip-and-replace',
+];
+
+const why = [
+  { t: 'We ship real products', d: 'Seven shipping WordPress & WooCommerce plugins. We build maintainable software, not throwaway one-offs that rot after handover.' },
+  { t: 'Operator-built', d: 'Five years running real client stores through our sister business, Orion Web Service. We have felt the pain we build against.' },
+  { t: 'You own it', d: 'Most agencies licence the code back to you and hold it hostage. Your build is yours — source, IP, all of it.' },
+  { t: 'Fixed scope, fixed price', d: 'You approve a written spec and a number before we start. No metered hours, no scope-creep invoices.' },
+  { t: 'One team, end to end', d: 'The people who build it are the people who support it. No handing you to a different support queue.' },
+];
+
+const faqs = [
+  { q: 'Do I actually own the plugin?', a: '100%. You get the full source and the IP. No per-site licence, no usage caps, no us holding the keys.' },
+  { q: 'How long does a build take?', a: 'A focused utility or modal is typically 1–2 weeks. A larger integration or commerce feature is usually 4–8 weeks. You get a firm timeline in the proposal.' },
+  { q: 'Can you work with my existing site and plugins?', a: 'Yes. We build to fit your current theme and plugin stack, test against it, and avoid conflicts. No rebuild required.' },
+  { q: 'Will it survive WordPress / WooCommerce updates?', a: 'Every build is written to current standards and tested across PHP versions. A Care plan keeps it actively maintained against core, WC and PHP changes.' },
+  { q: 'Can you publish it to WordPress.org?', a: 'Yes, where it makes sense — we know the review process (we ship plugins there) and can prepare and submit a compliant release.' },
+  { q: 'What about confidentiality and my data?', a: 'NDA on request before scoping. Builds are GDPR-aware by design, and we never expose customer data we do not need.' },
+  { q: 'I only need a tweak to an existing plugin — can you help?', a: 'Yes. Small fixes, extensions and "make this plugin do X" changes are very welcome, usually as a one-time job or under a Care plan.' },
+  { q: 'Do you do rush jobs?', a: 'Yes, with a rush fee and a confirmed slot. Tell us the deadline on the scoping call.' },
+];
+---
+
+<Layout
+  title="Custom WordPress & WooCommerce Plugins — Asteris Commerce"
+  description="Bespoke WordPress and WooCommerce plugins built for your exact use case — any industry, any plugin type (modals, shipping, multimedia, integrations and more). Fixed-scope builds you own outright, plus optional monthly support and maintenance. Built by the Sydney team behind seven shipping Asteris plugins and five years of Orion Web Service client work."
+>
+  <!-- HERO -->
+  <section class="cp-hero">
+    <div class="container">
+      <p class="cp-eyebrow">★ Asteris Commerce · Bespoke builds</p>
+      <h1>Custom plugins, built for exactly<br class="cp-br" /> how <em>your</em> business works.</h1>
+      <p class="lead">Off-the-shelf almost fits? We build the WordPress &amp; WooCommerce plugin that fits exactly — for any industry, any feature: modals, shipping, multimedia, integrations, automation and everything in between. Fixed scope, fixed price, and you own the code.</p>
+      <div class="cp-hero-cta">
+        <a href={CONTACT} class="btn btn-large btn-pop">Book a free scoping call →</a>
+        <a href="#how" class="btn btn-large btn-outline">See how it works ↓</a>
+      </div>
+      <ul class="cp-trust">
+        <li><strong>7</strong> plugins shipped</li>
+        <li><strong>5 yrs</strong> WP/WC client work</li>
+        <li><strong>You</strong> own the code</li>
+        <li><strong>Sydney</strong>-built</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT WE BUILD -->
+  <section class="cp-section">
+    <div class="container">
+      <h2>Any plugin type</h2>
+      <p class="cp-sub">If WordPress or WooCommerce can do it, we can build it. A sample of what we&rsquo;re asked for &mdash; yours probably isn&rsquo;t on the list, and that&rsquo;s the point.</p>
+      <div class="cp-grid">
+        {pluginTypes.map((p) => (
+          <div class="cp-card">
+            <span class="cp-card-icon">{p.icon}</span>
+            <h3>{p.title}</h3>
+            <p>{p.ex}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="cp-section cp-alt">
+    <div class="container">
+      <h2>Any industry</h2>
+      <p class="cp-sub">We&rsquo;ve built for stores, studios, clinics, agencies and B2B operators. Custom means we start from your workflow, not a template.</p>
+      <ul class="cp-chips">
+        {industries.map((i) => <li>{i}</li>)}
+      </ul>
+      <p class="cp-note">Don&rsquo;t see yours? <a href={CONTACT}>Tell us about it →</a></p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="cp-section">
+    <div class="container">
+      <h2>How it works</h2>
+      <p class="cp-sub">A clear, low-risk path from idea to a plugin running on your site &mdash; with you steering at every step.</p>
+      <ol class="cp-steps">
+        {steps.map((s) => (
+          <li>
+            <span class="cp-step-n">{s.n}</span>
+            <div>
+              <h3>{s.t}</h3>
+              <p>{s.d}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- INCLUDED -->
+  <section class="cp-section cp-dark">
+    <div class="container">
+      <h2>Every build includes</h2>
+      <p class="cp-sub cp-sub-light">The quality floor on every project &mdash; the things cheap freelancers skip and you only discover later.</p>
+      <ul class="cp-checks">
+        {included.map((c) => <li><span class="cp-tick">✓</span>{c}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="cp-section cp-alt">
+    <div class="container">
+      <h2>Why Asteris, not a random freelancer</h2>
+      <div class="cp-why">
+        {why.map((w) => (
+          <div class="cp-why-item">
+            <h3>{w.t}</h3>
+            <p>{w.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="cp-section">
+    <div class="container cp-faq-wrap">
+      <h2>Questions, answered</h2>
+      <div class="cp-faq">
+        {faqs.map((f) => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING — two-card close (image-1 style) -->
+  <section class="cp-section cp-pricing">
+    <div class="container">
+      <h2>Two ways to work together</h2>
+      <p class="cp-sub">Pay once for a finished tool you own &mdash; or add a Care plan to keep a mission-critical plugin updated and supported for the long run.</p>
+      <div class="cp-cards">
+        <div class="cp-pcard">
+          <div class="cp-pcard-head">
+            <span class="cp-pcard-tag cp-tag-amber">★ One-time build</span>
+            <span class="cp-pcard-badge cp-badge-amber">You own it</span>
+          </div>
+          <h3>Fixed-scope build</h3>
+          <p class="cp-price">from <strong>$1,500</strong> <span>one-time</span></p>
+          <p class="cp-pcard-desc">A defined plugin, scoped and quoted up front, delivered and installed. Source code, documentation and full ownership are yours.</p>
+          <ul>
+            <li>✓ Written spec &amp; fixed price</li>
+            <li>✓ Built on staging with milestone demos</li>
+            <li>✓ Full source + documentation</li>
+            <li>✓ Security, a11y &amp; performance pass</li>
+            <li>✓ 30-day warranty</li>
+          </ul>
+          <a href={CONTACT} class="btn btn-large btn-outline">Get a fixed quote →</a>
+          <p class="cp-pcard-foot">Best for a defined, finished tool.</p>
+        </div>
+
+        <div class="cp-pcard cp-pcard-featured">
+          <div class="cp-pcard-head">
+            <span class="cp-pcard-tag cp-tag-violet">★ Build + Care plan</span>
+            <span class="cp-pcard-badge cp-badge-violet">Most popular</span>
+          </div>
+          <h3>Build, then kept alive</h3>
+          <p class="cp-price">build + from <strong>$95</strong><span>/mo</span></p>
+          <p class="cp-pcard-desc">Everything in a one-time build, plus an ongoing plan that keeps the plugin compatible, supported and improving every month.</p>
+          <ul>
+            <li>✓ Everything in the one-time build</li>
+            <li>✓ WP / WC / PHP compatibility updates</li>
+            <li>✓ Bug fixes &amp; small monthly changes</li>
+            <li>✓ Priority support with an SLA</li>
+            <li>✓ Uptime &amp; error monitoring</li>
+            <li>✓ Cancel anytime</li>
+          </ul>
+          <a href={CONTACT} class="btn btn-large btn-pop">Start your build →</a>
+          <p class="cp-pcard-foot">Best for plugins that must keep working.</p>
+        </div>
+      </div>
+      <p class="cp-note cp-note-center">Final price is set after the free scoping call &mdash; no obligation. Care plans can be added to any build.</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* HERO */
+  .cp-hero { background: var(--c-black); color: var(--c-white); padding: 7rem 0 5rem; }
+  .cp-eyebrow { color: var(--c-yellow); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: .85rem; margin: 0 0 1.2rem; }
+  .cp-hero h1 { font-size: clamp(2.4rem, 1.6rem + 3.4vw, 4.2rem); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 1.4rem; color: #fff; }
+  .cp-hero h1 em { color: var(--c-violet); font-style: normal; }
+  .cp-hero .lead { font-size: clamp(1.05rem, 1rem + .4vw, 1.35rem); color: #cfcfcf; max-width: 60ch; line-height: 1.55; margin: 0 0 2rem; }
+  .cp-hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 2.4rem; }
+  .cp-hero .btn-outline { color: #fff; border-color: #fff; }
+  .cp-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 1.2rem 2.4rem; padding: 0; margin: 0; border-top: 1px solid #222; padding-top: 1.6rem; }
+  .cp-trust li { color: #aaa; font-size: .95rem; }
+  .cp-trust strong { color: #fff; font-size: 1.15rem; margin-right: .35rem; }
+
+  /* SECTIONS */
+  .cp-section { padding: 4.5rem 0; }
+  .cp-alt { background: var(--c-bg); }
+  .cp-section h2 { font-size: clamp(1.8rem, 1.4rem + 1.6vw, 2.6rem); letter-spacing: -.02em; margin: 0 0 .6rem; }
+  .cp-sub { color: var(--c-muted); font-size: 1.1rem; max-width: 62ch; margin: 0 0 2.4rem; line-height: 1.55; }
+  .cp-sub-light { color: #bdbdbd; }
+
+  /* WHAT WE BUILD GRID */
+  .cp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .cp-card { border: 2px solid var(--c-black); border-radius: var(--r-lg); background: #fff; padding: 20px; transition: transform .12s, box-shadow .12s; }
+  .cp-card:hover { transform: translate(-3px, -3px); box-shadow: var(--pop-shadow); }
+  .cp-card-icon { font-size: 1.6rem; display: block; margin-bottom: .5rem; }
+  .cp-card h3 { font-size: 1.05rem; margin: 0 0 .4rem; }
+  .cp-card p { color: var(--c-muted); font-size: .9rem; line-height: 1.5; margin: 0; }
+
+  /* INDUSTRY CHIPS */
+  .cp-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; padding: 0; margin: 0 0 1.6rem; }
+  .cp-chips li { border: 2px solid var(--c-black); border-radius: 999px; padding: 9px 18px; font-weight: 600; font-size: .95rem; background: #fff; }
+  .cp-note { color: var(--c-muted); font-size: 1rem; }
+  .cp-note a { color: var(--c-violet); font-weight: 700; text-decoration: none; }
+  .cp-note-center { text-align: center; margin-top: 1.8rem; }
+
+  /* STEPS */
+  .cp-steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .cp-steps li { display: flex; gap: 20px; align-items: flex-start; border: 2px solid var(--c-black); border-radius: var(--r-lg); padding: 22px 24px; background: #fff; }
+  .cp-step-n { font-family: var(--font-mono); font-weight: 700; font-size: 1.5rem; color: var(--c-violet); flex: 0 0 auto; min-width: 2.4ch; }
+  .cp-steps h3 { margin: 0 0 .35rem; font-size: 1.2rem; }
+  .cp-steps p { margin: 0; color: var(--c-muted); line-height: 1.55; }
+
+  /* INCLUDED (dark) */
+  .cp-dark { background: var(--c-black); color: #fff; }
+  .cp-dark h2 { color: #fff; }
+  .cp-checks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 28px; }
+  .cp-checks li { display: flex; gap: 12px; align-items: flex-start; color: #e8e8e8; line-height: 1.5; }
+  .cp-tick { color: #4ade80; font-weight: 800; flex: 0 0 auto; }
+
+  /* WHY */
+  .cp-why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .cp-why-item { border-left: 3px solid var(--c-violet); padding: .2rem 0 .2rem 18px; }
+  .cp-why-item h3 { margin: 0 0 .4rem; font-size: 1.15rem; }
+  .cp-why-item p { margin: 0; color: var(--c-muted); line-height: 1.55; }
+
+  /* FAQ */
+  .cp-faq-wrap { max-width: 760px; }
+  .cp-faq details { border: 2px solid var(--c-black); border-radius: var(--r-lg); padding: 16px 20px; margin-bottom: 12px; background: #fff; }
+  .cp-faq summary { font-weight: 700; cursor: pointer; font-size: 1.05rem; list-style: none; }
+  .cp-faq summary::-webkit-details-marker { display: none; }
+  .cp-faq summary::after { content: '+'; float: right; color: var(--c-violet); font-weight: 800; }
+  .cp-faq details[open] summary::after { content: '–'; }
+  .cp-faq p { color: var(--c-muted); margin: .8rem 0 0; line-height: 1.6; }
+
+  /* PRICING two-card */
+  .cp-pricing { background: var(--c-bg); }
+  .cp-pricing h2, .cp-pricing .cp-sub { text-align: center; margin-left: auto; margin-right: auto; }
+  .cp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 920px; margin: 0 auto; align-items: start; }
+  .cp-pcard { border: 2px solid var(--c-black); border-radius: var(--r-lg); background: #fff; padding: 28px; display: flex; flex-direction: column; }
+  .cp-pcard-featured { border-color: var(--c-violet); box-shadow: var(--pop-shadow); }
+  .cp-pcard-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
+  .cp-pcard-tag { font-weight: 800; font-size: .95rem; }
+  .cp-tag-amber { color: #b8860b; }
+  .cp-tag-violet { color: var(--c-violet); }
+  .cp-pcard-badge { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; color: #fff; }
+  .cp-badge-amber { background: #b8860b; }
+  .cp-badge-violet { background: var(--c-violet); }
+  .cp-pcard h3 { margin: 0 0 .4rem; font-size: 1.3rem; }
+  .cp-price { font-size: 1rem; color: var(--c-muted); margin: 0 0 1rem; }
+  .cp-price strong { font-size: 2.1rem; color: var(--c-black); }
+  .cp-price span { font-size: .95rem; }
+  .cp-pcard-desc { color: var(--c-muted); line-height: 1.55; margin: 0 0 1.2rem; }
+  .cp-pcard ul { list-style: none; padding: 0; margin: 0 0 1.6rem; display: grid; gap: 9px; }
+  .cp-pcard li { color: var(--c-text); font-size: .96rem; }
+  .cp-pcard .btn { margin-top: auto; text-align: center; }
+  .cp-pcard-foot { text-align: center; color: var(--c-faint); font-size: .85rem; margin: .9rem 0 0; }
+
+  @media (max-width: 900px) {
+    .cp-grid { grid-template-columns: repeat(2, 1fr); }
+    .cp-why { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 700px) {
+    .cp-grid { grid-template-columns: 1fr; }
+    .cp-checks { grid-template-columns: 1fr; }
+    .cp-cards { grid-template-columns: 1fr; }
+    .cp-br { display: none; }
+  }
+</style>
