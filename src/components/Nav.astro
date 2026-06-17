@@ -31,7 +31,21 @@ const tailLinks = [
       <span class="star" aria-hidden="true">★</span> Asteris Commerce
     </a>
 
-    <div class="nav-center">
+    <button
+      type="button"
+      class="nav-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="nav-center"
+    >
+      <span class="nav-toggle-box" aria-hidden="true">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </span>
+    </button>
+
+    <div class="nav-center" id="nav-center">
       {navLinks.map(link => (
         <a
           href={link.href}
@@ -148,6 +162,35 @@ const tailLinks = [
     outline: none;
   }
 
+  /* Hamburger toggle — hidden on desktop, shown ≤900px */
+  .nav-toggle {
+    display: none;
+    flex: 0 0 auto;
+    background: none;
+    border: 2px solid var(--c-black);
+    border-radius: 8px;
+    padding: 9px 10px;
+    cursor: pointer;
+    line-height: 0;
+  }
+  .nav-toggle-box {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 22px;
+  }
+  .nav-toggle-bar {
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background: var(--c-black);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
   /* Dropdown */
   .nav-dropdown {
     position: relative;
@@ -246,22 +289,76 @@ const tailLinks = [
     .logo { font-size: 20px; }
     .logo .star { font-size: 24px; }
   }
-  @media (max-width: 880px) {
+  @media (max-width: 900px) {
+    .nav-toggle { display: inline-flex; }
     .site-nav {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
       padding: 16px var(--gutter);
     }
+    /* Menu becomes a full-width panel below the bar */
     .nav-center {
-      width: 100%;
-      justify-content: flex-start;
-      gap: 14px;
-    }
-    .dropdown-menu {
+      position: absolute;
+      top: 100%;
       left: 0;
-      transform: none;
-      min-width: 280px;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      flex-wrap: nowrap;
+      background: #fff;
+      border-bottom: 1px solid #e0e3eb;
+      box-shadow: 0 16px 40px -16px rgba(10, 10, 10, 0.2);
+      padding: 4px var(--gutter) 14px;
+      display: none;
+      z-index: 200;
     }
+    .nav-center.open { display: flex; }
+    .nav-link {
+      width: 100%;
+      padding: 14px 2px;
+      font-size: 17px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    /* Plugins: expand its items inline — no off-screen dropdown */
+    .nav-dropdown { width: 100%; }
+    .dropdown-trigger {
+      width: 100%;
+      padding: 14px 2px;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-trigger .caret { display: none; }
+    .nav-dropdown::after { display: none; }
+    .dropdown-menu {
+      position: static;
+      transform: none;
+      display: flex;
+      min-width: 0;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 4px 0 6px 4px;
+    }
+    .dropdown-item { padding: 12px 8px; }
   }
 </style>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('nav-center');
+  if (btn && menu) {
+    const close = () => { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); };
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    // Tapping any real link closes the panel (the Plugins trigger is not a link)
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  }
+</script>
