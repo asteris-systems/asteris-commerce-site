@@ -70,6 +70,30 @@ const why = [
   { t: 'One team, end to end', d: 'The people who build it are the people who support it. No handing you to a different support queue.' },
 ];
 
+// Build pricing tiers — "from" anchors within real market bands.
+const tiers = [
+  {
+    name: 'Essential', price: 'from $1,200', featured: false,
+    best: 'A focused, single-purpose plugin.',
+    points: ['Modals, utilities, small admin tools, tweaks', 'Typically 1–2 weeks', 'Full source + docs — you own it', '30-day warranty'],
+  },
+  {
+    name: 'Standard', price: 'from $3,500', featured: true,
+    best: 'A full-featured WordPress plugin.',
+    points: ['Custom post types, settings, admin UI', 'Third-party API / service integrations', 'Typically 2–4 weeks', 'Everything in Essential'],
+  },
+  {
+    name: 'WooCommerce', price: 'from $6,500', featured: false,
+    best: 'Store-grade commerce features.',
+    points: ['Checkout, shipping, pricing, subscriptions', 'HPOS + Block Checkout compatible', 'Typically 3–6 weeks', 'Everything in Standard'],
+  },
+  {
+    name: 'Enterprise', price: 'Custom quote', featured: false,
+    best: 'Heavy integrations & multi-system builds.',
+    points: ['ERP / CRM / large API integrations', 'Multisite & high-volume ready', 'Security & load review', 'Dedicated build + SLA'],
+  },
+];
+
 const faqs = [
   { q: 'Do I actually own the plugin?', a: '100%. You get the full source and the IP. No per-site licence, no usage caps, no us holding the keys.' },
   { q: 'How long does a build take?', a: 'A focused utility or modal is typically 1–2 weeks. A larger integration or commerce feature is usually 4–8 weeks. You get a firm timeline in the proposal.' },
@@ -194,52 +218,36 @@ const faqs = [
     </div>
   </section>
 
-  <!-- PRICING — two-card close (image-1 style) -->
+  <!-- PRICING — tiered table + Care add-on -->
   <section class="cp-section cp-pricing">
     <div class="container">
-      <h2>Two ways to work together</h2>
-      <p class="cp-sub">Pay once for a finished tool you own &mdash; or add a Care plan to keep a mission-critical plugin updated and supported for the long run.</p>
-      <div class="cp-cards">
-        <div class="cp-pcard">
-          <div class="cp-pcard-head">
-            <span class="cp-pcard-tag cp-tag-amber">★ One-time build</span>
-            <span class="cp-pcard-badge cp-badge-amber">You own it</span>
+      <h2>Transparent pricing</h2>
+      <p class="cp-sub">Every build is a fixed quote you approve up front &mdash; and you own the code. These are starting points by complexity; your exact price is set on the free scoping call.</p>
+      <div class="cp-tiers">
+        {tiers.map((t) => (
+          <div class={'cp-tier' + (t.featured ? ' cp-tier-featured' : '')}>
+            {t.featured && <span class="cp-tier-flag">Most common</span>}
+            <h3>{t.name}</h3>
+            <p class="cp-tier-price">{t.price}</p>
+            <p class="cp-tier-best">{t.best}</p>
+            <ul>
+              {t.points.map((pt) => <li>{pt}</li>)}
+            </ul>
+            <a href={CONTACT} class={'btn ' + (t.featured ? 'btn-pop' : 'btn-outline')}>Get a quote →</a>
           </div>
-          <h3>Fixed-scope build</h3>
-          <p class="cp-price">from <strong>$1,500</strong> <span>one-time</span></p>
-          <p class="cp-pcard-desc">A defined plugin, scoped and quoted up front, delivered and installed. Source code, documentation and full ownership are yours.</p>
-          <ul>
-            <li>✓ Written spec &amp; fixed price</li>
-            <li>✓ Built on staging with milestone demos</li>
-            <li>✓ Full source + documentation</li>
-            <li>✓ Security, a11y &amp; performance pass</li>
-            <li>✓ 30-day warranty</li>
-          </ul>
-          <a href={CONTACT} class="btn btn-large btn-outline">Get a fixed quote →</a>
-          <p class="cp-pcard-foot">Best for a defined, finished tool.</p>
-        </div>
-
-        <div class="cp-pcard cp-pcard-featured">
-          <div class="cp-pcard-head">
-            <span class="cp-pcard-tag cp-tag-violet">★ Build + Care plan</span>
-            <span class="cp-pcard-badge cp-badge-violet">Most popular</span>
-          </div>
-          <h3>Build, then kept alive</h3>
-          <p class="cp-price">build + from <strong>$95</strong><span>/mo</span></p>
-          <p class="cp-pcard-desc">Everything in a one-time build, plus an ongoing plan that keeps the plugin compatible, supported and improving every month.</p>
-          <ul>
-            <li>✓ Everything in the one-time build</li>
-            <li>✓ WP / WC / PHP compatibility updates</li>
-            <li>✓ Bug fixes &amp; small monthly changes</li>
-            <li>✓ Priority support with an SLA</li>
-            <li>✓ Uptime &amp; error monitoring</li>
-            <li>✓ Cancel anytime</li>
-          </ul>
-          <a href={CONTACT} class="btn btn-large btn-pop">Start your build →</a>
-          <p class="cp-pcard-foot">Best for plugins that must keep working.</p>
-        </div>
+        ))}
       </div>
-      <p class="cp-note cp-note-center">Final price is set after the free scoping call &mdash; no obligation. Care plans can be added to any build.</p>
+
+      <div class="cp-care">
+        <div class="cp-care-text">
+          <span class="cp-care-tag">★ Optional Care plan</span>
+          <h3>Keep it alive &mdash; from <strong>$99/mo</strong></h3>
+          <p>Add ongoing support to any build: WP / WC / PHP compatibility updates, bug fixes, small monthly changes, priority support with an SLA, and uptime &amp; error monitoring. Cancel anytime.</p>
+        </div>
+        <a href={CONTACT} class="btn btn-large btn-outline">Add a Care plan →</a>
+      </div>
+
+      <p class="cp-note cp-note-center">All prices in USD &middot; fixed quote after a free, no-obligation scoping call &middot; you own the code outright.</p>
     </div>
   </section>
 
@@ -387,28 +395,28 @@ const faqs = [
   .cp-faq details[open] summary::after { content: '–'; }
   .cp-faq p { color: var(--c-muted); margin: .8rem 0 0; line-height: 1.6; }
 
-  /* PRICING two-card */
+  /* PRICING tiers */
   .cp-pricing { background: var(--c-bg); }
-  .cp-pricing h2, .cp-pricing .cp-sub { text-align: center; margin-left: auto; margin-right: auto; }
-  .cp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 920px; margin: 0 auto; align-items: stretch; }
-  .cp-pcard { border: 2px solid var(--c-black); border-radius: var(--r-lg); background: #fff; padding: 28px; display: flex; flex-direction: column; }
-  .cp-pcard-featured { border-color: var(--c-violet); box-shadow: var(--pop-shadow); }
-  .cp-pcard-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 1rem; }
-  .cp-pcard-tag { font-weight: 800; font-size: .95rem; }
-  .cp-tag-amber { color: #b8860b; }
-  .cp-tag-violet { color: var(--c-violet); }
-  .cp-pcard-badge { font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; color: #fff; }
-  .cp-badge-amber { background: #b8860b; }
-  .cp-badge-violet { background: var(--c-violet); }
-  .cp-pcard h3 { margin: 0 0 .4rem; font-size: 1.3rem; }
-  .cp-price { font-size: 1rem; color: var(--c-muted); margin: 0 0 1rem; }
-  .cp-price strong { font-size: 2.1rem; color: var(--c-black); }
-  .cp-price span { font-size: .95rem; }
-  .cp-pcard-desc { color: var(--c-muted); line-height: 1.55; margin: 0 0 1.2rem; }
-  .cp-pcard ul { list-style: none; padding: 0; margin: 0 0 1.6rem; display: grid; gap: 9px; }
-  .cp-pcard li { color: var(--c-text); font-size: .96rem; }
-  .cp-pcard .btn { margin-top: auto; text-align: center; }
-  .cp-pcard-foot { text-align: center; color: var(--c-faint); font-size: .85rem; margin: .9rem 0 0; }
+  .cp-pricing h2, .cp-pricing > .container > .cp-sub { text-align: center; margin-left: auto; margin-right: auto; }
+  .cp-tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
+  .cp-tier { position: relative; border: 2px solid var(--c-black); border-radius: var(--r-lg); background: #fff; padding: 24px 20px; display: flex; flex-direction: column; }
+  .cp-tier-featured { border-color: var(--c-violet); box-shadow: var(--pop-shadow); }
+  .cp-tier-flag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--c-violet); color: #fff; font-size: .66rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+  .cp-tier h3 { margin: .2rem 0 .3rem; font-size: 1.25rem; }
+  .cp-tier-price { font-size: 1.5rem; font-weight: 800; color: var(--c-black); margin: 0 0 .6rem; }
+  .cp-tier-best { color: var(--c-violet); font-weight: 600; font-size: .92rem; margin: 0 0 1rem; min-height: 2.6em; }
+  .cp-tier ul { list-style: none; padding: 0; margin: 0 0 1.4rem; display: grid; gap: 8px; }
+  .cp-tier li { color: var(--c-muted); font-size: .9rem; line-height: 1.45; padding-left: 18px; position: relative; }
+  .cp-tier li::before { content: '✓'; position: absolute; left: 0; color: var(--c-violet); font-weight: 800; }
+  .cp-tier .btn { margin-top: auto; text-align: center; }
+
+  /* Care add-on strip */
+  .cp-care { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; border: 2px solid var(--c-black); border-radius: var(--r-lg); background: var(--c-black); color: #fff; padding: 28px 32px; margin-top: 28px; }
+  .cp-care-tag { color: var(--c-yellow); font-weight: 800; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; }
+  .cp-care h3 { color: #fff; margin: .4rem 0 .5rem; font-size: 1.5rem; }
+  .cp-care h3 strong { color: var(--c-yellow); }
+  .cp-care p { color: #cfcfcf; margin: 0; max-width: 64ch; line-height: 1.55; }
+  .cp-care .btn { flex: 0 0 auto; color: #fff; border-color: #fff; }
 
   /* ENQUIRY FORM */
   .cp-enquire { background: var(--c-black); color: #fff; }
@@ -435,11 +443,13 @@ const faqs = [
   @media (max-width: 900px) {
     .cp-grid { grid-template-columns: repeat(2, 1fr); }
     .cp-why { grid-template-columns: 1fr; }
+    .cp-tiers { grid-template-columns: repeat(2, 1fr); }
+    .cp-care { flex-direction: column; align-items: flex-start; }
   }
   @media (max-width: 700px) {
     .cp-grid { grid-template-columns: 1fr; }
     .cp-checks { grid-template-columns: 1fr; }
-    .cp-cards { grid-template-columns: 1fr; }
+    .cp-tiers { grid-template-columns: 1fr; }
     .cp-field-row { grid-template-columns: 1fr; }
     .cp-br { display: none; }
   }
