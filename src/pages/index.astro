@@ -164,6 +164,22 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ── Custom plugins band ──────────────────────────────────────── -->
+  <section class="custombuild">
+    <div class="container">
+      <div class="cb-inner">
+        <div class="cb-text">
+          <div class="cb-eye"><span class="ps">★</span> Bespoke builds</div>
+          <h2 class="section-h">Need something off the menu?</h2>
+          <p class="section-lead">
+            When off-the-shelf won't cut it, we build <strong>custom WordPress &amp; WooCommerce plugins</strong> for your exact use case — any industry, any feature: modals, shipping, multimedia, integrations and more. Fixed-scope, fixed price, and you own the code.
+          </p>
+        </div>
+        <a href="/custom-plugins/" class="btn btn-large btn-pop cb-cta">Explore custom plugins →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Mission strip · "Less cost, more inclusions" ─────────────── -->
   <section class="mission-strip">
     <div class="container">
@@ -436,6 +452,18 @@ import Layout from '../layouts/Layout.astro';
   .ro-card p strong { color: var(--c-black); }
   .ro-cta { margin-top: auto; font-weight: 700; color: var(--c); font-size: 17px; }
   @media (max-width: 800px) { .ro-grid { grid-template-columns: 1fr; } }
+
+  /* ── Custom plugins band ────────────────────────────────────────── */
+  .custombuild { background: var(--c-black); color: #fff; padding: 56px 0; }
+  .custombuild .cb-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .custombuild .cb-text { max-width: 720px; }
+  .custombuild .cb-eye { color: var(--c-yellow); font-weight: 700; letter-spacing: .1em; text-transform: uppercase; font-size: .82rem; margin-bottom: .8rem; }
+  .custombuild .cb-eye .ps { color: var(--c-yellow); }
+  .custombuild .section-h { color: #fff; margin: 0 0 .6rem; }
+  .custombuild .section-lead { color: #cfcfcf; margin: 0; }
+  .custombuild .section-lead strong { color: #fff; }
+  .custombuild .cb-cta { flex: 0 0 auto; }
+  @media (max-width: 760px) { .custombuild .cb-cta { width: 100%; text-align: center; } }
 
   /* ── Mission strip (kept from previous) ─────────────────────────── */
   .mission-strip {
