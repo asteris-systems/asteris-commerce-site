@@ -8,6 +8,9 @@ const year = 2026;
       <a href="/" class="brand" aria-label="Asteris Commerce home"><span class="star">★</span> Asteris Commerce</a>
       <p class="tagline">Faster sites. Lower memory. Smaller install. A lean suite of plugins, a theme and patterns for WordPress and WooCommerce from one Sydney team.</p>
       <p class="aus">Made in Australia · ABN 30 652 358 159</p>
+      <a href="https://x.com/asteriscommerce" class="footer-x" target="_blank" rel="noopener" aria-label="Asteris Commerce on X">
+        <span aria-hidden="true">𝕏</span> Follow on X
+      </a>
     </div>
     <div class="col col-products">
       <h4>Products</h4>
@@ -129,6 +132,9 @@ const year = 2026;
   }
   @media (max-width: 820px) { .legal-strip .meta { font-size: 14px; } }
   .legal-strip .usd { color: #999999; font-weight: 600; }
+  .footer-x { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; color: #cccccc; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .footer-x span { font-size: 19px; line-height: 1; }
+  .footer-x:hover { color: var(--c-orange); }
   @media (max-width: 900px) {
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .col-products { grid-column: span 2; }
