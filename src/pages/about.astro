@@ -15,6 +15,67 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <section class="name">
+    <div class="container">
+      <div class="name-grid">
+        <div class="name-copy">
+          <p class="eyebrow">The name</p>
+          <h2>Asteris is Greek for <em>star</em>.</h2>
+          <p>
+            Αστέρι. Not the wish-upon-it kind — the kind sailors steered by. A fixed point you
+            navigate by when everything else is moving: vendors get acquired, plugins change
+            hands, prices jump at renewal, and the stack you trusted last year is someone
+            else's roadmap now.
+          </p>
+          <p>
+            Asteris is built to be the opposite of that — one dependable reference point for
+            your WordPress and WooCommerce stack. The mark is a five-pointed star, and each
+            point is a commitment we don't move.
+          </p>
+        </div>
+
+        <div class="name-star" aria-hidden="true">
+          <svg viewBox="120 104 480 396" role="img" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M360,150 L400,265 L521.7,267.5 L424.7,341 L459.9,457.5 L360,388 L260.1,457.5 L295.3,341 L198.3,267.5 L320,265 Z"
+              fill="rgba(255,107,0,0.06)" stroke="var(--c-orange)" stroke-width="3"
+              stroke-linejoin="round" />
+            <g class="node">
+              <circle cx="360"   cy="150"   r="23" /><text x="360"   y="158">1</text>
+              <circle cx="521.7" cy="267.5" r="23" /><text x="521.7" y="275.5">2</text>
+              <circle cx="459.9" cy="457.5" r="23" /><text x="459.9" y="465.5">3</text>
+              <circle cx="260.1" cy="457.5" r="23" /><text x="260.1" y="465.5">4</text>
+              <circle cx="198.3" cy="267.5" r="23" /><text x="198.3" y="275.5">5</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <ol class="pillars">
+        <li>
+          <span class="n">1</span>
+          <p><strong>Consolidation.</strong> One vendor, one standard, one place to update. The whole reason Asteris exists: replace 15–20 plugins from a dozen vendors with a focused suite that behaves like it was designed together — because it was.</p>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <p><strong>Craft.</strong> Every module is built in-house to the Module Quality Protocol: it has to match the best commercial competitor feature-for-feature before the next one starts. Nothing white-labelled, nothing aggregated, no thin "all-in-one" filler.</p>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <p><strong>Ownership.</strong> Not SaaS. Everything you buy installs on your site, with your data, on your host. If we vanished tomorrow, your store keeps running.</p>
+        </li>
+        <li>
+          <span class="n">4</span>
+          <p><strong>Independence.</strong> No VC, no investors, no exit plan. Funded by Orion Web Service, our five-year-old WP services business. We only succeed if the software stays good enough to keep you subscribed.</p>
+        </li>
+        <li>
+          <span class="n">5</span>
+          <p><strong>Transparency.</strong> Public roadmaps, one standard price for everyone, and a support address that goes straight to the founder. No tiers, no games, no enterprise upsell maze.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <section class="body">
     <div class="container">
 
@@ -132,4 +193,86 @@ import Layout from '../layouts/Layout.astro';
   }
   .body a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 3px; }
   .body a:hover { color: var(--c-black); }
+
+  /* ── The name / five-point star ── */
+  .name { padding: 24px 0 16px; }
+  .name-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .name .eyebrow {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--c-orange);
+    margin-bottom: 12px;
+  }
+  .name h2 {
+    font-size: 44px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    color: var(--c-black);
+  }
+  .name h2 em { font-style: italic; color: var(--c-orange); }
+  .name-copy p {
+    font-size: 22px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 16px;
+  }
+  .name-star { display: flex; justify-content: center; }
+  .name-star svg { width: 100%; max-width: 360px; height: auto; }
+  .name-star .node circle { fill: var(--c-orange); }
+  .name-star .node text {
+    fill: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    text-anchor: middle;
+    font-family: inherit;
+  }
+
+  .pillars {
+    list-style: none;
+    margin: 32px 0 8px;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+  }
+  .pillars li {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .pillars .n {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--c-orange);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+  }
+  .pillars p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #333;
+    margin: 6px 0 0;
+  }
+  .pillars p strong { color: var(--c-black); }
+
+  @media (max-width: 800px) {
+    .name-grid { grid-template-columns: 1fr; gap: 24px; }
+    .name-star { order: -1; }
+    .name-star svg { max-width: 260px; }
+    .name h2 { font-size: 34px; }
+    .name-copy p, .pillars p { font-size: 19px; }
+  }
 </style>
