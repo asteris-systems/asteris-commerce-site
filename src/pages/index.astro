@@ -56,14 +56,14 @@ import Layout from '../layouts/Layout.astro';
   <section id="plugins" class="plugins">
     <div class="container">
       <div class="section-head">
-        <h2 class="section-h">Four plugin suites — under one vendor.</h2>
+        <h2 class="section-h">Six plugin suites — under one vendor.</h2>
         <p class="section-lead">
-          Each plugin replaces a stack of separate licences. Each is built to the same Module Quality Protocol. All four are sold direct — no marketplaces, no resellers, no surprise upgrade gates.
+          Each plugin replaces a stack of separate licences. Each is built to the same Module Quality Protocol. All six are sold direct — no marketplaces, no resellers, no surprise upgrade gates.
         </p>
       </div>
 
       <div class="plugin-grid">
-        <a href="https://asteriscommerce.com/asteris-utility-suite" class="plug plug--wp" target="_blank" rel="noopener">
+        <a href="/asteris-utility-suite/" class="plug plug--wp">
           <div class="plug-head">
             <div class="plug-eye"><span class="ps">★</span> Asteris Utility Suite</div>
             <span class="plug-stat plug-stat--live">Live · v1.0</span>
@@ -122,6 +122,36 @@ import Layout from '../layouts/Layout.astro';
           </ul>
           <span class="plug-cta">asterisaffiliates.com →</span>
         </a>
+
+        <a href="https://asterisforwoocommerce.com/b2b-wholesale" class="plug plug--wholesale" target="_blank" rel="noopener">
+          <div class="plug-head">
+            <div class="plug-eye"><span class="ps">★</span> Asteris B2B Wholesale</div>
+            <span class="plug-stat plug-stat--live">Live · v1.0</span>
+          </div>
+          <h3>Wholesale + B2B for WooCommerce.</h3>
+          <ul>
+            <li><strong>Wholesale roles</strong> · tiered &amp; dynamic pricing · per-customer pricing</li>
+            <li>Request-a-quote · company accounts · tax handling · store credit</li>
+            <li>BOGO + bulk discounts · order minimums · CSV price import</li>
+            <li>Replaces <strong>~$348/yr</strong> of Wholesale Suite / B2BKing</li>
+          </ul>
+          <span class="plug-cta">asterisforwoocommerce.com/b2b-wholesale →</span>
+        </a>
+
+        <a href="https://asterisforwoocommerce.com/subscriptions" class="plug plug--subs" target="_blank" rel="noopener">
+          <div class="plug-head">
+            <div class="plug-eye"><span class="ps">★</span> Asteris Subscriptions</div>
+            <span class="plug-stat plug-stat--live">Live · v1.0</span>
+          </div>
+          <h3>Recurring billing for WooCommerce.</h3>
+          <ul>
+            <li><strong>Reliable renewals</strong> · dunning that recovers failed payments</li>
+            <li>Compliance-by-default cancellation · customer self-service portal</li>
+            <li>Stripe + PayPal · prorating · pause / resume · free trials</li>
+            <li>Replaces <strong>~$199/yr</strong> of WooCommerce Subscriptions</li>
+          </ul>
+          <span class="plug-cta">asterisforwoocommerce.com/subscriptions →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -156,7 +186,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3>73 premium block patterns.</h3>
           <p>
-            Niche page templates, multimedia sections, audio/video blocks, premium e-commerce patterns, heroes, and composite sections. Drop them onto any page, replace the placeholder content, ship. <strong>Simple annual pricing</strong> — one standard price for everyone.
+            Niche page templates, multimedia sections, audio/video blocks, premium e-commerce patterns, heroes, and composite sections. Drop them onto any page, replace the placeholder content, ship. <strong>Simple annual pricing</strong> — one standard price.
           </p>
           <span class="ro-cta">Read more about Blocks Pro →</span>
         </a>
@@ -196,7 +226,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="mission-table">
           <div class="mission-row mission-row--head"><span>Product</span><span>Replaces</span><span>Asteris price</span></div>
           <div class="mission-row"><span><strong>Asteris Theme</strong></span><span>~$59/yr theme + WC patches</span><span><strong>Free forever</strong></span></div>
-          <div class="mission-row"><span><strong>Asteris for WP</strong></span><span>~$1,400/yr</span><span>$149–$549/yr</span></div>
+          <div class="mission-row"><span><strong>Asteris Utility Suite</strong></span><span>~$1,400/yr</span><span>$149–$549/yr</span></div>
           <div class="mission-row"><span><strong>Asteris for WC</strong></span><span>~$1,650/yr</span><span>$149–$549/yr</span></div>
           <div class="mission-row"><span><strong>Asteris Cart</strong></span><span>~$540/yr</span><span>$99–$399/yr</span></div>
           <div class="mission-row"><span><strong>Asteris Affiliates</strong></span><span>$300–$2,400/yr</span><span>$149–$549/yr</span></div>
@@ -384,6 +414,8 @@ import Layout from '../layouts/Layout.astro';
   .plug--wc { --c: #FF5B3F; }
   .plug--cart { --c: #00C853; }
   .plug--aff { --c: #06D6A0; border-color: #06D6A0; }
+  .plug--wholesale { --c: #475569; }
+  .plug--subs { --c: #EC4899; }
   .plug-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
   .plug-eye {
     font-size: 15px; font-weight: 700; color: var(--c);
