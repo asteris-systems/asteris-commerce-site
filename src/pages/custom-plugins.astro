@@ -302,7 +302,7 @@ const schema = {
   <section class="cp-section cp-alt">
     <div class="container">
       <h2>Run your own licence server</h2>
-      <p class="cp-sub">Selling premium plugins, themes or software through Lemon Squeezy, Gumroad or Paddle? They take <strong>5&ndash;15% of every sale &mdash; forever</strong>. We set up your own self-hosted licence server &mdash; licence keys, activation, automatic updates and Stripe checkout &mdash; so you keep your revenue and pay near-zero running costs.</p>
+      <p class="cp-sub">Selling premium plugins, themes or software through Lemon Squeezy, Gumroad or Paddle? They take <strong>5&ndash;15% of every sale &mdash; forever</strong>. We set up your own self-hosted licence server &mdash; licence keys, activation, automatic updates and Stripe checkout &mdash; so you keep your revenue. It runs on any low-cost WordPress install: use one you already have, or we&rsquo;ll set one up and maintain it for a small monthly fee.</p>
 
       <div class="cp-tiers" style="justify-content:center;">
         <div class="cp-tier cp-tier-featured" style="max-width:480px;width:100%;">
@@ -323,8 +323,44 @@ const schema = {
       </div>
 
       <p class="cp-note cp-note-center">Do the maths: a marketplace taking 10% of $100k/yr in sales costs you <strong>$10,000 every year</strong>. Your own licence server is a one-time install from <strong>$750</strong> &mdash; it pays for itself in weeks.</p>
+
+      <div class="ls-faq">
+        <h3>Licence server &mdash; common questions</h3>
+        <details>
+          <summary>Do I need my own hosting?</summary>
+          <p>It runs on any WordPress site and is lightweight, so a cheap shared or managed WP install is plenty. Use one you already have &mdash; or we&rsquo;ll set one up and keep it maintained for a small monthly fee.</p>
+        </details>
+        <details>
+          <summary>What are the ongoing costs?</summary>
+          <p>Just your hosting &mdash; a few dollars a month. There are <strong>no per-sale fees, ever</strong>, unlike Lemon Squeezy, Gumroad or Paddle (5&ndash;15% of every sale).</p>
+        </details>
+        <details>
+          <summary>What&rsquo;s included?</summary>
+          <p>Licence keys with activation/deactivation, automatic plugin &amp; theme updates via signed downloads, Stripe Checkout, a customer account + downloads portal, and version, update-gating &amp; expiry handling &mdash; across your whole product catalogue.</p>
+        </details>
+        <details>
+          <summary>How are payments handled?</summary>
+          <p>Through Stripe Checkout in <strong>your own Stripe account</strong>. Money lands directly with you &mdash; we never touch it.</p>
+        </details>
+        <details>
+          <summary>Do I own it?</summary>
+          <p>Yes. One-time setup, fully working, and you own the install and the code outright.</p>
+        </details>
+        <details>
+          <summary>How long does setup take?</summary>
+          <p>Usually a few days once we have your products and Stripe details. You approve a fixed quote on a free scoping call first.</p>
+        </details>
+      </div>
     </div>
   </section>
+
+  <style>
+    .ls-faq { max-width: 760px; margin: 36px auto 0; }
+    .ls-faq h3 { text-align: center; font-size: 21px; margin: 0 0 18px; }
+    .ls-faq details { border: 1px solid var(--c-border, #e6e6ea); border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; background: var(--c-white, #fff); }
+    .ls-faq summary { font-weight: 700; cursor: pointer; font-size: 16px; }
+    .ls-faq details p { margin: 10px 0 0; color: var(--c-muted, #555); line-height: 1.6; font-size: 15px; }
+  </style>
 
   <!-- ENQUIRY FORM -->
   <section id="enquire" class="cp-section cp-enquire">
