@@ -1,0 +1,117 @@
+---
+/**
+ * /asteris-utility-suite/roadmap/ — public roadmap.
+ * Migrated + renamed from asteriscommerce.com/asteris-utility-suite roadmap.md, June 2026.
+ */
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+---
+
+<UtilitySuiteLayout
+  title="Asteris Utility Suite — Roadmap"
+  description="What's shipping next. The roadmap is public, honest, and the source of truth for what we're working on. Customer feedback shapes this list."
+>
+  <article class="prose">
+    <h1>Asteris Utility Suite — Roadmap</h1>
+
+    <p>The roadmap is public on purpose. Items that are <strong>committed</strong> are marked committed. Items that are <strong>maybe</strong> are marked maybe. Items that have been <strong>deprioritised</strong> stay listed with a note so you don't have to guess whether we forgot.</p>
+
+    <p>Customers have direct say on the v1.x roadmap. If you want to vote on what ships next, email us — every bug report and feature request goes into the same queue we work from.</p>
+
+    <hr />
+
+    <h2>Shipped in v1.0</h2>
+    <p>All v1.0 modules are built and shipped:</p>
+    <ol>
+      <li>Security + Login + 2FA</li>
+      <li>SEO + AI Suite (flagship)</li>
+      <li>Performance (post-research v2 spec)</li>
+      <li>Forms</li>
+      <li>SMTP + Email Logs</li>
+      <li>Activity Log + Site Health (shared with Asteris for WooCommerce)</li>
+      <li>Analytics + Pixels (with Search Console OAuth + Bing Webmaster / GA4-pull roadmap cards)</li>
+      <li>Image Optimisation</li>
+      <li>Backups + Migration</li>
+      <li>Accessibility scanner</li>
+      <li><strong>Asteris Links</strong> — branded short links + click tracking + UTM auto-stitch</li>
+      <li><strong>Asteris Insights</strong> — cookieless first-party analytics with cross-module annotations + UTM attribution + Search Console keywords + AI assistant traffic</li>
+    </ol>
+    <p>See <a href="/asteris-utility-suite/modules/">Modules</a> for what each one ships.</p>
+
+    <hr />
+
+    <h2>Studio × Insights × AI — the suite-only loop</h2>
+    <p>The pieces that make Asteris meaningfully different from any single-purpose WordPress plugin. These exist because we own the analytics, the AI, and the canvas — no third-party can stitch them together.</p>
+    <ul>
+      <li><strong>📊 Studio per-section engagement overlay.</strong> Toggle Insights on in the Studio editor → every block on the canvas gets a chip showing 30-day views, clicks, and CTR, with a heat tint scaled to clicks.</li>
+      <li><strong>🪄 AI rewrites diagnosed by engagement.</strong> The Rewrite button on each low-CTR chip sends the section's current copy + the engagement data to the AI; you get back a rewrite that explicitly addresses the diagnosis. <strong>No other builder can do this.</strong></li>
+      <li><strong>Traffic anomaly admin notices.</strong> Daily cron flags pages with &gt;50% drop or spike vs the trailing-7-day average.</li>
+      <li><strong>Outbound-link split tracking.</strong> Section clicks split into internal vs outbound — "they engaged" vs "they left for a competitor".</li>
+    </ul>
+
+    <hr />
+
+    <h2>Committed for v1.1 (post-launch, ordered by priority)</h2>
+    <ul>
+      <li><strong>Dedicated Slack channel</strong> for Agency-tier customers. Engineering channel with @-mention SLA.</li>
+      <li><strong>One-click importers from RankMath, AIOSEO, SEOPress</strong> (Yoast importer shipped in v1.0). Carry over titles, descriptions, schema settings, redirects.</li>
+      <li><strong>White-label module</strong> (Agency-only). Lets agencies rebrand the plugin admin for their clients.</li>
+      <li><strong>Multisite support.</strong> Currently not in v1.0. Will come with proper network-admin settings, per-site licence activation, and aggregate Site Health.</li>
+      <li><strong>More forms integrations.</strong> v1.0 ships Mailchimp / ConvertKit / MailerLite / Slack / Zapier. v1.1 adds HubSpot, ActiveCampaign, and Brevo.</li>
+      <li><strong>More backup destinations.</strong> v1.0 ships S3/B2/R2/Wasabi/SFTP/local. v1.1 adds Google Drive, Dropbox, OneDrive.</li>
+    </ul>
+
+    <hr />
+
+    <h2>Under consideration (not committed)</h2>
+    <p>Items here might ship in v1.x or might not. Customer votes break ties.</p>
+    <ul>
+      <li><strong>Maintenance mode / coming soon module</strong> — there are decent free plugins for this; not sure we'd add value.</li>
+      <li><strong>Donations / one-time payments</strong> — Stripe button + receipt + thank-you flow. Could fit; not core to most sites.</li>
+      <li><strong>Custom fields module</strong> — deferred. ACF and Meta Box cover this well.</li>
+      <li><strong>Real User Monitoring</strong> — Core Web Vitals field data. The Performance module already has a basic CWV monitor; an RUM-level expansion is being considered.</li>
+      <li><strong>A11y audit cloud reporting</strong> — push audit JSON to a hosted dashboard for agencies tracking multiple sites.</li>
+      <li><strong>Two-way sync of SEO data to Search Console</strong> — surface impressions/clicks/CTR inside the SEO module.</li>
+    </ul>
+
+    <hr />
+
+    <h2>Deliberately out of scope</h2>
+    <p>Things we've actively decided <strong>not</strong> to do (or not in v1.x):</p>
+    <ul>
+      <li><strong>Page builder of our own.</strong> Elementor, Bricks, Beaver Builder, Divi all do this; we integrate, we don't compete.</li>
+      <li><strong>LMS module.</strong> LearnDash et al. own this space.</li>
+      <li><strong>Membership module.</strong> PMP, MemberPress, RCP own this space.</li>
+      <li><strong>Translation module.</strong> WPML and Polylang own this space.</li>
+      <li><strong>Hosting / managed-WP service.</strong> We're a plugin, not a host.</li>
+    </ul>
+
+    <hr />
+
+    <h2>Cadence</h2>
+    <p>We ship every Friday during launch. Even if a release is small, there's a release. Updates land via the WordPress.org plugin updater (free edition) and the plugin's built-in updater (paid licences).</p>
+    <p>The <a href="/asteris-utility-suite/changelog/">changelog</a> is the source of truth for what has shipped.</p>
+
+    <hr />
+
+    <h2>See also</h2>
+    <ul>
+      <li><a href="/asteris-utility-suite/changelog/">Changelog →</a></li>
+      <li><a href="/asteris-utility-suite/modules/">Modules →</a></li>
+      <li><a href="/asteris-utility-suite/pricing/">Pricing →</a></li>
+    </ul>
+  </article>
+</UtilitySuiteLayout>
+
+<style>
+  .prose { max-width: 820px; margin: 0 auto; padding: 64px 36px 96px; }
+  .prose h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin: 0 0 24px; }
+  .prose h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 40px 0 12px; }
+  .prose p { font-size: 16px; line-height: 1.65; color: #333; margin: 0 0 16px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 15.5px; line-height: 1.6; color: #333; margin-bottom: 8px; }
+  .prose strong { color: var(--c-black); }
+  .prose a { color: var(--c-orange); text-decoration: underline; }
+  .prose code { background: #f0f0f3; padding: 1px 6px; border-radius: 3px; font-size: 13.5px; font-family: var(--font-mono); }
+  .prose hr { border: none; border-top: 2px solid var(--c-border); margin: 36px 0; }
+  @media (max-width: 700px) { .prose { padding: 40px 22px 64px; } .prose h1 { font-size: 34px; } }
+</style>

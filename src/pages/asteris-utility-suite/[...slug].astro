@@ -1,0 +1,134 @@
+---
+/**
+ * Scoped catch-all for the Asteris Utility Suite long-tail content
+ * (marketing + docs), migrated from asterisforwordpress.com. Every
+ * `utility-suite` collection entry renders here wrapped in
+ * UtilitySuiteLayout so the ProductSubNav stays present.
+ *
+ * Routing:
+ *  - Marketing entries route to their `url` frontmatter (already rewritten to
+ *    /asteris-utility-suite/...). The slug param is that path minus the
+ *    /asteris-utility-suite/ prefix.
+ *  - Docs entries (collection id begins "docs/") route to /asteris-utility-suite/docs/<id>.
+ *
+ * Slugs owned by hand-built .astro pages (index, modules, pricing, demo,
+ * changelog, roadmap) are filtered out so this route never collides with them.
+ */
+import { getCollection, render } from 'astro:content';
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+import UtilitySuiteJsonLd from '../../components/UtilitySuiteJsonLd.astro';
+
+const SECTION = '/asteris-utility-suite';
+
+// Hand-built rich pages in src/pages/asteris-utility-suite/*.astro — skip.
+const RICH_SLUGS = new Set(['', 'modules', 'pricing', 'demo', 'changelog', 'roadmap']);
+
+export async function getStaticPaths() {
+  const SECTION = '/asteris-utility-suite';
+  const RICH_SLUGS = new Set(['', 'modules', 'pricing', 'demo', 'changelog', 'roadmap']);
+  const entries = await getCollection('utility-suite');
+
+  return entries
+    .map((entry) => {
+      const isDocs = entry.id.startsWith('docs/');
+      let slug: string;
+      if (isDocs) {
+        // collection id: "docs/getting-started" or "docs/modules/security"
+        slug = entry.id; // already begins with "docs/"
+      } else if (entry.data.url) {
+        slug = entry.data.url.replace(new RegExp(`^${SECTION}/?`), '');
+      } else {
+        slug = entry.id;
+      }
+      slug = slug.replace(/\/$/, '');
+      return { slug, entry, isDocs };
+    })
+    .filter(({ slug, isDocs }) => isDocs || !RICH_SLUGS.has(slug))
+    .map(({ slug, entry, isDocs }) => ({
+      params: { slug },
+      props: { entry, isDocs },
+    }));
+}
+
+const { entry, isDocs } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const description = data.description ?? data.meta_description ?? data.og_description;
+---
+
+<UtilitySuiteLayout
+  title={data.title}
+  description={description}
+  ogImage={data.og_image}
+  noindex={data.noindex}
+>
+  <UtilitySuiteJsonLd
+    slot="head"
+    schemaType={data.schema_type}
+    title={data.title}
+    description={description}
+    url={canonical}
+    modifiedDate={data.verified_date}
+    faqs={data.faqs}
+  />
+  <article class="us-prose">
+    {isDocs && (
+      <p class="us-docs-back"><a href={`${SECTION}/docs/`}>← Documentation</a></p>
+    )}
+    <Content />
+  </article>
+</UtilitySuiteLayout>
+
+<style is:global>
+  .us-prose {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 56px 36px 96px;
+  }
+  .us-prose h1 {
+    font-size: 44px; font-weight: 900; letter-spacing: -1.5px;
+    line-height: 1.06; margin: 0 0 28px;
+  }
+  .us-prose h2 {
+    font-size: 27px; font-weight: 800; letter-spacing: -0.5px;
+    margin: 44px 0 14px; line-height: 1.2;
+  }
+  .us-prose h3 { font-size: 19px; font-weight: 800; margin: 32px 0 10px; }
+  .us-prose h4 { font-size: 16px; font-weight: 700; margin: 24px 0 8px; }
+  .us-prose p { font-size: 16.5px; line-height: 1.65; color: #222; margin: 0 0 16px; }
+  .us-prose ul, .us-prose ol { margin: 0 0 18px; padding-left: 24px; }
+  .us-prose li { font-size: 16px; line-height: 1.6; color: #222; margin-bottom: 7px; }
+  .us-prose strong { color: var(--c-black); font-weight: 700; }
+  .us-prose a { color: var(--c-orange); text-decoration: underline; text-underline-offset: 2px; }
+  .us-prose a:hover { color: var(--c-black); }
+  .us-prose code {
+    background: #f0f0f3; padding: 1px 6px; border-radius: 3px;
+    font-size: 13.5px; font-family: var(--font-mono);
+  }
+  .us-prose pre {
+    background: var(--c-black); color: #f5f5f5; padding: 18px;
+    border-radius: var(--r-md, 6px); overflow-x: auto; font-size: 14px; margin: 18px 0;
+  }
+  .us-prose pre code { background: transparent; padding: 0; color: inherit; }
+  .us-prose hr { border: 0; border-top: 1px solid var(--c-border); margin: 40px 0; }
+  .us-prose blockquote {
+    border-left: 3px solid var(--c-orange); padding: 6px 0 6px 18px;
+    margin: 22px 0; color: #444; font-style: italic;
+  }
+  .us-prose table {
+    width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14.5px;
+    display: block; overflow-x: auto;
+  }
+  .us-prose th, .us-prose td {
+    border: 1px solid var(--c-border); padding: 9px 13px; text-align: left; vertical-align: top;
+  }
+  .us-prose th { background: #fafafa; font-weight: 700; }
+  .us-docs-back { font-size: 13px; margin-bottom: 8px; }
+  .us-docs-back a { color: var(--c-muted, #777); text-decoration: none; }
+  @media (max-width: 700px) {
+    .us-prose { padding: 36px 22px 64px; }
+    .us-prose h1 { font-size: 32px; }
+    .us-prose h2 { font-size: 22px; }
+  }
+</style>

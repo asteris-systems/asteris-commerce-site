@@ -4,24 +4,14 @@ interface Props {
 }
 const { currentPath = '' } = Astro.props;
 
+// Flat, ordered nav. "Plugins" is a full built-out page (/plugins), not a dropdown.
 const navLinks = [
-  { href: '/asteris-theme/',         label: 'Asteris Theme', match: '/asteris-theme' },
-  { href: '/custom-plugins/',        label: 'Custom Plugins', match: '/custom-plugins' },
-];
-
-const pluginItems = [
-  { href: 'https://asterisforwordpress.com',   label: 'For WordPress',   color: '#3D5AFE', desc: '13 modules · security · SEO · performance · forms · backups · insights' },
-  { href: 'https://asterisforwoocommerce.com', label: 'For WooCommerce', color: '#FF5B3F', desc: '20 modules · SEO · swatches · PDF invoices · wishlist · filters' },
-  { href: 'https://asteriscart.com',           label: 'Asteris Cart',    color: '#00C853', desc: '21 modules · side cart · checkout funnel · urgency · upsells' },
-  { href: 'https://asterisaffiliates.com',     label: 'Asteris Affiliates', color: '#06D6A0', desc: 'Full affiliate program · 3 payout methods · self-hosted' },
-];
-
-const tailLinks = [
-  { href: 'https://asterisblocks.com/blocks-pro/', label: 'Blocks Pro', match: '/asteris-blocks-pro' },
-  { href: 'https://asterisblocks.com', label: 'Blocks', external: true },
-  { href: '/about',                  label: 'About',    match: '/about' },
-  { href: '/roadmap',                label: 'Roadmap',  match: '/roadmap' },
-  { href: '/press',                  label: 'Press',    match: '/press' },
+  { href: '/asteris-theme/',  label: 'Asteris Theme',  match: '/asteris-theme' },
+  { href: '/plugins/',        label: 'Plugins',        match: '/plugins' },
+  { href: '/custom-plugins/', label: 'Custom Plugins', match: '/custom-plugins' },
+  { href: '/about',           label: 'About',          match: '/about' },
+  { href: '/roadmap',         label: 'Roadmap',        match: '/roadmap' },
+  { href: '/press',           label: 'Press',          match: '/press' },
 ];
 ---
 
@@ -49,47 +39,7 @@ const tailLinks = [
       {navLinks.map(link => (
         <a
           href={link.href}
-          class:list={['nav-link', { active: currentPath.startsWith(link.match) }]}
-        >
-          {link.label}
-        </a>
-      ))}
-
-      <div class="nav-dropdown">
-        <button
-          type="button"
-          class="nav-link dropdown-trigger"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Plugins <span class="caret" aria-hidden="true">▾</span>
-        </button>
-        <div class="dropdown-menu" role="menu">
-          {pluginItems.map(p => (
-            <a
-              href={p.href}
-              class="dropdown-item"
-              style={`--c: ${p.color};`}
-              target="_blank"
-              rel="noopener"
-              role="menuitem"
-            >
-              <span class="dd-dot" aria-hidden="true"></span>
-              <span class="dd-text">
-                <strong>{p.label}</strong>
-                <span class="dd-desc">{p.desc}</span>
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {tailLinks.map(link => (
-        <a
-          href={link.href}
           class:list={['nav-link', { active: link.match && currentPath.startsWith(link.match) }]}
-          target={link.external ? '_blank' : undefined}
-          rel={link.external ? 'noopener' : undefined}
         >
           {link.label}
         </a>
@@ -150,16 +100,10 @@ const tailLinks = [
     color: var(--c-text);
     transition: color 0.1s ease;
     text-decoration: none;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-family: inherit;
     white-space: nowrap;
   }
-  .nav-link:hover, .nav-link.active, .dropdown-trigger:focus {
+  .nav-link:hover, .nav-link.active {
     color: var(--c-violet, #AA00FF);
-    outline: none;
   }
 
   /* Hamburger toggle — hidden on desktop, shown ≤900px */
@@ -191,97 +135,6 @@ const tailLinks = [
   .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
-  /* Dropdown */
-  .nav-dropdown {
-    position: relative;
-  }
-  .dropdown-trigger {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .caret {
-    font-size: 12px;
-    margin-top: 2px;
-  }
-  .dropdown-menu {
-    position: absolute;
-    top: calc(100% + 16px);
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 340px;
-    background: #fff;
-    border: 1px solid #e0e3eb;
-    border-radius: 14px;
-    box-shadow: 0 16px 48px -16px rgba(10, 10, 10, 0.18), 0 4px 12px -4px rgba(10, 10, 10, 0.06);
-    padding: 8px;
-    display: none;
-    flex-direction: column;
-    gap: 2px;
-    z-index: 200;
-  }
-  .nav-dropdown:hover .dropdown-menu,
-  .nav-dropdown:focus-within .dropdown-menu {
-    display: flex;
-  }
-  .nav-dropdown:hover .dropdown-trigger,
-  .nav-dropdown:focus-within .dropdown-trigger {
-    color: var(--c-violet, #AA00FF);
-  }
-  .nav-dropdown:hover .dropdown-trigger[aria-expanded],
-  .nav-dropdown:focus-within .dropdown-trigger[aria-expanded] {
-    /* JS-free — aria-expanded stays "false" but visual state is via :hover/:focus-within */
-  }
-  /* invisible bridge so the menu doesn't close when traversing the gap */
-  .nav-dropdown::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 16px;
-  }
-
-  .dropdown-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 14px;
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--c-text);
-    transition: background 0.12s ease;
-    border-left: 3px solid transparent;
-  }
-  .dropdown-item:hover {
-    background: #f6f7fa;
-    border-left-color: var(--c, var(--c-violet, #AA00FF));
-  }
-  .dd-dot {
-    flex: 0 0 auto;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--c, var(--c-violet, #AA00FF));
-    margin-top: 5px;
-  }
-  .dd-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    line-height: 1.35;
-  }
-  .dd-text strong {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--c-black);
-  }
-  .dd-desc {
-    font-size: 14px;
-    color: #6b7280;
-    font-weight: 400;
-  }
-
   @media (max-width: 1100px) {
     .site-nav { gap: 16px; }
     .nav-center { gap: 18px; }
@@ -298,7 +151,6 @@ const tailLinks = [
       gap: 16px;
       padding: 16px var(--gutter);
     }
-    /* Menu becomes a full-width panel below the bar */
     .nav-center {
       position: absolute;
       top: 100%;
@@ -322,28 +174,6 @@ const tailLinks = [
       font-size: 17px;
       border-bottom: 1px solid #f0f0f0;
     }
-    /* Plugins: expand its items inline — no off-screen dropdown */
-    .nav-dropdown { width: 100%; }
-    .dropdown-trigger {
-      width: 100%;
-      padding: 14px 2px;
-      justify-content: space-between;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .dropdown-trigger .caret { display: none; }
-    .nav-dropdown::after { display: none; }
-    .dropdown-menu {
-      position: static;
-      transform: none;
-      display: flex;
-      min-width: 0;
-      width: 100%;
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-      padding: 4px 0 6px 4px;
-    }
-    .dropdown-item { padding: 12px 8px; }
   }
 </style>
 
@@ -357,7 +187,6 @@ const tailLinks = [
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
-    // Tapping any real link closes the panel (the Plugins trigger is not a link)
     menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', close));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
   }

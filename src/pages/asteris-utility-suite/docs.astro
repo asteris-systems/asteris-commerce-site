@@ -1,0 +1,190 @@
+---
+/**
+ * /asteris-utility-suite/docs/ — documentation landing + getting started.
+ * Migrated + condensed from asteriscommerce.com/asteris-utility-suite docs collection (index.md +
+ * getting-started.md), June 2026. The deeper per-doc / per-module reference pages
+ * from the source Starlight docs are not yet migrated — see report.
+ */
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+
+const modules = [
+  'Security + Login + 2FA', 'SEO + AI Suite', 'Performance', 'Forms',
+  'SMTP + Email Logs', 'Activity Log + Site Health', 'Analytics + Pixels',
+  'Image Optimisation', 'Backups + Migration', 'Accessibility scanner',
+  'Asteris Links', 'Asteris Insights',
+];
+---
+
+<UtilitySuiteLayout
+  title="Asteris Utility Suite — Documentation"
+  description="Documentation for the Asteris Utility Suite. Getting started, module guides, requirements, installation, and licensing."
+>
+  <article class="prose">
+    <h1>Documentation</h1>
+    <p>Everything you need to install, configure, and get the most out of the Asteris Utility Suite. This page covers the essentials end to end — requirements, installation (free and paid), and first steps for each module. For the full reference, browse the documentation index below.</p>
+
+    <hr />
+
+    <h2 id="browse">Browse all documentation</h2>
+
+    <h3>Getting started</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/docs/getting-started/">Installation and first setup</a></li>
+      <li><a href="/asteris-utility-suite/docs/free-vs-paid/">Free vs paid tiers</a></li>
+      <li><a href="/asteris-utility-suite/docs/free-and-paid-together/">Using free and paid together</a></li>
+      <li><a href="/asteris-utility-suite/docs/licensing/">Licensing and site limits</a></li>
+      <li><a href="/asteris-utility-suite/docs/troubleshooting/">Troubleshooting</a></li>
+      <li><a href="/asteris-utility-suite/docs/conflicts/">Plugin conflicts</a></li>
+      <li><a href="/asteris-utility-suite/docs/recovery/">Recovery / safe mode</a></li>
+    </ul>
+
+    <h3>Module reference</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/docs/modules/security/">Security + Login + 2FA</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/seo-ai/">SEO + AI Suite</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/performance/">Performance</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/forms/">Forms</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/smtp/">SMTP + Email Logs</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/activity-log/">Activity Log + Site Health</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/analytics-pixels/">Analytics + Pixels</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/image-optimisation/">Image Optimisation</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/backups/">Backups + Migration</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/accessibility/">Accessibility scanner</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/links/">Asteris Links</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/insights/">Asteris Insights</a></li>
+      <li><a href="/asteris-utility-suite/docs/modules/ai-suite/">AI Suite</a></li>
+    </ul>
+
+    <h3>Tutorials</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/docs/tutorials/configure-ga4-meta-capi-consent-mode-v2/">Configure GA4 + Meta CAPI + Consent Mode v2</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/configure-gmail-oauth-smtp/">Configure Gmail OAuth SMTP</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/migrate-from-yoast-step-by-step/">Migrate from Yoast, step by step</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/run-accessibility-audit-before-eaa-deadline/">Run an accessibility audit before the EAA deadline</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/set-up-scheduled-backups-to-cloudflare-r2/">Set up scheduled backups to Cloudflare R2</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/setup-llms-txt-for-ai-visibility/">Set up llms.txt for AI visibility</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/switch-from-multi-plugin-stack-in-one-weekend/">Switch from a multi-plugin stack in one weekend</a></li>
+      <li><a href="/asteris-utility-suite/docs/tutorials/wire-up-cwv-and-speculation-rules/">Wire up Core Web Vitals + speculation rules</a></li>
+    </ul>
+
+    <h3>Migration guides</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/migrate/from-yoast/">From Yoast SEO</a></li>
+      <li><a href="/asteris-utility-suite/migrate/from-wordfence/">From Wordfence</a></li>
+      <li><a href="/asteris-utility-suite/migrate/from-updraftplus/">From UpdraftPlus</a></li>
+      <li><a href="/asteris-utility-suite/migrate/from-wp-mail-smtp/">From WP Mail SMTP</a></li>
+      <li><a href="/asteris-utility-suite/migrate/from-monsterinsights/">From MonsterInsights</a></li>
+      <li>Full migration hub: <a href="/asteris-utility-suite/migrate/">/migrate</a></li>
+    </ul>
+
+    <h3>Security + privacy</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/docs/security/">Security architecture</a></li>
+      <li><a href="/asteris-utility-suite/docs/data-handling/">Data handling (GDPR)</a></li>
+      <li><a href="/asteris-utility-suite/docs/cookie-compliance/">Cookie compliance</a></li>
+    </ul>
+
+    <h3>For developers + agencies</h3>
+    <ul>
+      <li><a href="/asteris-utility-suite/docs/api-reference/">REST API reference</a></li>
+      <li><a href="/asteris-utility-suite/docs/wp-cli/">WP-CLI commands</a></li>
+      <li><a href="/asteris-utility-suite/docs/multisite/">WordPress Multisite</a></li>
+      <li><a href="/asteris-utility-suite/docs/account-portal/">Account portal</a></li>
+      <li><a href="/asteris-utility-suite/docs/changelog/">Changelog (technical)</a></li>
+    </ul>
+
+    <hr />
+
+    <h2 id="requirements">Requirements</h2>
+    <ul>
+      <li>WordPress 6.4 or later (tested up to 6.8)</li>
+      <li>PHP 8.1 or later</li>
+      <li>Minimum 128 MB PHP memory limit (256 MB recommended for large sites)</li>
+      <li>Tested with: Astra, Kadence, GeneratePress, Blocksy, Hello Elementor, Twenty Twenty-Four, and major builders (Elementor, Bricks, Beaver Builder, Divi)</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="install-free">Installing the free edition</h2>
+    <ol>
+      <li>In your WordPress admin, go to <strong>Plugins → Add New</strong></li>
+      <li>Search "Asteris Utility Suite"</li>
+      <li>Click <strong>Install Now</strong>, then <strong>Activate</strong></li>
+      <li>The <strong>Asteris</strong> menu item appears in your WP admin sidebar</li>
+    </ol>
+    <p>No licence key needed for the free edition. It's available on WordPress.org under the slug <code>asteris-utility-suite</code>.</p>
+
+    <h2 id="install-paid">Installing a paid tier (Starter, Pro, Agency)</h2>
+    <ol>
+      <li>After purchase, download the plugin ZIP from your <code>pay.asteriscommerce.com</code> customer portal</li>
+      <li>In your WordPress admin, go to <strong>Plugins → Add New → Upload Plugin</strong></li>
+      <li>Upload the ZIP and activate</li>
+      <li>Go to <strong>Asteris → Licence</strong> in your WP admin sidebar</li>
+      <li>Enter your licence key (sent by email on purchase)</li>
+      <li>Click <strong>Activate Licence</strong></li>
+    </ol>
+    <p>If the free edition is already installed, installing the paid tier upgrades it automatically. All your settings, SMTP config, scheduled backups, etc. carry over because both editions write to the same <code>asteris_wp_*</code> option namespace — nothing to manually migrate.</p>
+
+    <hr />
+
+    <h2 id="modules">Enabling modules</h2>
+    <p>After activation, go to <strong>Asteris → Modules</strong> in your WP admin. Every module is listed; toggle the ones you want active. Modules activate immediately — no save button.</p>
+    <p>Start with the modules you know you need, and add more as required. <strong>Disabled modules load zero PHP, zero JS, zero CSS</strong> — performance impact is minimal.</p>
+
+    <h3>First steps per module</h3>
+    <ul>
+      <li><strong>Security + Login + 2FA</strong> — Asteris → Security. Enable TOTP and/or WebAuthn passkey 2FA. Configure brute-force thresholds.</li>
+      <li><strong>SEO + AI Suite</strong> — Asteris → SEO + AI → General. Set sitewide title/description templates. Declare site identity (Organization or Person).</li>
+      <li><strong>Performance</strong> — Asteris → Performance. The safe-defaults profile turns on what's universally safe. Opt into aggressive optimisations per-feature.</li>
+      <li><strong>Forms</strong> — Asteris → Forms → New Form. Drag-and-drop builder.</li>
+      <li><strong>SMTP + Email Logs</strong> — Asteris → SMTP → Provider. Pick one of 6 presets (Gmail OAuth / M365 OAuth / SendGrid / Mailgun / SES / generic). Send a test.</li>
+      <li><strong>Activity Log + Site Health</strong> — Asteris → Activity Log. Capture is on by default; configure retention and notifications.</li>
+      <li><strong>Analytics + Pixels</strong> — Asteris → Analytics + Pixels → Google. Enter your GA4 Measurement ID and (optionally) GTM container.</li>
+      <li><strong>Image Optimisation</strong> — Asteris → Image Optimisation. Run bulk-optimise on your existing media library; enable WebP (and AVIF for paid).</li>
+      <li><strong>Backups + Migration</strong> — Asteris → Backups → Destinations. Add a cloud destination (S3 / B2 / R2 / Wasabi / SFTP). Schedule a daily backup.</li>
+      <li><strong>Accessibility scanner</strong> — Asteris → Accessibility. On-save scan runs automatically; the audit dashboard shows site-wide issue counts.</li>
+      <li><strong>Asteris Links</strong> — Asteris → Links. Create branded short links with click tracking and UTM auto-stitch.</li>
+      <li><strong>Asteris Insights</strong> — Asteris → Insights. Cookieless first-party analytics with cross-module annotations; no configuration required to start.</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="migration">Migration guides</h2>
+    <p>Moving from a competing plugin? Each module ships with an importer or an add-alongside path:</p>
+    <ul>
+      <li><strong>From Yoast SEO</strong> — the one-click importer preserves titles, meta, schema, and redirects.</li>
+      <li><strong>From Wordfence</strong> — add-alongside or full-replace; security settings can run in parallel during cutover.</li>
+      <li><strong>From UpdraftPlus</strong> — restore-verified switch before you disable the old plugin.</li>
+      <li><strong>From WP Mail SMTP</strong> — no email-delivery downtime; configure the new provider preset before deactivating.</li>
+      <li><strong>From MonsterInsights</strong> — your GA4 history is safe (it lives in Google); only the WP-side tracking config moves.</li>
+    </ul>
+
+    <hr />
+
+    <h2 id="woocommerce">Running with Asteris for WooCommerce</h2>
+    <p>If you also run WooCommerce, install <a href="https://asterisforwoocommerce.com" target="_blank" rel="noopener">Asteris for WooCommerce</a> alongside this plugin. The shared modules (SEO + AI, Analytics + Pixels, Activity Log + Site Health, Links, AI library) deduplicate automatically — same code, same data, served once.</p>
+
+    <hr />
+
+    <h2 id="more">Need more?</h2>
+    <p>For the marketing overview of each module, see <a href="/asteris-utility-suite/modules/">Modules</a>. For pricing and licensing terms, see <a href="/asteris-utility-suite/pricing/">Pricing</a>. If you can't find what you need, email <a href="mailto:support@asteriscommerce.com">support@asteriscommerce.com</a>.</p>
+
+    <p class="modnote">Modules covered: {modules.join(' · ')}.</p>
+  </article>
+</UtilitySuiteLayout>
+
+<style>
+  .prose { max-width: 820px; margin: 0 auto; padding: 64px 36px 96px; }
+  .prose h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin: 0 0 24px; }
+  .prose h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 40px 0 12px; }
+  .prose h3 { font-size: 19px; font-weight: 700; margin: 28px 0 10px; }
+  .prose p { font-size: 16px; line-height: 1.65; color: #333; margin: 0 0 16px; }
+  .prose ul, .prose ol { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 15.5px; line-height: 1.6; color: #333; margin-bottom: 8px; }
+  .prose strong { color: var(--c-black); }
+  .prose a { color: var(--c-orange); text-decoration: underline; }
+  .prose code { background: #f0f0f3; padding: 1px 6px; border-radius: 3px; font-size: 13.5px; font-family: var(--font-mono); }
+  .prose hr { border: none; border-top: 2px solid var(--c-border); margin: 36px 0; }
+  .modnote { font-size: 13px; color: #888; margin-top: 24px; }
+  @media (max-width: 700px) { .prose { padding: 40px 22px 64px; } .prose h1 { font-size: 34px; } }
+</style>

@@ -1,0 +1,120 @@
+---
+/**
+ * /asteris-utility-suite/changelog/ — release history.
+ * Migrated + renamed from asteriscommerce.com/asteris-utility-suite changelog.md, June 2026.
+ */
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+---
+
+<UtilitySuiteLayout
+  title="Asteris Utility Suite — Changelog"
+  description="Every version of the Asteris Utility Suite, reverse-chronological. Updated the same day a release ships."
+>
+  <article class="prose">
+    <h1>Asteris Utility Suite — Changelog</h1>
+
+    <p>Reverse-chronological. One entry per shipped version. Updated the same day a release goes out.</p>
+
+    <p>The current branch is <strong>v1.0.2</strong> — public launch shipped on 19 June 2026 as v1.0.0; v1.0.1 followed on 20 June with the Studio Insights→AI loop + Replace-model migration fixes; v1.0.2 ships on 20 June with the Code Snippets module removed.</p>
+
+    <p>For what's <em>coming next</em>, see the <a href="/asteris-utility-suite/roadmap/">roadmap</a>.</p>
+
+    <hr />
+
+    <h2>v1.0.2 — 2026-06-20</h2>
+    <p><strong>Code Snippets module removed.</strong> Snippet management is a well-served space — Code Snippets (free, WordPress.org) and WPCode Pro both handle this category competently. We're focusing on the modules where Asteris adds genuine differentiation (the SEO → AI → Insights loop, the Studio canvas, the analytics pipeline) and dropping what's been an "also-bundled" module rather than a core reason customers choose Asteris.</p>
+    <ul>
+      <li><strong>Removed:</strong> the Code Snippets module. MODULE_MAP entry, free-module entry, Dashboard tile, and main-file description all updated. Module count is now 12.</li>
+      <li><strong>Existing snippets aren't deleted from the database</strong> — the <code>wp_asteris_snippets</code> table stays in place on upgrade so you can recover snippets via SQL if you need them. The Asteris uninstall path (delete the plugin entirely) does drop it; the v1.0.1 → v1.0.2 update path does not.</li>
+      <li><strong>Recommended migration:</strong> install <a href="https://wordpress.org/plugins/code-snippets/" target="_blank" rel="noopener">Code Snippets</a> (free) or <a href="https://wpcode.com/" target="_blank" rel="noopener">WPCode Lite</a>, then bulk-copy your existing snippets across before disabling the table.</li>
+    </ul>
+
+    <hr />
+
+    <h2>v1.0.1 — 2026-06-20</h2>
+    <p><strong>The Insights → AI feedback loop closes.</strong> Five features that make the suite-only differentiator concrete: see <em>what's underperforming</em>, fix it without leaving the editor. Plus the Replace-model migration guard.</p>
+    <ul>
+      <li><strong>🪄 Per-section AI rewrites</strong> — Studio's per-section chips now carry a Rewrite button when a section has low CTR. One click diagnoses the engagement gap and drafts a rewrite addressing it. New REST endpoint <code>POST /asteris-wp/v1/ai/section-rewrite</code>. The Insights→AI loop, end to end.</li>
+      <li><strong>AI Suite settings page</strong> — proper toggles + tone + language + monthly cap + usage meter.</li>
+      <li><strong>Insights anomaly detector</strong> — daily cron compares yesterday's pageviews to the trailing-7-day average; ≥50% drops or spikes on pages with ≥20 yesterday-views surface as a dismissible admin notice.</li>
+      <li><strong>Outbound vs internal click tracking</strong> — <code>section_click</code> now splits by anchor hostname. Studio chips show outbound separately so "they engaged" stops looking the same as "they left for a competitor".</li>
+      <li><strong><code>per_section_stats</code> cached</strong> — 5-min transient + explicit Studio-save invalidation. Editor loads stay flat at scale.</li>
+      <li><strong>Sibling free-edition deactivation guard</strong> — paid activation now auto-deactivates any legacy free install with a green success notice. Migration safety net for pre-19-June free installs.</li>
+    </ul>
+
+    <hr />
+
+    <h2>v1.0.0 — 2026-06-19</h2>
+    <p><strong>Public launch.</strong> Pre-launch alpha (alpha.252, alpha.253, alpha.254) bundled into the stable v1.0.0 release. The Asteris Utility Suite is now a 1.0 product.</p>
+
+    <hr />
+
+    <h2>v1.0.0-alpha.253 — 2026-06-18</h2>
+    <p><strong>The Insights → AI feedback loop closes.</strong></p>
+    <ul>
+      <li><strong>🪄 Per-section AI rewrites — the loop-closer.</strong> Studio's per-section chips now carry a Rewrite button when a section has low CTR. One click sends the section's current copy + the engagement stats to the AI; you get back a diagnosed rewrite with the suggestion side-by-side. <strong>No other WordPress builder can do this — it requires owning the analytics, the AI, and the canvas.</strong></li>
+      <li><strong>AI Suite gets a proper settings page.</strong> Per-generator visibility toggles, tone selector, language, monthly request cap, and a live usage meter.</li>
+      <li><strong>Insights anomaly detector.</strong> Daily cron compares each page's yesterday-views to the trailing-7-day average. Drops or spikes &gt;50% surface as a dismissible admin notice.</li>
+      <li><strong>Outbound-link click tracking.</strong> <code>section_click</code> now splits into internal vs outbound.</li>
+      <li><strong>Studio overlay caching.</strong> <code>Query::per_section_stats()</code> cached in a 5-minute transient and explicitly invalidated by Studio on save.</li>
+    </ul>
+
+    <h2>v1.0.0-alpha.252 — 2026-06-17</h2>
+    <p><strong>Studio × Insights — per-section engagement overlay (Phase 2).</strong> See how each block on your page is actually performing while you edit it. Per-section view + click tracking, a new isolated DB table, a read API, and a Studio canvas overlay that paints chips on every stamped block.</p>
+
+    <h2>v1.0.0-alpha.243 — 2026-06-11</h2>
+    <p><strong>Insights v2 — UTMs, Search Console keywords, AI assistant traffic, custom events.</strong> 14 new analytics features on top of the v1 pipeline: persistent UTM attribution, Search Console keyword dimension, AI assistant traffic classification (ChatGPT, Claude, Perplexity, Gemini and more bucketed as a dedicated "AI Search" channel), WP internal site-search capture, UTM builder, campaign A/B compare, cohort retention, and custom event tracking.</p>
+
+    <h2>v1.0.0-alpha.242 — 2026-06-11</h2>
+    <p><strong>Asteris Insights ships.</strong> First-party, cookieless WordPress analytics with cross-module annotations from Activity Log / Security / SEO. Sub-1KB beacon, 24-hour-rotating salt visitor hash, CSV export, Cloudflare + MaxMind GeoIP, WooCommerce server-side conversion tracking, weekly email digest.</p>
+
+    <h2>v1.0.0-alpha.218 — 2026-06-07</h2>
+    <p><strong>Asteris Links ships.</strong> Branded short links at <code>yourdomain.com/go/whatever</code> with click tracking, UTM auto-stitch (incoming and outgoing), and per-link analytics. Plugs into the Activity Log for an audit trail of link create / update / delete.</p>
+
+    <h2>v1.0.0-alpha.212 — 2026-06-05</h2>
+    <p><strong>Self-hosted plugin updater shipped.</strong> Customers see "Update available" on Asteris exactly the way they do for WordPress.org plugins, and can one-click upgrade from <code>wp-admin/plugins.php</code>. The free build correctly strips the updater.</p>
+
+    <h2>v1.0.0-alpha.208 — 2026-06-04</h2>
+    <p><strong>Accessibility module v1 ships.</strong> WCAG 2.1 AA scanner (DOMDocument + XPath, 13 checks), on-save scan with in-editor metabox, site-wide audit dashboard, EAA-compliant accessibility statement generator, scheduled rescans, and a REST endpoint for CI integration.</p>
+
+    <h2>v1.0.0-alpha.205 — 2026-06-03</h2>
+    <p><strong>Performance module locked to v2 spec.</strong> Re-scoped against WP Rocket, NitroPack, Perfmatters, LiteSpeed Cache. Positioning locked: "WordPress-safe by default." Added <code>fetchpriority</code> on LCP, Speculation Rules, Early Hints, host/APO detect, field-data CWV monitor.</p>
+
+    <h2>v1.0.0-alpha.180 — 2026-06-03</h2>
+    <p><strong>SMTP + Email Logs module ships.</strong> 6 provider presets (Gmail / Microsoft 365 OAuth / SendGrid / Mailgun / Amazon SES / generic SMTP), full email logs with body capture, retention cron, deliverability alerts, resend + bulk + CSV export, and AES-256 at-rest encryption for credentials.</p>
+
+    <h2>v1.0.0-alpha.165 — 2026-06-03</h2>
+    <p><strong>Forms module ships.</strong> Drag-and-drop form builder, 20 field types, anti-spam (honeypot + Cloudflare Turnstile + hCaptcha), 5 integrations (Mailchimp, ConvertKit, MailerLite, Slack, Zapier webhook), conditional logic per field, and multi-step forms.</p>
+
+    <h2>v1.0.0-alpha.163 — 2026-06-03</h2>
+    <p><strong>SEO + AI Suite 2nd-pass features ship.</strong> <code>llms.txt</code> generator, IndexNow auto-submit, AI bot blocker, AI traffic tracker, schema import URL, SEO revisions per field, author E-E-A-T metadata, headline analyzer, and a Yoast → Asteris one-click importer.</p>
+
+    <h2>v1.0.0-alpha.100 — 2026-05-28</h2>
+    <p><strong>Security + Login + 2FA module ships.</strong> The wedge module. Brute-force protection with progressive lockout, TOTP + WebAuthn (passkey) 2FA, per-role enforcement, hide / rename <code>wp-login.php</code>, XML-RPC kill switch, file-change monitoring, IP allow/block lists with country geofence, Application Passwords audit.</p>
+
+    <h2>v1.0.0-alpha.83 — 2026-05-15</h2>
+    <p><strong>Initial plugin scaffold.</strong> Bootstrapped from the shared engineering base — module loader, settings panel, licence manager, shared namespace, dual-plugin architecture committed.</p>
+
+    <hr />
+
+    <h2>See also</h2>
+    <ul>
+      <li><a href="/asteris-utility-suite/roadmap/">Roadmap →</a></li>
+      <li><a href="/asteris-utility-suite/modules/">Modules →</a></li>
+    </ul>
+  </article>
+</UtilitySuiteLayout>
+
+<style>
+  .prose { max-width: 820px; margin: 0 auto; padding: 64px 36px 96px; }
+  .prose h1 { font-size: 48px; font-weight: 900; letter-spacing: -2px; line-height: 1.05; margin: 0 0 24px; }
+  .prose h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin: 40px 0 12px; }
+  .prose p { font-size: 16px; line-height: 1.65; color: #333; margin: 0 0 16px; }
+  .prose ul { margin: 0 0 20px; padding-left: 22px; }
+  .prose li { font-size: 15.5px; line-height: 1.6; color: #333; margin-bottom: 8px; }
+  .prose strong { color: var(--c-black); }
+  .prose a { color: var(--c-orange); text-decoration: underline; }
+  .prose code { background: #f0f0f3; padding: 1px 6px; border-radius: 3px; font-size: 13.5px; font-family: var(--font-mono); }
+  .prose hr { border: none; border-top: 2px solid var(--c-border); margin: 36px 0; }
+  @media (max-width: 700px) { .prose { padding: 40px 22px 64px; } .prose h1 { font-size: 34px; } }
+</style>

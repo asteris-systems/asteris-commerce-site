@@ -1,0 +1,115 @@
+---
+/**
+ * /asteris-utility-suite/modules/ — all 12 modules.
+ * Migrated + renamed from asteriscommerce.com/asteris-utility-suite modules.astro, June 2026.
+ */
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+
+const modules = [
+  { id: 'security', name: 'Security + Login + 2FA', tagline: 'Brute-force protection · TOTP + WebAuthn · file-change monitor · IP geofence', replaces: 'Wordfence Premium ($119)', category: 'security', inFree: false },
+  { id: 'seo-ai', name: 'SEO + AI Suite', tagline: 'Titles, schema, sitemaps, AI content tools, llms.txt, IndexNow, importers', replaces: 'Yoast Premium ($129)', category: 'seo', inFree: false },
+  { id: 'performance', name: 'Performance', tagline: 'Cache, defer, lazy load, fetchpriority LCP, Speculation Rules, field-data CWV', replaces: 'WP Rocket ($59)', category: 'performance', inFree: false },
+  { id: 'forms', name: 'Forms', tagline: '20 field types · 5 integrations · conditional logic · multi-step · anti-spam', replaces: 'WPForms Pro ($199)', category: 'forms', inFree: false },
+  { id: 'smtp', name: 'SMTP + Email Logs', tagline: '6 provider presets · full email logs · resend · encrypted credentials', replaces: 'WP Mail SMTP Pro ($49)', category: 'email', inFree: 'lite' },
+  { id: 'activity-log', name: 'Activity Log + Site Health', tagline: '100+ event types · per-event Undo · debug snapshot ZIP · temp support user', replaces: 'WP Activity Log Premium ($99)', category: 'operations', inFree: 'lite' },
+  { id: 'analytics-pixels', name: 'Analytics + Pixels', tagline: 'GA4 · GTM · Meta + TikTok + LinkedIn Pixels · Search Console OAuth · consent-mode v2', replaces: 'PixelYourSite Pro ($99)', category: 'analytics', inFree: 'lite' },
+  { id: 'image-optimisation', name: 'Image Optimisation', tagline: 'JPEG/PNG compression · WebP + AVIF · bulk · lazy load · CDN integration', replaces: 'Smush Pro ($90)', category: 'media', inFree: 'lite' },
+  { id: 'backups', name: 'Backups + Migration', tagline: 'S3/B2/R2/Wasabi/SFTP · AES-256 · one-click restore · cross-site migration', replaces: 'UpdraftPlus Premium ($70)', category: 'operations', inFree: false },
+  { id: 'accessibility', name: 'Accessibility scanner', tagline: 'WCAG 2.1 AA scanner · audit dashboard · EAA statement generator', replaces: 'WP Accessibility ($120)', category: 'accessibility', inFree: 'lite' },
+  { id: 'links', name: 'Asteris Links', tagline: 'Branded short links · click tracking · UTM auto-stitch · per-link analytics · rebrandable', replaces: 'Pretty Links Pro ($99)', category: 'marketing', inFree: false },
+  { id: 'insights', name: 'Asteris Insights', tagline: 'Cookieless first-party analytics · cross-module annotations · Search Console correlation · WC conversion tracking · weekly digest', replaces: 'MonsterInsights Pro ($199)', category: 'analytics', inFree: false },
+];
+
+const totalValue = '$1,400+';
+---
+
+<UtilitySuiteLayout
+  title="Asteris Utility Suite — All 12 modules"
+  description="All 12 modules in the Asteris Utility Suite. Security + 2FA, SEO + AI, Performance, Forms, SMTP, Activity Log, Analytics + Pixels, Image Optimization, Backups, Accessibility scanner, Asteris Links, Asteris Insights. Replaces ~$1,400+/yr of plugin licences."
+>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">★ 12 modules · 1 plugin · 1 bill</div>
+      <h1>Every module.<br /><span class="accent">One plugin.</span></h1>
+      <p class="lead">
+        All 12 Asteris Utility Suite modules. Each is independently toggleable in the dashboard — disabled modules load zero PHP, zero JS, zero CSS. Replaces around <strong>{totalValue}/year</strong> of separate plugins.
+      </p>
+      <div class="hactions">
+        <a href="/asteris-utility-suite/pricing/" class="btn btn-pop btn-large">See pricing →</a>
+        <a href="/asteris-utility-suite/demo/" class="btn btn-outline btn-large">Try the live demo →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Module grid -->
+  <section class="grid-sect">
+    <div class="container">
+      <div class="grid">
+        {modules.map(m => (
+          <div class="card">
+            <div class="cname">
+              {m.name}
+              {m.inFree === true && <span class="pf">★ Free</span>}
+              {m.inFree === 'lite' && <span class="pl">★ Free (lite)</span>}
+            </div>
+            <div class="ctag">{m.tagline}</div>
+            <div class="cmeta">
+              <span class="crepl">replaces {m.replaces}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What's free vs paid summary -->
+  <section class="freecut">
+    <div class="container">
+      <div class="freegrid">
+        <div class="fcol">
+          <h2>What's <span class="accent">free.</span></h2>
+          <p>The free Asteris Utility Suite edition has <strong>lite versions</strong> of five paid modules on WordPress.org — Image Optimisation, Analytics + Pixels, Activity Log, SMTP, and the Accessibility scanner. No credit card, no time limit.</p>
+          <a href="/asteris-utility-suite/pricing/" class="btn btn-large">See what's in the free edition →</a>
+        </div>
+        <div class="fcol">
+          <h2>What's <span class="accent-orange">paid.</span></h2>
+          <p>The paid suite unlocks <strong>Security + 2FA, SEO + AI Suite, Performance, Forms, Backups + Migration, Asteris Links, Asteris Insights</strong> — plus the full versions of the five "lite" modules in the free edition (Image Optimisation, Analytics + Pixels, Activity Log, SMTP, Accessibility scanner).</p>
+          <a href="/asteris-utility-suite/pricing/" class="btn btn-large">See paid pricing →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</UtilitySuiteLayout>
+
+<style>
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 36px; }
+  .hero { padding: 80px 0 48px; }
+  .hero .eyebrow { display: inline-block; background: var(--c-orange); color: var(--c-white); padding: 6px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; border-radius: var(--r-sm); }
+  .hero h1 { font-size: 80px; line-height: 0.98; letter-spacing: -3px; font-weight: 900; margin: 22px 0 28px; }
+  .hero .accent { background: var(--c-yellow); color: var(--c-black); padding: 0 10px; transform: skew(-3deg); display: inline-block; }
+  .hero .lead { font-size: 20px; max-width: 720px; color: #333; line-height: 1.5; margin-bottom: 28px; }
+  .hero .lead strong { color: var(--c-black); }
+  .hactions { display: flex; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 700px) { .hero h1 { font-size: 48px; letter-spacing: -1.5px; } }
+
+  .grid-sect { padding: 32px 0 80px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card { background: var(--c-white); border: 2px solid var(--c-black); border-radius: var(--r-md); padding: 22px; color: var(--c-black); display: block; }
+  .cname { font-weight: 800; font-size: 17px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .pf { background: var(--c-orange); color: var(--c-white); font-size: 10px; padding: 3px 8px; border-radius: 3px; font-weight: 800; letter-spacing: 0.5px; }
+  .pl { background: var(--c-yellow); color: var(--c-black); font-size: 10px; padding: 3px 8px; border-radius: 3px; font-weight: 800; letter-spacing: 0.5px; }
+  .ctag { font-size: 13.5px; color: #555; line-height: 1.45; margin-bottom: 12px; min-height: 38px; }
+  .cmeta { padding-top: 12px; border-top: 1px solid var(--c-border); }
+  .crepl { font-size: 12px; color: var(--c-orange); font-weight: 600; }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
+
+  .freecut { padding: 80px 0; background: var(--c-yellow); }
+  .freegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .freegrid h2 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 14px; }
+  .freegrid .accent { background: var(--c-orange); color: var(--c-white); padding: 0 8px; transform: skew(-3deg); display: inline-block; }
+  .freegrid p { font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
+  .freegrid p strong { color: var(--c-black); }
+  .accent-orange { color: var(--c-orange); }
+  @media (max-width: 800px) { .freegrid { grid-template-columns: 1fr; } }
+</style>

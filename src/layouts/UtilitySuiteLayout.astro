@@ -1,0 +1,27 @@
+---
+/**
+ * UtilitySuiteLayout — wraps the base Layout and injects the product
+ * secondary nav (ProductSubNav) above the page content. Every page in the
+ * /asteris-utility-suite/ section uses this layout so the secondary menu is
+ * guaranteed present + consistent (layout-enforced, Option A).
+ *
+ * Pass-through props match Layout's so individual pages set their own
+ * title / description / ogImage / noindex.
+ */
+import Layout from './Layout.astro';
+import ProductSubNav from '../components/ProductSubNav.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+const { title, description, ogImage, noindex } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<Layout title={title} description={description} ogImage={ogImage} noindex={noindex}>
+  <ProductSubNav currentPath={currentPath} />
+  <slot />
+</Layout>

@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Every Asteris plugin, stacked with detail. Each links to its own home.
+const plugins = [
+  {
+    name: 'Asteris Utility Suite',
+    color: '#3D5AFE',
+    href: '/asteris-utility-suite/',
+    external: false,
+    tag: 'All-in-one WordPress toolkit',
+    blurb: 'Replaces a stack of single-purpose plugins with one lightweight suite. Twelve independently-toggleable modules — turn on only what you need. The free edition (5 modules) lives on WordPress.org; the paid edition adds the heavier modules.',
+    features: ['Security + Login', 'SEO + AI', 'Performance + caching', 'Backups', 'Forms', 'SMTP', 'Image Optimisation', 'Analytics + Pixels', 'Accessibility', 'Activity Log', 'Links', 'Insights'],
+    cta: 'Explore Asteris Utility Suite',
+  },
+  {
+    name: 'Asteris for WooCommerce',
+    color: '#FF5B3F',
+    href: 'https://asterisforwoocommerce.com',
+    external: true,
+    tag: 'One plugin for a better WooCommerce store',
+    blurb: 'Twenty store-tuned modules that replace a pile of single-feature WooCommerce add-ons — all in one lightweight plugin with a single settings area.',
+    features: ['SEO', 'Variation swatches', 'PDF invoices', 'Product filtering', 'Wishlist', 'Sequential order numbers', 'Trust badges'],
+    cta: 'Visit asterisforwoocommerce.com',
+  },
+  {
+    name: 'Asteris Cart',
+    color: '#00C853',
+    href: 'https://asteriscart.com',
+    external: true,
+    tag: 'A faster cart & checkout for WooCommerce',
+    blurb: 'Twenty-one conversion modules covering the whole cart-to-checkout journey — a slide-out side cart, a dedicated checkout template, urgency, and upsells, without the bloat of four separate plugins.',
+    features: ['Side cart', 'Sticky checkout', 'Free-shipping bar', 'Urgency timers', 'Order bumps', 'Express checkout', 'GDPR'],
+    cta: 'Visit asteriscart.com',
+  },
+  {
+    name: 'Asteris Affiliates',
+    color: '#06D6A0',
+    href: 'https://asterisaffiliates.com',
+    external: true,
+    tag: 'Run an affiliate program on WooCommerce',
+    blurb: 'A complete, self-hosted affiliate program — referral tracking, an affiliate portal, three payout methods, and EPC analytics. Your data stays on your server, no per-sale fees.',
+    features: ['Referral tracking', 'Affiliate portal', '3 payout methods', 'EPC analytics', 'Outbound webhooks'],
+    cta: 'Visit asterisaffiliates.com',
+  },
+  {
+    name: 'Asteris Blocks',
+    color: '#FFC107',
+    href: 'https://asterisblocks.com',
+    external: true,
+    tag: '50 free Gutenberg blocks',
+    blurb: 'A full-featured block library for the WordPress editor — fifty blocks covering layout, media, content and marketing, free forever on WordPress.org.',
+    features: ['50 blocks', 'Native Gutenberg', 'No page-builder lock-in', 'Free forever'],
+    cta: 'Visit asterisblocks.com',
+  },
+  {
+    name: 'Asteris Blocks Pro',
+    color: '#D99A00',
+    href: '/asteris-blocks-pro/',
+    external: false,
+    tag: 'Pro blocks, patterns & global controls',
+    blurb: 'The paid layer for Asteris Blocks — a control layer over every block (styling, responsive, hover, visibility, animations), an AI section generator, a cloud pattern library, and a role manager.',
+    features: ['Global style controls', 'AI section generator', 'Cloud pattern library', 'Role manager', 'Custom CSS'],
+    cta: 'Explore Asteris Blocks Pro',
+  },
+  {
+    name: 'Asteris B2B Wholesale',
+    color: '#475569',
+    href: 'https://asterisforwoocommerce.com/b2b-wholesale',
+    external: true,
+    tag: 'Wholesale for WooCommerce',
+    blurb: 'Turn a WooCommerce store into a B2B channel — wholesale roles, tiered & dynamic pricing, request-a-quote, company accounts, tax handling and store credit.',
+    features: ['Wholesale roles', 'Tiered pricing', 'Request-a-quote', 'Company accounts', 'Store credit'],
+    cta: 'Visit the B2B Wholesale site',
+  },
+  {
+    name: 'Asteris Subscriptions',
+    color: '#EC4899',
+    href: '/roadmap',
+    external: false,
+    comingSoon: true,
+    tag: 'Recurring billing for WooCommerce',
+    blurb: 'Reliable recurring billing for WooCommerce — dependable renewals, dunning that recovers failed payments, and compliance-by-default cancellation. In development.',
+    features: ['Reliable renewals', 'Dunning + recovery', 'Compliance-by-default cancellation'],
+    cta: 'See the roadmap',
+  },
+];
+---
+
+<Layout
+  title="Plugins — Asteris Commerce"
+  description="Every Asteris plugin for WordPress and WooCommerce: Asteris Utility Suite, for WooCommerce, Cart, Affiliates, Blocks, Blocks Pro, B2B Wholesale, and Subscriptions. Lightweight, no bloat."
+>
+  <section class="pl-hero">
+    <div class="pl-inner">
+      <h1>Asteris plugins</h1>
+      <p class="pl-sub">
+        A small family of lightweight plugins for WordPress and WooCommerce — each does its
+        job well and stays out of the way. Pick the one you need; every one links through to
+        its own home.
+      </p>
+    </div>
+  </section>
+
+  <section class="pl-list">
+    <div class="pl-inner">
+      {plugins.map((p) => (
+        <article class="pl-card" style={`--c: ${p.color};`}>
+          <div class="pl-card-head">
+            <h2>
+              {p.name}
+              {p.comingSoon && <span class="pl-soon">Coming soon</span>}
+            </h2>
+            <p class="pl-tag">{p.tag}</p>
+          </div>
+          <p class="pl-blurb">{p.blurb}</p>
+          <ul class="pl-features">
+            {p.features.map((f) => <li>{f}</li>)}
+          </ul>
+          <a
+            class="pl-cta"
+            href={p.href}
+            target={p.external ? '_blank' : undefined}
+            rel={p.external ? 'noopener' : undefined}
+          >
+            {p.cta} <span aria-hidden="true">→</span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    .pl-inner { max-width: var(--max-w, 1100px); margin: 0 auto; padding: 0 var(--gutter, 36px); }
+    .pl-hero { padding: 56px 0 24px; }
+    .pl-hero h1 { font-size: clamp(32px, 5vw, 50px); margin: 0 0 14px; }
+    .pl-sub { font-size: 18px; line-height: 1.6; color: var(--c-muted, #555); max-width: 700px; }
+
+    .pl-list { padding: 16px 0 72px; }
+    .pl-card {
+      border: 1px solid var(--c-border, #e6e6ea);
+      border-left: 6px solid var(--c);
+      border-radius: 10px;
+      padding: 26px 30px;
+      margin: 18px 0;
+      background: var(--c-white, #fff);
+    }
+    .pl-card-head { display: flex; flex-direction: column; gap: 4px; margin-bottom: 10px; }
+    .pl-card h2 {
+      font-size: 24px; margin: 0; color: var(--c-black, #0a0a0a);
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .pl-soon {
+      font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+      color: var(--c); border: 1px solid var(--c); border-radius: 999px; padding: 3px 10px;
+    }
+    .pl-tag { margin: 0; font-size: 15px; font-weight: 600; color: var(--c); }
+    .pl-blurb { font-size: 15.5px; line-height: 1.65; color: var(--c-text, #2a2a2a); max-width: 780px; margin: 0 0 16px; }
+
+    .pl-features { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .pl-features li {
+      font-size: 13px; color: var(--c-text, #333);
+      background: var(--c-soft, #f4f4f7); border-radius: 6px; padding: 5px 11px;
+    }
+
+    .pl-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 15px; font-weight: 700; color: #fff; background: var(--c);
+      text-decoration: none; padding: 10px 18px; border-radius: 7px;
+    }
+    .pl-cta:hover { filter: brightness(1.08); }
+
+    @media (max-width: 600px) {
+      .pl-card { padding: 22px 20px; }
+      .pl-card h2 { font-size: 21px; }
+    }
+  </style>
+</Layout>

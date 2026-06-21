@@ -1,0 +1,164 @@
+---
+/**
+ * /asteris-utility-suite/demo/ — WordPress Playground live demo.
+ * Migrated + renamed from asteriscommerce.com/asteris-utility-suite demo.astro, June 2026.
+ */
+import UtilitySuiteLayout from '../../layouts/UtilitySuiteLayout.astro';
+
+// Blueprint is served from the canonical site once deployed.
+const PLAYGROUND_URL = 'https://playground.wordpress.net/?blueprint-url=https://asteriscommerce.com/playground/blueprint.json';
+---
+
+<UtilitySuiteLayout
+  title="Asteris Utility Suite — Try the live demo in your browser"
+  description="Try all 12 Asteris Utility Suite modules in a real WordPress site, in your browser, with no install. WordPress Playground embed — no signup, no credit card."
+>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">★ Live in your browser</div>
+      <h1>Try Asteris.<br /><span class="accent">No install. No signup.</span></h1>
+      <p class="lead">
+        A full WordPress + Asteris install, running entirely in your browser via <strong>WordPress Playground</strong>. All 12 modules enabled. Click around, toggle modules, scan a post for accessibility issues, browse the Activity Log — see how it actually feels in a WP admin.
+      </p>
+      <p class="boot">First-time boot takes ~30–60 seconds while Playground spins up WordPress + Asteris.</p>
+      <div class="hactions">
+        <a href={PLAYGROUND_URL} target="_blank" rel="noopener" class="btn btn-pop btn-large">★ Launch the Playground demo →</a>
+        <a href="/asteris-utility-suite/pricing/" class="btn btn-outline btn-large">Or see pricing →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Status banner -->
+  <section class="status">
+    <div class="container narrow">
+      <div class="sbox">
+        <div class="seye">★ Live demo — all 12 modules pre-activated</div>
+        <p>The Playground blueprint installs WordPress with a sample theme, then fetches the latest Asteris Utility Suite zip and activates it with all modules enabled in dev-mode (no licence key needed inside the sandbox). First boot takes 30–60 seconds — subsequent boots are cached.</p>
+        <p>Want it on your own site instead? <a href="/asteris-utility-suite/pricing/">Grab the free edition</a> on WordPress.org or <a href="/asteris-utility-suite/pricing/">see paid pricing</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's active -->
+  <section class="active">
+    <div class="container">
+      <h2>What's active in the demo</h2>
+      <p class="csub">All 12 modules enabled in a sample WordPress site. The Playground demo loads straight into the WP admin so you can toggle modules and explore settings.</p>
+      <div class="agrid">
+        <div class="acol">
+          <h3>Front-end</h3>
+          <ul>
+            <li>SEO meta tags + schema rendered on sample posts</li>
+            <li>Performance: deferred scripts, image preconnect, lazy load</li>
+            <li>Image Optimisation: WebP serving</li>
+            <li>Forms: contact form on a sample page</li>
+            <li>Analytics: GA4 + GTM containers wired</li>
+            <li>Accessibility: scanner-flagged demo post with WCAG issues</li>
+          </ul>
+        </div>
+        <div class="acol">
+          <h3>Admin</h3>
+          <ul>
+            <li>Unified Asteris settings panel</li>
+            <li>SEO module + AI content tools (BYOK or mock provider)</li>
+            <li>Security: 2FA setup, brute-force log</li>
+            <li>Activity Log with sample events + Asteris Undo</li>
+            <li>SMTP: provider presets + test send</li>
+            <li>Backups: schedule + destination config</li>
+            <li>Accessibility audit dashboard with worst-offenders report</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Limits -->
+  <section class="limits">
+    <div class="container narrow">
+      <h2>What works in Playground vs what doesn't</h2>
+      <div class="lgrid">
+        <div class="lcol works">
+          <h3>★ Works</h3>
+          <ul>
+            <li>Full WordPress admin</li>
+            <li>Toggling all 12 Asteris modules on/off</li>
+            <li>Browsing the sample site + editing posts</li>
+            <li>Running the Accessibility scanner on any page</li>
+            <li>Configuring SEO + module settings</li>
+          </ul>
+        </div>
+        <div class="lcol limited">
+          <h3>★ Limited / unavailable</h3>
+          <ul>
+            <li>AI Suite needs your own API key (OpenAI, Anthropic, Gemini, or OpenRouter) to generate content</li>
+            <li>No real Stripe checkout (test mode only)</li>
+            <li>No persistent storage — your changes reset when you close the browser tab</li>
+            <li>No email delivery (everything is local to the browser sandbox)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- After demo -->
+  <section class="after">
+    <div class="container narrow">
+      <h2>After the demo.</h2>
+      <p>The free Asteris Utility Suite edition is on WordPress.org. Install it on your site and see how it works with your theme and existing plugins before purchasing.</p>
+      <div class="aactions">
+        <a href="https://wordpress.org/plugins/asteris-utility-suite/" target="_blank" rel="noopener" class="btn btn-large">Get it free →</a>
+        <a href="/asteris-utility-suite/pricing/" class="btn btn-outline btn-large">See paid pricing →</a>
+      </div>
+    </div>
+  </section>
+</UtilitySuiteLayout>
+
+<style>
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 36px; }
+  .narrow { max-width: 820px; }
+
+  .hero { padding: 80px 0 48px; }
+  .hero .eyebrow { display: inline-block; background: var(--c-orange); color: var(--c-white); padding: 6px 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; border-radius: var(--r-sm); }
+  .hero h1 { font-size: 80px; line-height: 0.98; letter-spacing: -3px; font-weight: 900; margin: 22px 0 28px; }
+  .hero .accent { background: var(--c-yellow); color: var(--c-black); padding: 0 10px; transform: skew(-3deg); display: inline-block; }
+  .hero .lead { font-size: 20px; max-width: 760px; color: #333; line-height: 1.5; margin-bottom: 14px; }
+  .hero .lead strong { color: var(--c-black); }
+  .hero .boot { font-size: 14px; color: #666; margin-bottom: 28px; }
+  .hactions { display: flex; gap: 14px; flex-wrap: wrap; }
+  @media (max-width: 700px) { .hero h1 { font-size: 48px; letter-spacing: -1.5px; } }
+
+  .status { padding: 32px 0; background: var(--c-yellow); }
+  .sbox { background: var(--c-white); border: 2px solid var(--c-black); border-radius: var(--r-md); padding: 22px 24px; }
+  .seye { color: var(--c-orange); font-weight: 800; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
+  .sbox p { font-size: 15px; color: #333; line-height: 1.5; margin-bottom: 10px; }
+  .sbox a { color: var(--c-orange); text-decoration: underline; }
+
+  .active { padding: 80px 0; background: var(--c-white); border-top: 2px solid var(--c-black); border-bottom: 2px solid var(--c-black); }
+  .active h2 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 12px; }
+  .csub { font-size: 16px; color: #555; max-width: 760px; line-height: 1.55; margin-bottom: 28px; }
+  .agrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .acol h3 { font-size: 20px; font-weight: 800; margin-bottom: 14px; color: var(--c-orange); }
+  .acol ul { list-style: none; }
+  .acol li { padding: 6px 0 6px 20px; position: relative; font-size: 15px; color: #333; }
+  .acol li::before { content: '→'; position: absolute; left: 0; color: var(--c-orange); font-weight: 700; }
+  @media (max-width: 800px) { .agrid { grid-template-columns: 1fr; } }
+
+  .limits { padding: 80px 0; }
+  .limits h2 { font-size: 36px; font-weight: 900; letter-spacing: -1.2px; margin-bottom: 24px; }
+  .lgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .lcol { border: 2px solid var(--c-black); border-radius: var(--r-md); padding: 22px; background: var(--c-white); }
+  .works h3 { color: #2e7d32; font-size: 18px; margin-bottom: 12px; }
+  .limited h3 { color: #c0392b; font-size: 18px; margin-bottom: 12px; }
+  .lcol ul { list-style: none; }
+  .lcol li { padding: 6px 0 6px 20px; position: relative; font-size: 14.5px; color: #333; }
+  .works li::before { content: '✓'; position: absolute; left: 0; color: #2e7d32; font-weight: 800; }
+  .limited li::before { content: '⚠'; position: absolute; left: 0; color: #c0392b; }
+  @media (max-width: 800px) { .lgrid { grid-template-columns: 1fr; } }
+
+  .after { padding: 80px 0; background: var(--c-black); color: var(--c-white); text-align: center; border-top: 6px solid var(--c-orange); }
+  .after h2 { font-size: 42px; font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; }
+  .after p { font-size: 17px; color: #ccc; max-width: 680px; margin: 0 auto 24px; }
+  .aactions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .after .btn { background: var(--c-orange); border-color: var(--c-orange); color: var(--c-white); }
+  .after .btn-outline { background: var(--c-white); color: var(--c-black); border-color: var(--c-white); }
+</style>

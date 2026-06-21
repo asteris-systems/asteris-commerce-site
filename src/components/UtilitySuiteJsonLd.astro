@@ -1,0 +1,75 @@
+---
+/**
+ * UtilitySuiteJsonLd — emits a <script type="application/ld+json"> for the
+ * Asteris Utility Suite long-tail pages. Adapted from the source
+ * asterisforwordpress.com JsonLd component, rebranded to Asteris Utility Suite
+ * + asteriscommerce.com. Supports: Article, FAQPage, SoftwareApplication,
+ * Event, AboutPage, Person, WebPage (combine with "+").
+ */
+interface FAQ { q: string; a: string }
+interface Props {
+  schemaType?: string;
+  title: string;
+  description?: string;
+  url: string;
+  publishedDate?: string;
+  modifiedDate?: string;
+  faqs?: FAQ[];
+}
+const { schemaType = 'WebPage', title, description, url, publishedDate, modifiedDate, faqs } = Astro.props;
+
+const ORG = {
+  '@type': 'Organization',
+  name: 'Asteris Commerce',
+  legalName: 'My Cosmic Message Pty Ltd t/a Asteris Commerce',
+  url: 'https://asteriscommerce.com',
+};
+
+const types = schemaType.split('+').map((t) => t.trim());
+if (faqs && faqs.length > 0 && !types.includes('FAQPage')) types.push('FAQPage');
+
+const graph: any[] = [];
+for (const t of types) {
+  if (t === 'Article') {
+    graph.push({
+      '@type': 'Article', headline: title, description, url,
+      author: { '@type': 'Person', name: 'Nick Lord' }, publisher: ORG,
+      datePublished: publishedDate ?? '2026-06-01',
+      dateModified: modifiedDate ?? publishedDate ?? '2026-06-01',
+    });
+  } else if (t === 'FAQPage') {
+    graph.push({
+      '@type': 'FAQPage', url,
+      mainEntity: (faqs ?? []).map((f) => ({
+        '@type': 'Question', name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  } else if (t === 'SoftwareApplication') {
+    graph.push({
+      '@type': 'SoftwareApplication', name: 'Asteris Utility Suite',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'WordPress 6.4+',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: ORG,
+    });
+  } else if (t === 'Event') {
+    graph.push({
+      '@type': 'Event', name: title, description, url, organizer: ORG,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+    });
+  } else if (t === 'AboutPage') {
+    graph.push({ '@type': 'AboutPage', url, name: title, description });
+  } else if (t === 'Person') {
+    graph.push({ '@type': 'Person', name: 'Nick Lord', jobTitle: 'Founder, Asteris Commerce', worksFor: ORG });
+  } else {
+    graph.push({ '@type': 'WebPage', url, name: title, description, publisher: ORG });
+  }
+}
+
+const jsonLd = graph.length === 1
+  ? { '@context': 'https://schema.org', ...graph[0] }
+  : { '@context': 'https://schema.org', '@graph': graph };
+---
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

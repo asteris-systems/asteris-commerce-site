@@ -1,0 +1,160 @@
+---
+/**
+ * ProductSubNav — secondary navigation bar for the Asteris Utility Suite
+ * product section (migrated from asteriscommerce.com/asteris-utility-suite, June 2026).
+ *
+ * Sticky horizontal text-link bar that sits directly under the global
+ * commerce Nav. One config array = the single source of truth for the
+ * section's pages. Active item auto-highlights from the current URL
+ * (exact match for the Overview root, prefix match for sub-sections so
+ * /asteris-utility-suite/docs/anything keeps "Docs" lit).
+ *
+ * Option A (Nick, 20 Jun 2026): text links, no separate hub page —
+ * /asteris-utility-suite/ IS the Overview. To add/reorder a link, edit LINKS only.
+ */
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const ROOT = '/asteris-utility-suite';
+
+const LINKS = [
+  { href: `${ROOT}/`,           label: 'Overview',  exact: true  },
+  { href: `${ROOT}/modules/`,   label: 'Modules'                 },
+  { href: `${ROOT}/pricing/`,   label: 'Pricing'                 },
+  { href: `${ROOT}/demo/`,      label: 'Live Demo'               },
+  { href: `${ROOT}/docs/`,      label: 'Docs'                    },
+  { href: `${ROOT}/changelog/`, label: 'Changelog'               },
+  { href: `${ROOT}/roadmap/`,   label: 'Roadmap'                 },
+];
+
+// Normalise trailing slash for comparison.
+const here = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+
+function isActive(link: { href: string; exact?: boolean }): boolean {
+  const target = link.href.endsWith('/') ? link.href : `${link.href}/`;
+  if (link.exact) return here === target;
+  return here === target || here.startsWith(target);
+}
+---
+
+<nav class="usnav" aria-label="Asteris Utility Suite section">
+  <div class="usnav-inner">
+    <a href={`${ROOT}/`} class="usnav-brand">
+      <span class="usnav-star">★</span> Asteris Utility&nbsp;Suite
+    </a>
+
+    <ul class="usnav-links">
+      {LINKS.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class={isActive(link) ? 'is-active' : ''}
+            aria-current={isActive(link) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href={`${ROOT}/pricing/`} class="usnav-cta">Get it free</a>
+  </div>
+</nav>
+
+<style>
+  .usnav {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    background: var(--c-white, #fff);
+    border-bottom: 1px solid var(--c-border, #eee);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+  }
+  .usnav-inner {
+    max-width: var(--max-w, 1100px);
+    margin: 0 auto;
+    padding: 0 var(--gutter, 36px);
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 52px;
+  }
+  .usnav-brand {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--c-text, #0a0a0a);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .usnav-star { color: #3D5AFE; }
+
+  .usnav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .usnav-links::-webkit-scrollbar { display: none; }
+  .usnav-links a {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: var(--c-muted, #555);
+    text-decoration: none;
+    border-radius: var(--r-sm, 3px);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .12s ease, border-color .12s ease;
+  }
+  .usnav-links a:hover { color: var(--c-text, #0a0a0a); }
+  .usnav-links a.is-active {
+    color: #3D5AFE;
+    font-weight: 600;
+    border-bottom-color: #3D5AFE;
+    border-radius: 0;
+  }
+
+  .usnav-cta {
+    flex-shrink: 0;
+    background: #3D5AFE;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: var(--r-md, 6px);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .usnav-cta:hover { filter: brightness(1.08); }
+
+  @media (max-width: 860px) {
+    /* Mobile: brand + CTA on the top row, ALL links wrap onto a full-width
+       row below so every item stays visible (no horizontal scroll, nothing
+       hidden). */
+    .usnav-inner {
+      flex-wrap: wrap;
+      height: auto;
+      gap: 10px 8px;
+      padding: 10px 20px;
+    }
+    .usnav-brand { font-size: 13px; order: 1; }
+    .usnav-cta   { order: 2; margin-left: auto; padding: 6px 11px; font-size: 12px; }
+    .usnav-links {
+      order: 3;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      overflow-x: visible;
+      gap: 4px 2px;
+      row-gap: 6px;
+    }
+    .usnav-links a { padding: 5px 10px; }
+  }
+</style>
