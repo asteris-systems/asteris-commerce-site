@@ -1,15 +1,15 @@
 ---
 // Minimal GDPR/EPR cookie banner — ported from asterisforwoocommerce.com.
-// No GA loaded yet (asteriscommerce.com is a brand page, not analytics-heavy),
-// so this banner is currently a placeholder for when analytics get wired.
-// Strategy when analytics added: defer gtag until window.__asterisConsent === 'accepted'.
+// GA4 is consent-gated: Layout.astro listens for the 'asteris:consent' event this
+// banner dispatches and only loads gtag once the value is 'accepted' (or on a
+// return visit where localStorage 'asteris-consent' === 'accepted'). Decline = no GA.
 ---
 
 <aside id="asteris-cookie-banner" class="cb" role="dialog" aria-labelledby="cb-title" aria-describedby="cb-desc" hidden>
   <div class="cb-inner">
     <p id="cb-title" class="cb-title">★ Cookies + tracking</p>
     <p id="cb-desc" class="cb-desc">
-      asteriscommerce.com is a static brand site. No third-party analytics, no advertising cookies, no cross-site tracking. We only set a consent-preference cookie if you accept below.
+      We use Google Analytics to understand how this site is used — it loads <strong>only if you accept</strong>. No advertising cookies, no cross-site tracking. Decline and we load nothing beyond a single preference cookie. See our <a href="/privacy">Privacy Policy</a>.
     </p>
     <div class="cb-actions">
       <button type="button" class="cb-btn cb-decline" id="cb-decline">Decline</button>
@@ -39,6 +39,8 @@
   .cb[hidden] { display: none; }
   .cb-title { font-weight: 700; font-size: 16px; margin: 0 0 6px; color: #ffffff; }
   .cb-desc { margin: 0 0 14px; color: #cccccc; }
+  .cb-desc strong { color: #ffffff; }
+  .cb-desc a { color: var(--c-orange, #AA00FF); text-decoration: underline; text-underline-offset: 2px; }
   .cb-actions { display: flex; gap: 8px; justify-content: flex-end; }
   .cb-btn {
     appearance: none; border: 0; border-radius: 6px;

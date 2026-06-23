@@ -56,13 +56,36 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
 
   <slot name="head" />
 
-  <!-- Google Analytics 4 (G-TXZL5GDQRT) -->
-  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TXZL5GDQRT"></script>
+  <!-- Google Analytics 4 (G-TXZL5GDQRT) — CONSENT-GATED.
+       GA only loads after the visitor clicks "Accept" in the cookie banner
+       (or on a return visit if they previously accepted). Declining loads nothing. -->
   <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TXZL5GDQRT');
+    (function () {
+      var GA_ID = 'G-TXZL5GDQRT';
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { anonymize_ip: true });
+      }
+      var consent = null;
+      try { consent = localStorage.getItem('asteris-consent'); } catch (e) {}
+      if (consent === 'accepted') {
+        loadGA();
+      } else {
+        window.addEventListener('asteris:consent', function (e) {
+          if (e && e.detail && e.detail.value === 'accepted') loadGA();
+        });
+      }
+    })();
   </script>
 </head>
 <body>
