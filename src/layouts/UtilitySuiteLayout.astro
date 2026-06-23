@@ -22,6 +22,15 @@ const currentPath = Astro.url.pathname;
 ---
 
 <Layout title={title} description={description} ogImage={ogImage} noindex={noindex}>
-  <ProductSubNav currentPath={currentPath} />
-  <slot />
+  <div class="aus-brand">
+    <ProductSubNav currentPath={currentPath} />
+    <slot />
+  </div>
 </Layout>
+
+<style is:global>
+  /* Asteris Utility Suite product brand = blue #3e59fe (NOT the Asteris Commerce
+     purple). Scoped to the product pages + sub-nav only — the global Nav/Footer
+     keep the commerce purple via their #AA00FF fallback. */
+  .aus-brand { --c-orange: #3e59fe; --c-violet: #3e59fe; }
+</style>
