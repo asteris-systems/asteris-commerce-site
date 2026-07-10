@@ -7,6 +7,11 @@ export default defineConfig({
   build: {
     format: 'directory',
   },
+  // Old theme URLs are retired — send any inbound links to the plugins page.
+  redirects: {
+    '/asteris-theme': '/plugins/',
+    '/try-theme': '/plugins/',
+  },
   integrations: [
     sitemap(),
   ],
