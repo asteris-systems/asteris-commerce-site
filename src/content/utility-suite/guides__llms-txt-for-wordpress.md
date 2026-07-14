@@ -126,7 +126,7 @@ The honest split: **training-class** crawlers (which ingest content into model t
 
 ### Option 2: Automatically (with Asteris)
 
-1. Install Asteris Utility Suite ([free version](https://wordpress.org/plugins/asteris-for-wordpress/) or a paid tier — the SEO + AI module's `llms.txt` generator is in the paid module).
+1. Install Asteris Utility Suite ([free version](https://wordpress.org/plugins/asteris-utility-suite/) or a paid tier — the SEO + AI module's `llms.txt` generator is in the paid module).
 2. WP Admin → **Asteris → Modules** → toggle **SEO + AI Suite** to ON.
 3. **Asteris → SEO + AI → Tools → llms.txt** → enable.
 4. Asteris generates `llms.txt` (and `llms-full.txt`) from your content automatically. It refreshes on a daily schedule by default. The file is served at `yoursite.com/llms.txt` via a WordPress rewrite rule (no actual file on disk).

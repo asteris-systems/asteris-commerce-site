@@ -162,6 +162,14 @@ import Layout from '../layouts/Layout.astro';
           <span class="plug-cta">asterisforwoocommerce.com/subscriptions →</span>
         </a>
       </div>
+
+      <p class="free-org">
+        Prefer to start free? Four are on WordPress.org —
+        <a href="https://wordpress.org/plugins/asteris-utility-suite/" target="_blank" rel="noopener">Utility Suite</a>,
+        <a href="https://wordpress.org/plugins/asteris-subscriptions/" target="_blank" rel="noopener">Subscriptions</a>,
+        <a href="https://wordpress.org/plugins/asteris-b2b-wholesale/" target="_blank" rel="noopener">B2B Wholesale</a>, and
+        <a href="https://wordpress.org/plugins/asteris-affiliates/" target="_blank" rel="noopener">Affiliates</a>.
+      </p>
     </div>
   </section>
 
@@ -472,6 +480,13 @@ import Layout from '../layouts/Layout.astro';
   .plug li strong { color: var(--c-black); }
   .plug-cta { margin-top: auto; font-weight: 700; color: var(--c); font-size: 17px; }
   @media (max-width: 800px) { .plugin-grid { grid-template-columns: 1fr; } }
+  .free-org {
+    margin: 26px 0 0; font-size: 17px; line-height: 1.6; color: #444;
+    background: #fafbfd; border: 1px solid #e0e3eb; border-radius: 10px;
+    padding: 16px 20px; text-align: center;
+  }
+  .free-org a { color: var(--c-violet, #AA00FF); font-weight: 700; text-decoration: none; }
+  .free-org a:hover { text-decoration: underline; }
 
   /* ── Round-it-out ───────────────────────────────────────────────── */
   .roundout { padding: 60px 0 80px; background: #fafbfd; border-top: 1px solid #e0e3eb; border-bottom: 1px solid #e0e3eb; }
